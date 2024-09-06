@@ -1,0 +1,199 @@
+* {
+    overflow: hidden;
+}
+
+/*Contenedor principal*/
+.Simulador-Finanzas {
+    height: 80vh;
+    width: 94vw;
+    margin-top: 1%;
+    margin-bottom:  1%;
+    margin-left:  3%;
+    margin-right:  3%;
+    border: 1px solid #000;
+    border-radius: 16px;
+}
+
+/*-----------------------------*/
+/*Fecha de la Simulación*/
+.Fecha {
+    position: relative;
+    top: 5%;
+    left: 2%;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    float: left;
+}
+
+.Fecha .Fecha-Contador{
+    font-size: small;
+    margin-bottom: 2px;
+    width:fit-content;
+}
+
+.Fecha h4{
+    margin-bottom: 0%;
+}
+
+/*-----------------------------*/
+/*Panel Superior - de Productos Financieros */
+.Panel-Superior {
+    position: relative;
+    top: 5%;
+    left: 4%;
+    width: 83%;
+    height: 30%;
+    border: 1px solid #000;
+    border-radius: 16px;
+}
+
+.Producto-Financiero {
+    border-radius: 16px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+}
+
+.Producto-Financiero *{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+}
+
+.PF-Tipo {
+    color: dodgerblue;
+}
+
+.PF-Status-Open {
+    color: green;
+}
+
+.PF-Status-Close {
+    color: red;
+}
+
+
+
+
+/*-----------------------------*/
+/*Panel de Cuentas*/
+.Panel-Cuentas {
+    position: relative;
+    top: 20%;
+    left: 2%;
+    height: 19%;
+    width: 84%;
+    border: 1px solid #000;
+    border-radius: 16px;
+    float: left;
+    overflow-x:  scroll;
+}
+
+.Panel-Cuentas .Cuentas{
+    position: relative;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+}
+
+.Panel-Cuentas::-webkit-scrollbar{
+    height: 8px;
+}
+
+.Panel-Cuentas::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 8px;
+}
+
+.Panel-Cuentas::-webkit-scrollbar-track{
+    background-color: cyan;
+    border-radius: 10px;
+}
+
+.Panel-Cuentas h5{
+    position: relative;
+    left: 2%;
+    width: fit-content;
+    margin:0%;
+}
+
+.Boton-Agregar-Cuentas{
+    height: 40px;
+    width: fit-content;
+    margin-top: 1%;
+    margin-left: 2%;
+    border: 1px solid #000;
+    border-radius: 16px;
+    float: left;
+}
+
+.Boton-Agregar-Cuentas button{
+    height: 40px;
+    width: 40px;
+    border: 1px solid #000;
+    border-radius: 16px;
+}
+
+.Cuenta {
+    position: relative;
+    top: 0%;
+    padding: 1%;
+    height: 60%;
+    width: fit-content;
+    border: 1px solid #000;
+    border-radius: 16px;
+    margin-left: 2%;
+    float: left
+}
+
+.Cuenta *{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left;
+}
+
+.Cuenta-Nueva{
+    position: relative;
+    top: 0%;
+    padding: 1%;
+    height: 60%;
+    width: 20%;
+    border: 1px solid #000;
+    border-radius: 16px;
+    margin-left: 2%;
+}
+
+.Panel-Inferior {
+    position: relative;
+    top: 21%;
+    left: 2%;
+    height: 25%;
+    width: 84%;
+    border: 1px solid #000;
+    border-radius: 16px;
+    float: left;
+}
+
+.Panel-Inferior p{
+    border: 1px solid #000;
+    position: relative;
+    top: 25%;
+    left: 4%;
+    width: fit-content;
+}
+
+
+.Boton-Siguiente {
+    position: relative;
+    top: 40%;
+    left: 4%;
+    height: 25%;
+    width: 10%;
+    border-radius: 16px;
+}

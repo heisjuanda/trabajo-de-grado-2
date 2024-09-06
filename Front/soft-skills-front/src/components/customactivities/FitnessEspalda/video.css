@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+.hidden-scroll {
+  overflow: hidden;
+}
+.score {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 46%;
+  color: white;
+  font-size: 40px;
+  text-shadow: 0 -1px #000, 1px -1px #000, 1px 0 #000, 1px 1px #000, 0 1px #000, -1px 1px #000, -1px 0 #000, -1px -1px #000;
+  font-family: 'New Rocker', cursive; 
+}
+
+.final-score {
+  animation: fadeIn 10s ease-in-out, vibrate 0.1s ease-in-out 1s 40;
+  position: absolute;
+  text-align: center;
+  top:73%;
+  left: 35%;
+  color: rgb(117, 112, 112);
+  font-size: 60px;
+  text-shadow: 0 -1px #000, 1px -1px #000, 1px 0 #000, 1px 1px #000, 0 1px #000, -1px 1px #000, -1px 0 #000, -1px -1px #000;
+  font-family: 'New Rocker', cursive; 
+}
+
+.play {
+  position: absolute;
+  top: 115px;
+  left: 5px;
+  color: rgb(122, 20, 20);
+  font-size: 30px;
+  text-shadow: 0 -1px #000, 1px -1px #000, 1px 0 #000, 1px 1px #000, 0 1px #000, -1px 1px #000, -1px 0 #000, -1px -1px #000;
+  font-family: 'New Rocker', cursive; 
+}
+.options {
+  position: 'relative';
+  top: 10%;
+  left: 0px;
+  color: rgb(49, 49, 49);
+  font-size: 22px;
+  font-family: 'New Rocker', cursive; 
+}
+
+.image-animation {
+  position: absolute;
+  top: 83%; /* Ajusta según sea necesario */
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.image-animation img {
+  width: 100px;
+  height: auto;
+}
+
+.slideFromLeft {
+  left: -200px;
+  animation: slideFromLeft 6s forwards;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    opacity: 1;
+    left: -200px; /* Ajuste inicial */
+  }
+  90% {
+    opacity: 1;
+    left: calc(40%);
+  }
+  100% {
+    opacity: 0;
+    left: calc(50%);
+  }
+}
+
+.slideFromRight {
+  right: -200px;
+  animation: slideFromRight 6s forwards;
+}
+
+@keyframes slideFromRight {
+  0% {
+    opacity: 1;
+    right: -200px; /* Ajuste inicial */
+  }
+  90% {
+    opacity: 1;
+    right: calc(40%);
+  }
+  100% {
+    opacity: 0;
+    right: calc(50%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes vibrate {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  50% { transform: translateX(10px); }
+  75% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}

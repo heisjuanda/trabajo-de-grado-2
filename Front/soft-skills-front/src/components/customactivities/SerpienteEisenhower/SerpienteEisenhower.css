@@ -1,0 +1,183 @@
+* {
+    overflow: hidden;
+}
+
+.Contenedor-Presentacion {
+    text-align: center;
+    height: "95vh";
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.Contenedor-Presentacion button{
+    color: black;
+    background-color: white;
+    border-radius: 16px;
+}
+
+.Juego-Serpiente {
+    height: 80vh;
+    width: 92vw;
+    margin-top: 1%;
+    margin-bottom:  1%;
+    margin-left:  3%;
+    margin-right:  3%;
+    border: 1px solid #000;
+    border-radius: 16px;
+}
+
+
+/*Puntaje*/
+.Marcador {
+    position: relative;
+    top: 3vh;
+    left: 3vh;
+    height: 10vh;
+    width: 40vh;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 8px;
+    float: left;
+}
+
+.Marcador .Numero{
+    margin-top: 2vh;
+    margin-left: 1vh;
+}
+
+/*Estilo de reloj*/
+.Reloj {
+    position: relative;
+    top: 3vh;
+    left: 6vh;
+    height: 10vh;
+    width: 30vh;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 8px;
+    float: left;
+}
+
+.Reloj h1{
+    margin-top: 2vh;
+    margin-left: 3vh;
+}
+
+/*Pustos por Fruto*/
+.Valores {
+    position: relative;
+    top: 3vh;
+    left: 9vh;
+    height: 10vh;
+    width: 40vh;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 8px;
+    float: left;
+}
+
+.Valores *{
+    margin-top: 3vh;
+    margin-left: 1vh;
+    float: left;
+}
+
+.Valores .Urgente{
+    background-color: yellow;
+    height: 3vh;
+    width: 3vh;
+    float: left;
+}
+
+.Valores .UrgenteImportante{
+    background-color: red;
+    height: 3vh;
+    width: 3vh;
+    float: left;
+}
+
+.Valores .Importante{
+    background-color: green;
+    height: 3vh;
+    width: 3vh;
+    float: left;
+}
+
+.Valores .NoImportante{
+    background-color: cyan;
+    height: 3vh;
+    width: 3vh;
+    float: left;
+}
+
+/*Contador de intentos*/
+.Contador {
+    position: relative;
+    top: 3vh;
+    left: 12vh;
+    height: 10vh;
+    width: 20vh;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 8px;
+    padding-left: 2vh;
+}
+
+/*Boton*/
+.Boton {
+    position: relative;
+    top: 3vh;
+    left: 84vw;
+    height: 10vh;
+    width: 10vh;
+    border: 1px solid #000;
+    border-radius: 8px;
+}
+
+/*Mapa*/
+#Tablero {
+    position: relative;
+    top: 6vh;
+    left: 3vh;
+    height: 60vh;
+    width: 60vh;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 8px;
+    float: left;
+}
+
+#Tablero canvas{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+
+.BotonTrampa {
+    position: relative;
+    top: 6vh;
+    left: 6vh;
+    float: left;
+}
+
+.BotonNotificaciones {
+    position: relative;
+    top: 6vh;
+    left: 9vh;
+    float: left;
+}
+
+.Musica {
+    position: relative;
+    top: 6vh;
+    left: 12vh;
+    height: 50vh;
+    width: 50vh;
+    float: left;
+    border: 1px solid gray;
+}
