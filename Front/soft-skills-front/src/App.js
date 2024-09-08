@@ -11,7 +11,7 @@ import DecitionMaking from "./components/customactivities/decisionMaking/Decisio
 import JigSaw from "./components/customactivities/jigsaw/JigSaw";
 import Muñeca from "./components/customactivities/FitnessMuñeca/FitnessMuñeca";
 import Espalda from "./components/customactivities/FitnessEspalda/FitnessEspalda";
-
+import Hercules from "./components/customactivities/mindsetHercules/Hercules";
 function App() {
   return (
     <Router>
@@ -29,7 +29,7 @@ function App() {
         <Route path="/activity/decisionmaking" element={<DecitionMaking />} />
         <Route path="/activity/fitnessmuñeca" element={<Muñeca />} />
         <Route path="/activity/fitnessespalda" element={<Espalda />} />
-+-
+        <Route path="/activity/GameMindset" element={<Hercules />} />
       </Routes>
     </Router>
   );
