@@ -284,6 +284,7 @@ function Home() {
   return (
     
     <div className="Home">
+      <ImageWithCloseButton imageSrc="https://drive.google.com/thumbnail?id=11q1qDS78hoxTZRJhkNUbNMZuOrMQkYBN" />
       <ResponsiveAppBar />
       <br />
       <header className="App-header">
@@ -356,7 +357,7 @@ function Home() {
           Score: {score} seconds
         </div>
       </header>
-      <ImageWithCloseButton imageSrc="https://drive.google.com/thumbnail?id=11q1qDS78hoxTZRJhkNUbNMZuOrMQkYBN" />
+      
 
     </div>
   );
