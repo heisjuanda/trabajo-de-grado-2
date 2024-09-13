@@ -18,7 +18,7 @@ import { CanvasProvider, useCanvas } from './js/data/CanvasContext.js';
 import { ColisionBlock } from "./js/clases/ColisionBlock.js";
 import background1 from "./img/backgroundLevel1.png";
 
-
+const imageTemp  = "https://drive.google.com/thumbnail?id=11q1qDS78hoxTZRJhkNUbNMZuOrMQkYBN"
 
 const parse2D = (array, rowLength) => {
   const rows = [];
@@ -41,6 +41,24 @@ const createObjectsFrom2D = (array, ctx2) => {
     });
   });
   return objects;
+};
+const ImageWithCloseButton = ({ imageSrc }) => {
+  const [isImageVisible, setIsImageVisible] = useState(true);
+
+  const handleHideImage = () => {
+    setIsImageVisible(false);
+  };
+
+  return (
+    isImageVisible && (
+      <div className="image-container">
+        <img src={imageSrc} alt="Temporary" className="image-style" />
+        <button className="close-button" onClick={handleHideImage}>
+          X
+        </button>
+      </div>
+    )
+  );
 };
 
 function Home() {
@@ -336,6 +354,8 @@ function Home() {
           Score: {score} seconds
         </div>
       </header>
+      <ImageWithCloseButton imageSrc="https://drive.google.com/thumbnail?id=11q1qDS78hoxTZRJhkNUbNMZuOrMQkYBN" />
+
     </div>
   );
 }

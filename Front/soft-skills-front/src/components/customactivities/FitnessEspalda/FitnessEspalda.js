@@ -83,6 +83,25 @@ const ImageAnimation = ({ imageSrc, animationClass, onAnimationEnd }) => {
   );
 };
 
+const ImageWithCloseButton = ({ imageSrc }) => {
+  const [isImageVisible, setIsImageVisible] = useState(true);
+
+  const handleHideImage = () => {
+    setIsImageVisible(false);
+  };
+
+  return (
+    isImageVisible && (
+      <div className="image-container">
+        <img src={imageSrc} alt="Temporary" className="image-style" />
+        <button className="close-button" onClick={handleHideImage}>
+          X
+        </button>
+      </div>
+    )
+  );
+};
+
 const Video = () => {
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
@@ -368,7 +387,10 @@ const Video = () => {
           Final Score: {score}
         </div>
       )}
+      <ImageWithCloseButton imageSrc="https://drive.google.com/thumbnail?id=1GzlgjxJgDAGBxUe-zuX2o_L6qK2Uwhz-" />
+      
     </div>
+    
   );
 };
 
