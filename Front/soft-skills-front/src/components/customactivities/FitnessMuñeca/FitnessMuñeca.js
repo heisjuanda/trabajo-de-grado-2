@@ -53,7 +53,7 @@ const ImageWithCloseButton = ({ imageSrc }) => {
     isImageVisible && (
       <div className="image-container">
         <div className="image-wrapper">
-          <img src={imageSrc} alt="Temporary" className="image-style" style={{ width: "200%", height: "auto" }} />
+          <img src={imageSrc} alt="Temporary" className="image-style" style={{ width: "100%", height: "auto" }} />
           <button className="close-button" onClick={handleHideImage}>
             X
           </button>
