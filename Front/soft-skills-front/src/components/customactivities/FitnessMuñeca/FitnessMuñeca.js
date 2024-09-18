@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect, useCallback } from "react";
 import * as tf from "@tensorflow/tfjs";
 import * as handpose from "@tensorflow-models/handpose";
 import Webcam from "react-webcam";
-import "./App.css";
+import "./fitness.css";
 import ResponsiveAppBar from "../../responsiveappbar/ResponsiveAppBar";
 import { drawHand } from "./js/description/utilities.js";
 import { fistDescription } from "./js/description/fist.js";
