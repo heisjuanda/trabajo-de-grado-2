@@ -55,8 +55,7 @@
 }
 
 .image-style {
-  transform: scale(2);
-  transform-origin: center;
+
   width: auto;
   height: auto;
   max-width: 100%;
