@@ -326,7 +326,7 @@ const Video = () => {
   return (
     
     <div className="hidden-scroll" style={{ position: "absolute", width: '100%', height: '100%' }}>
-      <ImageWithCloseButton imageSrc="https://drive.google.com/thumbnail?id=1GzlgjxJgDAGBxUe-zuX2o_L6qK2Uwhz-" />
+      
       <ResponsiveAppBar />
       
       <div className="options">
@@ -388,7 +388,7 @@ const Video = () => {
         </div>
       )}
      
-      
+     <ImageWithCloseButton imageSrc="https://drive.google.com/thumbnail?id=1GzlgjxJgDAGBxUe-zuX2o_L6qK2Uwhz-" />     
     </div>
     
   );

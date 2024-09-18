@@ -45,7 +45,7 @@
 
 .image-animation {
   position: absolute;
-  top: 83%; /* Ajusta según sea necesario */
+  top: 83%;
   transform: translateY(-50%);
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
@@ -64,7 +64,7 @@
 @keyframes slideFromLeft {
   0% {
     opacity: 1;
-    left: -200px; /* Ajuste inicial */
+    left: -200px;
   }
   90% {
     opacity: 1;
@@ -84,7 +84,7 @@
 @keyframes slideFromRight {
   0% {
     opacity: 1;
-    right: -200px; /* Ajuste inicial */
+    right: -200px;
   }
   90% {
     opacity: 1;
@@ -124,7 +124,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 100;
 }
 
@@ -139,7 +139,7 @@
   height: auto;
   max-width: 100%;
   max-height: 100%;
-  border: 2px solid black; /* Borde opcional */
+  border: 2px solid black;
 }
 
 
