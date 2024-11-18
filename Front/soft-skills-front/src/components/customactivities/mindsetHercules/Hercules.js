@@ -8,7 +8,7 @@ const Hercules = () => {
 
   return (
     <div>
-      {/* Puedes agregar un mensaje opcional o una indicación para el usuario si lo deseas */}
+      {}
       <p>Redirigiendo a la página del juego...</p>
     </div>
   );

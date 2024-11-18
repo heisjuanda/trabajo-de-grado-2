@@ -1,6 +1,6 @@
 import {Finger, FingerCurl, FingerDirection, GestureDescription} from 'fingerpose'; 
 
-// Define Gesture Description
+/* Esta seccion declara como se hace el movimiento utilizando la definicion de los dedos definiendo si estan contraidos o no*/
 export const palmDescription = new GestureDescription('palm'); 
 
 

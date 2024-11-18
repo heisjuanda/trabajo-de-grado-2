@@ -9,6 +9,7 @@ import unshine from './music/techno-beats-unshine-star-10564.mp3';
 import 'text-encoding-polyfill';
 import ResponsiveAppBar from "../../responsiveappbar/ResponsiveAppBar";
 
+/* Generamos la lista de movimiento para cada una de las canciones */
 const options = [
   { value: 'blue', label: 'Techno Beats Blue', numberSequence: [6, 5, 3, 1, 2, 4, 3, 3, 7, 4, 1, 2, 4, 4, 3, 1, 5, 6, 2, 3, 6, 3, 4, 6, 3, 3, 6, 2, 3, 6, 1, 1, 2, 5, 7, 7, 2, 1, 4, 5, 4, 1, 5, 3, 2, 4, 6, 3, 2, 6, 6, 2, 2, 3, 5, 3, 1, 3, 3, 2, 3, 2, 3, 5, 3, 2, 1, 5, 2, 3, 5, 4, 4, 7, 6, 7, 3, 2, 1, 2, 4, 6, 1, 6, 1, 2, 1, 7, 1, 3, 7, 6, 2, 4, 2, 1, 3, 1, 6, 2, 4, 6, 3, 6, 4, 7, 1, 2, 6, 2, 7, 7, 2, 5, 5]
     ,srcMusic: blue
@@ -20,7 +21,7 @@ const options = [
     ,srcMusic: unshine
    }
 ];
-
+/* generamos las imagenes alojadas en el servidor para cada uno de los movimientos */
 const images = [
   {
     src: "https://drive.google.com/thumbnail?id=1IrV0oJtLxLbPAH3ri-4e_ipYhEc9LzD8",
@@ -58,7 +59,7 @@ const images = [
     id: 2
   }
 ];
-
+/* Creamos los eventos para las animaciones de los movimientos*/
 const ImageAnimation = ({ imageSrc, animationClass, onAnimationEnd }) => {
   const elementRef = useRef(null);
 
@@ -79,7 +80,7 @@ const ImageAnimation = ({ imageSrc, animationClass, onAnimationEnd }) => {
     </div>
   );
 };
-
+/* Creamos el estado para poder cerrar la imagen de instrucciones */
 const ImageWithCloseButton = ({ imageSrc }) => {
   const [isImageVisible, setIsImageVisible] = useState(true);
 
@@ -115,6 +116,8 @@ const Video = () => {
   const audioRef = useRef(new Audio());
 
   useEffect(() => {
+    /* Creamos useEfecct para al lanzar la seccion del modulo se 
+    inicialize la conecion con mediapipe y su modelo de detecion de movimiento*/
     const initializeHandDetection = async () => {
       try {
         const vision = await FilesetResolver.forVisionTasks(
@@ -132,7 +135,8 @@ const Video = () => {
         console.error("Error initializing hand detection:", error);
       }
     };
-
+/* Utilizamos el modelo y generamos las diferentes secciones , dividiendo la pantalla en nueve 
+ secciones para utilizar posteriormente */
     const detectHands = () => {
       if (videoRef.current && videoRef.current.readyState >= 2) {
         const detections = handLandmarkerRef.current.detectForVideo(videoRef.current, performance.now());
@@ -151,7 +155,7 @@ const Video = () => {
               const col = Math.floor(x / sectionWidth);
               const row = Math.floor(y / sectionHeight);
               const sectionIndex = row * 3 + col;
-
+/* Esta parte garantiza que de las nueve secciones solo 2 puedan estar activas a la vez excluyendo la secciones centrales */
               if (sectionIndex !== 4 && sectionIndex !== 7) {
                 newActiveSections[sectionIndex] = true;
               }
@@ -170,7 +174,7 @@ const Video = () => {
               }
             }
           }
-
+/* Enviamos la orden para la seccion activa para colorearla y que se muestre graficamente utilizando figuras */
           setActiveSections(newActiveSections);
           drawOverlaysAndLandmarks(newActiveSections, detections.landmarks);
         }
@@ -187,7 +191,6 @@ const Video = () => {
       const sectionWidth = canvas.width / 3;
       const sectionHeight = canvas.height / 3;
       const colors = ['red', 'green', 'blue', 'purple', 'orange', 'pink', 'brown', 'cyan', 'magenta'];
-
       activeSections.forEach((isActive, index) => {
         if (isActive) {
           const col = index % 3;
@@ -232,7 +235,7 @@ const Video = () => {
       });
       });
     };
-
+/* Inicializamos la camara y la conectamos con el modelo */
     const startWebcam = async () => {
       try {
         const stream = await navigator.mediaDevices.getUserMedia({ video: true });
@@ -254,7 +257,7 @@ const Video = () => {
       }
     };
   }, []);
-
+/* Esta seccion se encarga de reproducir la musica e inicializar al presionar los botones */
   useEffect(() => {
     if (isPlaying && selectedSong) {
   
@@ -314,7 +317,7 @@ const Video = () => {
     setIsPlaying(false);
     setFinished(false);
   };
-
+/* Actualizacion de la puntuacion */
   const handleAnimationEnd = (sectionIndex) => {
     console.log("Animation ended for section:", sectionIndex);
     const activeSectionIndex = activeSections.findIndex((isActive, index) => isActive && index === sectionIndex);
@@ -322,7 +325,7 @@ const Video = () => {
       setScore(prevScore => prevScore + 50);
     }
   };
-
+/* Aspectos visuales y de posicion de la pagina */
   return (
     
     <div className="hidden-scroll" style={{ position: "absolute", width: '100%', height: '100%' }}>

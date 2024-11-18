@@ -1,5 +1,6 @@
 export class Player {
     constructor({
+        /* Aqui se declaran los valores inciales tales como tamaño, velocidad o posicion inicial */
         colisionBlock = [],
         ctx2 // cambio
     }) {
@@ -20,6 +21,7 @@ export class Player {
         this.colisionBlock = colisionBlock;
         this.ctx2 = ctx2; // cambio
     }
+    /*Esta funcion verifica si existe un bloque enemigo en las cordenadas actuales*/
     checkCollisionWithEnemy(enemy) {
         if (this.position.x < enemy.position.x + enemy.width &&
             this.position.x + this.width > enemy.position.x &&
@@ -42,7 +44,8 @@ export class Player {
         this.applyGravity(); // typo corrected from `aplyGravity` to `applyGravity`
         this.checkVerticalColision();
     }
-
+/*Esta funcion verifica si existe un bloque en alguna cordenada x cercana e impide 
+el movimiento con el mismo cambiando la cordenada constantemente en un pixel*/
     checkHorizontalColision() {
         for (let i = 0; i < this.colisionBlock.length; i++) {
             const colisionBlock = this.colisionBlock[i];
@@ -67,7 +70,8 @@ export class Player {
         this.velocity.y += this.gravity;
         this.position.y += this.velocity.y;
     }
-
+/*Esta funcion verifica si existe un bloque en alguna cordenada y cercana e impide 
+el movimiento con el mismo cambiando la cordenada constantemente en un pixel*/
     checkVerticalColision() {
         for (let i = 0; i < this.colisionBlock.length; i++) {
             const colisionBlock = this.colisionBlock[i];

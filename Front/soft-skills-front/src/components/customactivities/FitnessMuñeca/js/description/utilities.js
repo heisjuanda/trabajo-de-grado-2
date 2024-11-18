@@ -1,3 +1,5 @@
+/* Esta seccion declara que cordenadas de las manos define cada dedo,Ademas de definir
+ el color para graficar en pantalla cada cordenada*/
 export const drawHand = (predictions, ctx) => {
     const fingerJoints = {
         thumb:[0,1,2,3,4],

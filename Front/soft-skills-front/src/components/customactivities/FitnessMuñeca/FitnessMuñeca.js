@@ -17,7 +17,7 @@ import * as fp from "fingerpose";
 import { CanvasProvider, useCanvas } from './js/data/CanvasContext.js';
 import { ColisionBlock } from "./js/clases/ColisionBlock.js";
 import background1 from "./img/backgroundLevel1.png";
-
+/* Llamamos la imgen del tutorial */
 const imageTemp  = "https://drive.google.com/thumbnail?id=11q1qDS78hoxTZRJhkNUbNMZuOrMQkYBN"
 
 const parse2D = (array, rowLength) => {
@@ -27,7 +27,7 @@ const parse2D = (array, rowLength) => {
   }
   return rows;
 };
-
+/* Esta seccion llama a la lista de colisiones y las declara para usarlas posteriormente*/
 const createObjectsFrom2D = (array, ctx2) => {
   const objects = [];
   array.forEach((row, y) => {
@@ -75,7 +75,7 @@ function Home() {
   const [gameRestart, setGameRestart] = useState(false);
   const [score, setScore] = useState(0);
   const startTimeRef = useRef(null);
-
+/* Llamamos a las imagenes de cada pose*/
   const toggleGame = () => setGameStarted(prevState => !prevState);
   const restartAnimation = () => {
     setGameRestart(true);
@@ -100,6 +100,8 @@ function Home() {
 
   const detect = async (net) => {
     if (
+      /* Creamos una instancia pra vido y declaramos su tamaño en un valor dividible por 64 
+      para mantener el mismo formato que las colisiones*/
       typeof webcamRef.current !== "undefined" &&
       webcamRef.current !== null &&
       webcamRef.current.video.readyState === 4
@@ -117,7 +119,7 @@ function Home() {
       canvas2Ref.current.height = 64 * 9;
 
       const hand = await net.estimateHands(video);
-
+/* Llamamos un nuevo estimador de gestos y le pasamos la descripcion de los que queremos usar*/
       if (hand.length > 0) {
         const GE = new fp.GestureEstimator([
           palmDescription,
@@ -154,7 +156,7 @@ function Home() {
   const player = useRef(null);
   const enemy = useRef(null);
   const obstacle = useRef(null);
-
+/* Configuramos las entidades tales como jugador,enemigo y obstaculo*/
   const setupGameObjects = useCallback(() => {
     if (ctx2 && !colisionBlock.current.length) {
       colisionBlock.current = createObjectsFrom2D(parsedColisions.current, ctx2);
@@ -226,6 +228,7 @@ function Home() {
       ctx2.clearRect(0, 0, canvas2Ref.current.width, canvas2Ref.current.height);
       backgroundlevel1.current.draw();
       if (gameRestart) {
+        /* Esta seccion declara la posicion de los objetos al iniciar el nivel*/
         player.current.position.x = 250;
         player.current.position.y = 300;
         enemy.current.position.x = 850;
@@ -238,7 +241,8 @@ function Home() {
         startTimeRef.current = Date.now(); 
       }
       if (gameStarted) {
-        
+        /* Esta seccion se reinicia constantemente verificando valores para modificar 
+        la ubicacion de los objetos y sus interacciones entre si*/
         player.current.velocity.x = 0;
         if (keys.d.pressed) player.current.velocity.x = 5;
         else if (keys.a.pressed) player.current.velocity.x = -5;
@@ -250,7 +254,7 @@ function Home() {
         enemy.current.update();
         obstacle.current.draw();
         obstacle.current.update();
-        setScore(Math.floor((Date.now() - startTimeRef.current) / 1000)); // Update score
+        setScore(Math.floor((Date.now() - startTimeRef.current) / 1000));
 
         if (player.current.checkCollisionWithEnemy(enemy.current) || (player.current.checkCollisionWithEnemy(obstacle.current) && semiERef.current === false)) {
           console.log("Player has collided with Enemy or Obstacle!");
@@ -261,7 +265,7 @@ function Home() {
       animationFrameId.current = requestAnimationFrame(animate);
     }
   }, [ctx2, canvas2Ref, handleVolarChange, gameStarted, gameRestart]);
-
+/* Esta seccion declara como los primeros llamados y sus interacciones al abandonar la pagina*/
   useEffect(() => {
     if (ctx2) {
       setupGameObjects();
@@ -280,7 +284,7 @@ function Home() {
       };
     }
   }, [ctx2, animate, handleKeyDown, handleKeyUp, handleVolarChange, setupGameObjects]);
-
+/* Declaracion de ubicaciones y aspectos*/
   return (
     
     <div className="Home">

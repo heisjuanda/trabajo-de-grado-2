@@ -1,4 +1,4 @@
-// ./js/clases/Sprite.js
+/* Esta clase sirve para cargar los modelos de varis objetos */
 export class Sprite {
     constructor({ position, imageSrc, ctx2 }) {
       this.position = position;
