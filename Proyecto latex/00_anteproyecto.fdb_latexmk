@@ -1,30 +1,30 @@
 # Fdb version 4
-["biber 00_anteproyecto"] 1731912745.32451 "00_anteproyecto.bcf" "00_anteproyecto.bbl" "00_anteproyecto" 1732312051.01679 0
-  "00_anteproyecto.bcf" 1732312049 110492 e4b1c73a47cd4d333c8a7e45de44073f "pdflatex"
+["biber 00_anteproyecto"] 1731912745.32451 "00_anteproyecto.bcf" "00_anteproyecto.bbl" "00_anteproyecto" 1732313381.60724 0
+  "00_anteproyecto.bcf" 1732313379 110492 e4b1c73a47cd4d333c8a7e45de44073f "pdflatex"
   "Bibliografia.bib" 1731886270 8772 b096eb18f61c5e6127ce20c54f0c3fdd ""
   (generated)
   "00_anteproyecto.bbl"
   "00_anteproyecto.blg"
   (rewritten before read)
-["pdflatex"] 1732312022.65793 "c:/Users/juanc/OneDrive/Desktop/ANTEPROYECTO/00_anteproyecto.tex" "00_anteproyecto.pdf" "00_anteproyecto" 1732312051.01837 0
-  "00_anteproyecto.aux" 1732312049 52048 db3c0bbf06cc5ad0bede964b08ab733e "pdflatex"
+["pdflatex"] 1732313356.17174 "c:/Users/juanc/OneDrive/Desktop/TG2-main/Proyecto latex/00_anteproyecto.tex" "00_anteproyecto.pdf" "00_anteproyecto" 1732313381.60935 0
+  "00_anteproyecto.aux" 1732313379 52048 81aa0f7f62ba9db0b2a4330de1376f9e "pdflatex"
   "00_anteproyecto.bbl" 1731912752 58175 54acbc135383be91dcd60f65ed874e73 "biber 00_anteproyecto"
-  "00_anteproyecto.lof" 1732312049 17768 24bfaaa7bd4411ef6c0ffc29d24d7b07 "pdflatex"
-  "00_anteproyecto.lot" 1732312049 945 e706a0c42149474c1323c80d1ac56443 "pdflatex"
-  "00_anteproyecto.out" 1732312049 8645 8ec04afe295ef5eb2f847bc4ce3b1ff4 "pdflatex"
-  "00_anteproyecto.run.xml" 1732312049 2476 5fe9975d3d2abd649a1ce9d51d2c034d "pdflatex"
+  "00_anteproyecto.lof" 1732313379 17768 15b7b05561fc987cd86e82758c558812 "pdflatex"
+  "00_anteproyecto.lot" 1732313379 945 e706a0c42149474c1323c80d1ac56443 "pdflatex"
+  "00_anteproyecto.out" 1732313379 8645 8ec04afe295ef5eb2f847bc4ce3b1ff4 "pdflatex"
+  "00_anteproyecto.run.xml" 1732313379 2476 5fe9975d3d2abd649a1ce9d51d2c034d "pdflatex"
   "00_anteproyecto.tex" 1731909906 2584 4ff8244ac6ca0e2433ef7248ab96ee47 ""
-  "00_anteproyecto.toc" 1732312049 4791 cc406e3ee75c624c7abb5e638509ff6d "pdflatex"
-  "01_portada.aux" 1732312026 3971 4fff8cabc77102b152efb196d72b8c3b "pdflatex"
+  "00_anteproyecto.toc" 1732313379 4791 cc406e3ee75c624c7abb5e638509ff6d "pdflatex"
+  "01_portada.aux" 1732313358 3971 4fff8cabc77102b152efb196d72b8c3b "pdflatex"
   "01_portada.tex" 1731886270 678 b6292ca540a5df9b353777a0e832624f ""
-  "02_contraportada.aux" 1732312026 3977 c247486262e8cd03ad4388f7c80d736c "pdflatex"
+  "02_contraportada.aux" 1732313358 3977 c247486262e8cd03ad4388f7c80d736c "pdflatex"
   "02_contraportada.tex" 1731910447 1947 775c997c2dd894e8de3aa90d47cc3bce ""
   "03_resumen.tex" 1731910676 1994 434444214bd624561c81e94dced8cce5 ""
   "04_introduccion.tex" 1731913755 2728 6e4a0ec966627f8b86bf57580644fac6 ""
   "05_formulacion_problema.tex" 1732297606 4867 c37ea28b4d1f53fd480aa9fcf233a5e9 ""
   "06_marco_referencial.tex" 1731911600 19018 a7fabee81d39c853ebb66634abb5fb38 ""
   "07_alcance_problema.tex" 1731887379 4524 45728428d7e020c23a4c37f674c5cb61 ""
-  "08_metodologias.tex" 1731911981 6482 8206f54660b356f3195325642d1f2108 ""
+  "08_metodologias.tex" 1732313315 6482 1c1cb7d1391d90e63f8b7fc741e2e5bd ""
   "12_abstract.tex" 1731910834 1666 2ced91c2b4ebb76308dd650da5ecaea7 ""
   "13_revision_de_literatura.tex" 1731912159 35192 763a984f209f6c9d7447b8e7bda5633e ""
   "14_desarrollo.tex" 1732312019 10302 e2d97411e0ed1fe40c9d6946e8469ef0 ""
@@ -213,7 +213,7 @@
   "Imagenes/mc9.png" 1731886270 71513 a2867d6018f15e447a22807d18c241fd ""
   "Imagenes/tuto-espalda.png" 1731886270 370349 7b53084f8f02f24f1e9cd6daff5f30a9 ""
   "Imagenes/tutorial-muñeca.png" 1731886270 86698 f50e59d7e07c91ffc72ea14a95723780 ""
-  "c:/Users/juanc/OneDrive/Desktop/ANTEPROYECTO/00_anteproyecto.tex" 1731909906 2584 4ff8244ac6ca0e2433ef7248ab96ee47 ""
+  "c:/Users/juanc/OneDrive/Desktop/TG2-main/Proyecto latex/00_anteproyecto.tex" 1731909906 2584 4ff8244ac6ca0e2433ef7248ab96ee47 ""
   (generated)
   "00_anteproyecto.aux"
   "00_anteproyecto.bcf"

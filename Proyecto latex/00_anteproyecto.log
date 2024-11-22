@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.17)  22 NOV 2024 16:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.17)  22 NOV 2024 17:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/juanc/OneDrive/Desktop/ANTEPROYECTO/00_anteproyecto.tex
-(c:/Users/juanc/OneDrive/Desktop/ANTEPROYECTO/00_anteproyecto.tex
+**"c:/Users/juanc/OneDrive/Desktop/TG2-main/Proyecto latex/00_anteproyecto.tex"
+(c:/Users/juanc/OneDrive/Desktop/TG2-main/Proyecto latex/00_anteproyecto.tex
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
 (D:\Miketx\tex/latex/base\book.cls
@@ -2900,14 +2900,14 @@ Package logreq Info: Writing requests to '00_anteproyecto.run.xml'.
  ) 
 Here is how much of TeX's memory you used:
  21370 strings out of 473682
- 380092 string characters out of 5735770
+ 380450 string characters out of 5735770
  1348650 words of memory out of 5000000
  43923 multiletter control sequences out of 15000+600000
  565151 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,13n,81p,1253b,2778s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,13n,81p,1266b,2778s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\juanc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><D:/Miketx/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Miketx/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Miketx/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Miketx/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Miketx/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Miketx/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Miketx/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Miketx/fonts/type1/public/amsfonts/cm/cmsl10.pfb><D:/Miketx/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Miketx/fonts/type1/public/amsfonts/cm/cmtt10.pfb><D:/Miketx/fonts/type1/public/amsfonts/latxfont/lasy10.pfb>
-Output written on 00_anteproyecto.pdf (83 pages, 6615959 bytes).
+Output written on 00_anteproyecto.pdf (83 pages, 6615952 bytes).
 PDF statistics:
  1209 PDF objects out of 1440 (max. 8388607)
  257 named destinations out of 1000 (max. 500000)

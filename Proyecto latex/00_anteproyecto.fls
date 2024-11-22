@@ -1,6 +1,6 @@
-PWD c:\Users\juanc\OneDrive\Desktop\ANTEPROYECTO
+PWD c:\Users\juanc\OneDrive\Desktop\TG2-main\Proyecto latex
 INPUT C:\Users\juanc\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\juanc\OneDrive\Desktop\ANTEPROYECTO\00_anteproyecto.tex
+INPUT c:\Users\juanc\OneDrive\Desktop\TG2-main\Proyecto latex\00_anteproyecto.tex
 OUTPUT 00_anteproyecto.log
 INPUT D:\Miketx\tex\latex\base\book.cls
 INPUT D:\Miketx\tex\latex\base\book.cls
