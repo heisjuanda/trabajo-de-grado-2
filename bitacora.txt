@@ -1,0 +1,20 @@
+la siguiente es la bitacora del proyecto inicada el 25 de mayo del año 2024
+semana 0: Se hizo una estructuración general a tener en cuenta y se decidió hacer una tabla con literatura acerca de temas relacionados o útiles para la posterior utilización en el proyecto, decidiendo añadir entre 20 y 30 para tener un buen volumen para escoger el mas acorde al tema.
+Semana 1: Se opto por revisar literatura centrada en la enseñanza de habilidades como "IMPLEMENTACION DE UN PROTOTIPO DE ENSEÑANZA DE EJERCICIOS FISICOS GESTIONADOS MEDIANTE UNA APLICACION MOVIL CON INTERACCION SOCIAL" de Miguel Angel Askar
+Semana 2: Se opto por revisar literatura enfocada en el fitness como "Influencia del deporte y la actividad física en el estado de salud físico y mental" de Sergio Humberto Barbosa Granados y Ángela María Urrea Cuéllar
+Semana 3: Se opto por revisar literatura enfocada en la mindset y temas afines como "Meditaciones" de marco aurelio.
+Semana 4: Se opto por revisar trabajos similares tanto en el ámbito mindset como el fitness similares al trabajo actual, dicho de otra forma aquellos que buscaban la enseñanza de un conocimiento o mejorar la condición física del usuario pero en área de la universidad del valle para tener referencias previas. como "Prototipo de sistema de recomendación para el apoyo a futbolistas amateur en el desarrollo de su entrenamiento deportivo de manera individual" de Marlon Morales Cobo y  Jhoan Manuel Vásquez Lenis
+Semana 5: Se decidió la literatura a usar y separar de acuerdo a ella las habilidades enfocadas en el ámbito de mindset, las cuales son resiliencia, pensamiento lógico y el aprendizaje continuo. en cuanto al fitness se opto por enfocarse en problemas como el túnel carpiano y la postura física.
+Semana 6: se decidió dividir los problemas en principales para adaptarlos mas fácilmente a un sistema de juego, dividiendo los 3 en varios y escogiendo aquellos que mas destacan en la carrera del ingeniero de sistemas como son la adaptabilidad ,abstracción y autodidactismo. 
+Semana 7: Se opto por adaptarse al sistema en reactor y documentarse acerca del mismo y su uso, además de plantear ideas para el desarrollo del aprendizaje
+Semana 8: Se decidieron algunas ideas para el tema de mindset(aventura grafica centrada en desafiar al usuario)pero se decidió programar un demo técnico para verificar que su desarrollo sea posible en el tiempo establecido.
+Semana 9: La demo salió bien así que se decidió buscar ideas para el tema de fitness
+Semana 10: Se decidieron algunas ideas para el tema de fitness(juego basado en el uso de ejercicios para la prevención del túnel carpiano) pero se decidió programar un demo técnico para verificar que su desarrollo sea posible en el tiempo establecido
+Semana 11: Se decidieron algunas ideas para el tema de fitness(juego basado en el uso de ejercicios para alentar al jugador a levantarse y estirarse para evitar la mala postura y el desgaste de la espalda) pero se decidió programar un demo técnico para verificar que su desarrollo sea posible en el tiempo establecido
+Semana 12: Las demos fueron satisfactorias así que se opto por desarrollar primero la idea centrada en el túnel carpiano.
+Semana 13: Se desarrollaron los movimientos del jugador mediante el uso de ejercicios de la mano para túnel carpiano 
+Semana - viernes 5 julio se finalizo el desarrollo del juego para la fomentación de ejercicios contra el túnel carpiano y se acordó empezar el desarrollo del juego basado en movimiento para la espalda
+Semana - viernes 26 julio se desarrollo el uso del movimiento mediante las manos para la fomentación de movimientos favorecedores ala espalda y se acordó empezar el desarrollo del juego basado en mindSet
+Semana 0 Agosto 9 se empezó el desarrollo  del juego sobre mindSet y se terminaron los movimientos del jugador
+Semana 1 agosto 15 Se agregaron 3 nuevos mapas al juego y sonidos para el mismo
+Semana 2 agosto 23 se agregaron 2 mapas, un submenú para reiniciar el nivel actual e interfaz de finalización del juego
