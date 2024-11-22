@@ -1,0 +1,57 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Introducción}{2}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Formulación del problema}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Descripción del problema}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Formulación del problema}{5}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Marco de referencia}{6}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Marco Teórico}{6}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Marco conceptual}{8}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Glosario}{8}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Antecedentes}{9}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Alcance del problema}{12}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Declaración del alcance}{12}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Supuestos}{12}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Restricciones}{12}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Objetivos}{13}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Objetivo general}{13}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Objetivos especificos}{13}{subsection.4.4.2}%
+\contentsline {section}{\numberline {4.5}Entregables esperados}{13}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Resultados esperados}{13}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Metodologías}{14}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Metodología de investigación}{14}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Metodología de desarrollo de software}{15}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Metodología de gestión de actividades}{16}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Metodología de gamificacion}{16}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Revision de literatura}{17}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Desarrollo de los modulos}{31}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Desarrollo de los modulos}{31}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Modulo fitness}{31}{subsection.7.1.1}%
+\contentsline {subsubsection}{Modulo fitness: Ejercicios para el tunel carpiano}{31}{section*.10}%
+\contentsline {subsubsection}{Modulo fitness: Ejercicios para la corrección de la mala postura de la espalda}{33}{section*.14}%
+\contentsline {subsection}{\numberline {7.1.2}Modulo mindset}{34}{subsection.7.1.2}%
+\contentsline {subsubsection}{Nivel 1}{34}{section*.19}%
+\contentsline {subsubsection}{Nivel 2}{35}{section*.21}%
+\contentsline {subsubsection}{Nivel 3}{35}{section*.23}%
+\contentsline {subsubsection}{Nivel 4}{36}{section*.25}%
+\contentsline {subsubsection}{Nivel 5}{36}{section*.27}%
+\contentsline {chapter}{\numberline {8}Pruebas de los modulos}{38}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Experimentacìon y pruebas}{38}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Pruebas funcionales}{38}{subsection.8.1.1}%
+\contentsline {subsubsection}{Pruebas conjuntas}{38}{section*.29}%
+\contentsline {subsection}{\numberline {8.1.2}Pruebas de usabilidad en voz alta}{39}{subsection.8.1.2}%
+\contentsline {subsubsection}{Prueba 1}{39}{section*.32}%
+\contentsline {subsubsection}{Prueba 2}{39}{section*.33}%
+\contentsline {subsubsection}{Prueba 3}{40}{section*.34}%
+\contentsline {chapter}{\numberline {9}Resultados}{41}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Cuestionario sobre evaluación de experiencia en softskills para los módulos Mindset y Fitness}{41}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Fitness: Juego sobre movimiento de la muñeca}{41}{subsection.9.1.1}%
+\contentsline {subsection}{\numberline {9.1.2}Fitness: Juego sobre movimiento de la espalda}{46}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.3}Mindset: Juego sobre puzzles}{52}{subsection.9.1.3}%
+\contentsline {section}{\numberline {9.2}Cuestionario sobre pruebas de usabilidad heurísticas de Nielsen para plataforma gamificada sobre módulos Mindset y Fitness}{58}{section.9.2}%
+\contentsline {chapter}{\numberline {10}Conclusiones y trabajos futuros}{64}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Conclusiones}{64}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Trabajos futuros}{65}{section.10.2}%
+\contentsline {chapter}{\numberline {11}Anexos}{69}{chapter.11}%
+\contentsline {subsection}{\numberline {11.0.1}Pruebas para ejercicios de la espalda}{69}{subsection.11.0.1}%
+\contentsline {subsection}{\numberline {11.0.2}Pruebas para ejercicios del túnel carpiano}{70}{subsection.11.0.2}%
+\contentsline {subsection}{\numberline {11.0.3}Pruebas para el módulo mindset}{70}{subsection.11.0.3}%

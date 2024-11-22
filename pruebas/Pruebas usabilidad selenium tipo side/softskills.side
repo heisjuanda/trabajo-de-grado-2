@@ -1,0 +1,552 @@
+{
+  "id": "4e5a4df3-dccb-46c0-a307-3a9a2d12e4c3",
+  "version": "2.0",
+  "name": "softskills",
+  "url": "https://soft-skills-plataform-1lro.vercel.app",
+  "tests": [{
+    "id": "daf63d64-dc97-4cb1-8443-0f8b685e7316",
+    "name": "prueba de funcionamiento",
+    "commands": [{
+      "id": "5895dc41-0a0f-4915-9a25-b6dbdfb023ba",
+      "comment": "",
+      "command": "open",
+      "target": "/dashboard",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8a113018-f52d-4c0e-bc79-df69839c0447",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x784",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61c38a83-5ee7-4561-b7e5-f78bbff65f0a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.MuiGrid-root:nth-child(1) > .MuiPaper-root .MuiButtonBase-root",
+      "targets": [
+        ["css=.MuiGrid-root:nth-child(1) > .MuiPaper-root .MuiButtonBase-root", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div[2]/div/div/div/div[3]/a/button", "xpath:idRelative"],
+        ["xpath=//div[3]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4712543d-193e-4388-97eb-96ea6896b325",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ejercicio para espalda",
+      "targets": [
+        ["linkText=Ejercicio para espalda", "linkText"],
+        ["css=.flex:nth-child(1) a", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div[2]/div/h3/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/activity/FitnessEspalda')]", "xpath:href"],
+        ["xpath=//h3/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Ejercicio para espalda')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "78f3b0b9-7f5b-484b-be28-26942c115cf5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.close-button",
+      "targets": [
+        ["css=.close-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'X')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "de1e98d6-97a7-4dc0-92d2-ace48cae0539",
+      "comment": "",
+      "command": "click",
+      "target": "css=.close-button",
+      "targets": [
+        ["css=.close-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'X')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c2feee6-d0ee-403a-b185-b544debdd6a8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-19bb58m",
+      "targets": [
+        ["css=.css-19bb58m", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "88e83df0-1edc-46e8-960f-6ad814b91e21",
+      "comment": "",
+      "command": "click",
+      "target": "id=react-select-2-option-0",
+      "targets": [
+        ["id=react-select-2-option-0", "id"],
+        ["css=#react-select-2-option-0", "css:finder"],
+        ["xpath=//div[@id='react-select-2-option-0']", "xpath:attributes"],
+        ["xpath=//div[@id='react-select-2-listbox']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc254915-0e23-4781-a50f-92b7e88c2a8c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.play",
+      "targets": [
+        ["css=.play", "css:finder"],
+        ["xpath=//div[@id='root']/div/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Play')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c81db3c-3795-471c-9861-cd2c426d5a91",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-19bb58m",
+      "targets": [
+        ["css=.css-19bb58m", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "545c8c95-5180-46fb-942b-a82e180c5530",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-19bb58m",
+      "targets": [
+        ["css=.css-19bb58m", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6fe4ec46-02fb-4697-90ac-04afea205e6c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.play",
+      "targets": [
+        ["css=.play", "css:finder"],
+        ["xpath=//div[@id='root']/div/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Stop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f04be3b5-d7ad-46a7-91fd-6f92061cd57d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-19bb58m",
+      "targets": [
+        ["css=.css-19bb58m", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bacd6aa-96ef-4041-b9e3-ca86c5403de7",
+      "comment": "",
+      "command": "click",
+      "target": "id=react-select-2-option-1",
+      "targets": [
+        ["id=react-select-2-option-1", "id"],
+        ["css=#react-select-2-option-1", "css:finder"],
+        ["xpath=//div[@id='react-select-2-option-1']", "xpath:attributes"],
+        ["xpath=//div[@id='react-select-2-listbox']/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "da6cec7c-83ac-4436-b7e7-f8525ddbb072",
+      "comment": "",
+      "command": "click",
+      "target": "css=.play",
+      "targets": [
+        ["css=.play", "css:finder"],
+        ["xpath=//div[@id='root']/div/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Play')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3fdaaa0-b30a-4fb2-9710-d7ba1b5731db",
+      "comment": "",
+      "command": "click",
+      "target": "css=.play",
+      "targets": [
+        ["css=.play", "css:finder"],
+        ["xpath=//div[@id='root']/div/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Stop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa099478-f27b-4bcf-932b-752e3d6afbb8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-19bb58m",
+      "targets": [
+        ["css=.css-19bb58m", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "176a6031-c8a3-4e7b-aa88-85d31d390a54",
+      "comment": "",
+      "command": "click",
+      "target": "id=react-select-2-option-2",
+      "targets": [
+        ["id=react-select-2-option-2", "id"],
+        ["css=#react-select-2-option-2", "css:finder"],
+        ["xpath=//div[@id='react-select-2-option-2']", "xpath:attributes"],
+        ["xpath=//div[@id='react-select-2-listbox']/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e422e465-ff9b-4bd7-902d-f1152b4d6f96",
+      "comment": "",
+      "command": "click",
+      "target": "css=.play",
+      "targets": [
+        ["css=.play", "css:finder"],
+        ["xpath=//div[@id='root']/div/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Play')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3dacafe8-0891-4f91-8383-baf5216943e3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.play",
+      "targets": [
+        ["css=.play", "css:finder"],
+        ["xpath=//div[@id='root']/div/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Stop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1c97cb7-ff70-4b19-af60-5e2158b7d285",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.MuiButton-root",
+      "targets": [
+        ["css=.MuiButton-root", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/header/div/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6125cad-adb4-4cef-b609-9e2ec902ff61",
+      "comment": "",
+      "command": "click",
+      "target": "css=.MuiButton-root",
+      "targets": [
+        ["css=.MuiButton-root", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/header/div/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8a33212-b69d-4431-a7f0-5f7975b1df0a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.MuiButton-text",
+      "targets": [
+        ["css=.MuiButton-text", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/header/div/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e8771e0-d8c8-4184-83b7-bd41f3093a59",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.MuiButton-textInherit",
+      "targets": [
+        ["css=.MuiButton-textInherit", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/header/div/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "14e2e5ee-b774-4cf7-a07e-d9ca22d999e8",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.MuiGrid-root:nth-child(1) > .MuiPaper-root .MuiButtonBase-root",
+      "targets": [
+        ["css=.MuiGrid-root:nth-child(1) > .MuiPaper-root .MuiButtonBase-root", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div[2]/div/div/div/div[3]/a/button", "xpath:idRelative"],
+        ["xpath=//div[3]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d6f7470-096f-4c35-a465-d0f1d28e3642",
+      "comment": "",
+      "command": "click",
+      "target": "css=.MuiGrid-root:nth-child(1) > .MuiPaper-root .MuiButtonBase-root",
+      "targets": [
+        ["css=.MuiGrid-root:nth-child(1) > .MuiPaper-root .MuiButtonBase-root", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div[2]/div/div/div/div[3]/a/button", "xpath:idRelative"],
+        ["xpath=//div[3]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7a99f6a-eaf6-49b3-ad30-873a49649b71",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ejercicio para muñeca",
+      "targets": [
+        ["linkText=Ejercicio para muñeca", "linkText"],
+        ["css=.flex:nth-child(2) a", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div[2]/div[2]/h3/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/activity/FitnessMuñeca')]", "xpath:href"],
+        ["xpath=//div[2]/h3/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Ejercicio para muñeca')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd04ccf8-ffd1-4a8e-bcb2-80137e9e817e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.close-button",
+      "targets": [
+        ["css=.close-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'X')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c566c31f-46dd-4fce-b700-b78b5c8a966b",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(3)",
+      "targets": [
+        ["css=button:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='root']/div/header[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Restart Animation')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb46cd2a-6cd0-41cd-a2db-291d20f34a12",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(3)",
+      "targets": [
+        ["css=button:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='root']/div/header[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Restart Animation')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "60e62b65-281e-416f-9e20-e3bd706ae9a0",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(2)",
+      "targets": [
+        ["css=button:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/header[2]/button", "xpath:idRelative"],
+        ["xpath=//header[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Toggle Play/Stop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b01c8503-cf14-4997-8890-3268df704ed5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.MuiButton-root",
+      "targets": [
+        ["css=.MuiButton-root", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/header/div/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef352bc4-971e-408e-9b66-3ee4a67d3fc6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.MuiButton-root",
+      "targets": [
+        ["css=.MuiButton-root", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/header/div/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a75facff-587a-4117-945b-80e40a07cba8",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.MuiButton-text",
+      "targets": [
+        ["css=.MuiButton-text", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/header/div/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9bbffd2-b895-48b0-890e-efada61c4900",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.MuiButton-textInherit",
+      "targets": [
+        ["css=.MuiButton-textInherit", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/header/div/div/div[2]/a/button", "xpath:idRelative"],
+        ["xpath=//a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "60b24b09-2383-4bdd-83d6-313fe7ffb607",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.MuiGrid-root:nth-child(2) .MuiButtonBase-root",
+      "targets": [
+        ["css=.MuiGrid-root:nth-child(2) .MuiButtonBase-root", "css:finder"],
+        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div[2]/div/div[2]/div/div[3]/a/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd565e0a-855e-440d-a926-97ae3d082c30",
+      "comment": "",
+      "command": "click",
+      "target": "css=.MuiGrid-root:nth-child(2) .MuiButtonBase-root",
+      "targets": [
+        ["css=.MuiGrid-root:nth-child(2) .MuiButtonBase-root", "css:finder"],
+        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div[2]/div/div[2]/div/div[3]/a/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "08b1ff96-c356-467b-a7f8-bae4bde2e6a0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Game: Mindset",
+      "targets": [
+        ["linkText=Game: Mindset", "linkText"],
+        ["css=.MuiCardActions-root > a", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div[2]/div/h3/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/activity/GameMindset')]", "xpath:href"],
+        ["xpath=//h3/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Game: Mindset')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1301c552-ff84-4c9a-b259-bc58a644876e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.load_iframe_btn",
+      "targets": [
+        ["css=.load_iframe_btn", "css:finder"],
+        ["xpath=//div[@id='html_embed_9785467']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Run game')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a37b6c1a-9075-4e66-8e48-6cf2244e3443",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "964abf12-cb21-44a3-ae8a-d9b64aaa7f6e",
+      "comment": "",
+      "command": "click",
+      "target": "id=canvas",
+      "targets": [
+        ["id=canvas", "id"],
+        ["css=#canvas", "css:finder"],
+        ["xpath=//canvas[@id='canvas']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "72a22a32-ef8a-461b-bed9-9385f7849539",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=canvas",
+      "targets": [
+        ["id=canvas", "id"],
+        ["css=#canvas", "css:finder"],
+        ["xpath=//canvas[@id='canvas']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": "w"
+    }, {
+      "id": "f59885ce-a0c9-45bf-b96a-09ec08186055",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=canvas",
+      "targets": [
+        ["id=canvas", "id"],
+        ["css=#canvas", "css:finder"],
+        ["xpath=//canvas[@id='canvas']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "81d2b115-fe4c-486c-83dd-4c4bebcc3bce",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=canvas",
+      "targets": [
+        ["id=canvas", "id"],
+        ["css=#canvas", "css:finder"],
+        ["xpath=//canvas[@id='canvas']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": "s"
+    }, {
+      "id": "ce6a2812-a8ec-4c0c-a77d-5521578be7fb",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=canvas",
+      "targets": [
+        ["id=canvas", "id"],
+        ["css=#canvas", "css:finder"],
+        ["xpath=//canvas[@id='canvas']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": "d"
+    }]
+  }],
+  "suites": [{
+    "id": "d383323f-c5b2-4688-a608-3fec805294e8",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["daf63d64-dc97-4cb1-8443-0f8b685e7316"]
+  }],
+  "urls": ["https://soft-skills-plataform-1lro.vercel.app/"],
+  "plugins": []
+}

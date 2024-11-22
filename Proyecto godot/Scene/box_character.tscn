@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cy5en4vexv6ei"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/box_character.gd" id="1_srbfk"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+z_index = 1
+collision_layer = 4
+collision_mask = 335
+script = ExtResource("1_srbfk")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(0, 16)
+scale = Vector2(1, 1.00781)
+polygon = PackedVector2Array(-15, -8, 0, 0, 15, -8, 0, -16)

@@ -1,0 +1,178 @@
+{
+  "id": "b3e1c30d-6576-4755-a287-a5619b513390",
+  "version": "2.0",
+  "name": "prueba mindset",
+  "url": "https://soft-skills-plataform-1lro.vercel.app",
+  "tests": [{
+    "id": "3b18a7a2-d603-4910-b1d5-dbb4c6406bed",
+    "name": "prueba mindset",
+    "commands": [{
+      "id": "2d6281dc-0cb1-410b-83d2-fba008da772a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7aafb079-2e9c-48cd-8da4-69c767af8105",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x784",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3b29833-196c-42b5-934d-9becd7f3025d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.MuiButtonBase-root",
+      "targets": [
+        ["css=.MuiButtonBase-root", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div/form/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce56448e-57f4-4426-afb8-f50d09709029",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.MuiGrid-root:nth-child(2) .MuiButtonBase-root",
+      "targets": [
+        ["css=.MuiGrid-root:nth-child(2) .MuiButtonBase-root", "css:finder"],
+        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div[2]/div/div[2]/div/div[3]/a/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a167124-0689-4eae-a009-c025c182e413",
+      "comment": "",
+      "command": "click",
+      "target": "css=.MuiGrid-root:nth-child(2) .MuiButtonBase-root",
+      "targets": [
+        ["css=.MuiGrid-root:nth-child(2) .MuiButtonBase-root", "css:finder"],
+        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div[2]/div/div[2]/div/div[3]/a/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f0636ca-226b-49e6-a4e1-c4b3a4ee223b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Game: Mindset",
+      "targets": [
+        ["linkText=Game: Mindset", "linkText"],
+        ["css=.MuiCardActions-root > a", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div[2]/div/h3/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/activity/GameMindset')]", "xpath:href"],
+        ["xpath=//h3/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Game: Mindset')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0da9222-5b25-44d4-a34d-eb60e4b45abb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.load_iframe_btn",
+      "targets": [
+        ["css=.load_iframe_btn", "css:finder"],
+        ["xpath=//div[@id='html_embed_8556679']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Run game')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ab61734-b611-42e9-a5d6-ca3f1ded2319",
+      "comment": "",
+      "command": "selectFrame",
+      "target": "index=0",
+      "targets": [
+        ["index=0"]
+      ],
+      "value": ""
+    }, {
+      "id": "14251fbb-3b8d-46c8-882a-8076fc65aec4",
+      "comment": "",
+      "command": "click",
+      "target": "id=canvas",
+      "targets": [
+        ["id=canvas", "id"],
+        ["css=#canvas", "css:finder"],
+        ["xpath=//canvas[@id='canvas']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47da3a63-574c-4eef-b271-f499dc7ef6cd",
+      "comment": "",
+      "command": "click",
+      "target": "id=canvas",
+      "targets": [
+        ["id=canvas", "id"],
+        ["css=#canvas", "css:finder"],
+        ["xpath=//canvas[@id='canvas']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "54cbba67-4bc8-4edc-8146-b47ef8428255",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=canvas",
+      "targets": [
+        ["id=canvas", "id"],
+        ["css=#canvas", "css:finder"],
+        ["xpath=//canvas[@id='canvas']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": "w"
+    }, {
+      "id": "c00a1474-70d4-4ebb-bb36-f91ae033faaf",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=canvas",
+      "targets": [
+        ["id=canvas", "id"],
+        ["css=#canvas", "css:finder"],
+        ["xpath=//canvas[@id='canvas']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "b01e18e5-0f31-4df8-99e4-3dd0bc33723a",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=canvas",
+      "targets": [
+        ["id=canvas", "id"],
+        ["css=#canvas", "css:finder"],
+        ["xpath=//canvas[@id='canvas']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": "s"
+    }, {
+      "id": "505bd9a4-84a8-4bf3-8e1c-987b545e7003",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=canvas",
+      "targets": [
+        ["id=canvas", "id"],
+        ["css=#canvas", "css:finder"],
+        ["xpath=//canvas[@id='canvas']", "xpath:attributes"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": "d"
+    }]
+  }],
+  "suites": [{
+    "id": "291b8e58-5ca9-4b4f-b174-d2ff3201e06d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["3b18a7a2-d603-4910-b1d5-dbb4c6406bed"]
+  }],
+  "urls": ["https://soft-skills-plataform-1lro.vercel.app/"],
+  "plugins": []
+}

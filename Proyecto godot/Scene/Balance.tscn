@@ -1,0 +1,104 @@
+[gd_scene load_steps=10 format=3 uid="uid://4tbrqb71klbr"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Balance.gd" id="1_vhfr8"]
+[ext_resource type="Texture2D" uid="uid://drewm5avsxubl" path="res://Assets/Sprites/Balance.png" id="2_01y7p"]
+[ext_resource type="AudioStream" uid="uid://th2p4xcwkfwx" path="res://Assets/Sonidos/lever_chains14-41056.mp3" id="3_a08gs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qtpum"]
+
+[sub_resource type="Animation" id="Animation_kn3nk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_as76x"]
+resource_name = "animacion"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_1qpkg"]
+resource_name = "new_animation"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_4gyt5"]
+resource_name = "izquierda"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [9, 8, 7, 6, 5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ugeuq"]
+_data = {
+"RESET": SubResource("Animation_kn3nk"),
+"derecha": SubResource("Animation_as76x"),
+"estatic": SubResource("Animation_1qpkg"),
+"izquierda": SubResource("Animation_4gyt5")
+}
+
+[node name="Balance" type="Area2D"]
+collision_layer = 256
+collision_mask = 4
+script = ExtResource("1_vhfr8")
+
+[node name="left_area" type="CollisionShape2D" parent="."]
+position = Vector2(-81, 2)
+shape = SubResource("CircleShape2D_qtpum")
+
+[node name="right_area" type="CollisionShape2D" parent="."]
+position = Vector2(78, 18)
+shape = SubResource("CircleShape2D_qtpum")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(9, -30)
+texture = ExtResource("2_01y7p")
+hframes = 10
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ugeuq")
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_a08gs")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

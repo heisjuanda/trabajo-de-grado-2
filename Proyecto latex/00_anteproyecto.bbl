@@ -1,0 +1,1186 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{b}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=02442614793df87ef1a04f9077e3aee5}{%
+           family={Gaitán},
+           familyi={G\bibinitperiod},
+           given={Virginia},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{02442614793df87ef1a04f9077e3aee5}
+      \strng{fullhash}{02442614793df87ef1a04f9077e3aee5}
+      \strng{fullhashraw}{02442614793df87ef1a04f9077e3aee5}
+      \strng{bibnamehash}{02442614793df87ef1a04f9077e3aee5}
+      \strng{authorbibnamehash}{02442614793df87ef1a04f9077e3aee5}
+      \strng{authornamehash}{02442614793df87ef1a04f9077e3aee5}
+      \strng{authorfullhash}{02442614793df87ef1a04f9077e3aee5}
+      \strng{authorfullhashraw}{02442614793df87ef1a04f9077e3aee5}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Gamificación: el aprendizaje divertido}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://www.educativa.com/blog-articulos/gamificacion-el-aprendizaje-divertido/
+      \endverb
+      \verb{url}
+      \verb https://www.educativa.com/blog-articulos/gamificacion-el-aprendizaje-divertido/
+      \endverb
+    \endentry
+    \entry{c}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=77fc3ddcc8288f7460bb0aa51aa2d63d}{%
+           family={Sonmez},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{77fc3ddcc8288f7460bb0aa51aa2d63d}
+      \strng{fullhash}{77fc3ddcc8288f7460bb0aa51aa2d63d}
+      \strng{fullhashraw}{77fc3ddcc8288f7460bb0aa51aa2d63d}
+      \strng{bibnamehash}{77fc3ddcc8288f7460bb0aa51aa2d63d}
+      \strng{authorbibnamehash}{77fc3ddcc8288f7460bb0aa51aa2d63d}
+      \strng{authornamehash}{77fc3ddcc8288f7460bb0aa51aa2d63d}
+      \strng{authorfullhash}{77fc3ddcc8288f7460bb0aa51aa2d63d}
+      \strng{authorfullhashraw}{77fc3ddcc8288f7460bb0aa51aa2d63d}
+      \field{extraname}{1}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Soft Skills: The Software Developer's Life Manual.}
+      \field{year}{2014}
+    \endentry
+    \entry{d}{online}{}{}
+      \name{author}{2}{}{%
+        {{hash=687cc525a1e9783d2b38c08eda6e548f}{%
+           family={ESPINOZA\bibnamedelima Mina},
+           familyi={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Marcos\bibnamedelima Antonio},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=496b2e43aec50b681acee91640afcd86}{%
+           family={GALLEGOS\bibnamedelima Barzola},
+           familyi={G\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={Doris\bibnamedelimb del\bibnamedelima Pilar},
+           giveni={D\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{3549e186a0066eb48c5e8c6a39936ceb}
+      \strng{fullhash}{3549e186a0066eb48c5e8c6a39936ceb}
+      \strng{fullhashraw}{3549e186a0066eb48c5e8c6a39936ceb}
+      \strng{bibnamehash}{3549e186a0066eb48c5e8c6a39936ceb}
+      \strng{authorbibnamehash}{3549e186a0066eb48c5e8c6a39936ceb}
+      \strng{authornamehash}{3549e186a0066eb48c5e8c6a39936ceb}
+      \strng{authorfullhash}{3549e186a0066eb48c5e8c6a39936ceb}
+      \strng{authorfullhashraw}{3549e186a0066eb48c5e8c6a39936ceb}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Soft skills and their importance of application in the workplace: perspective of students from a private university in Ecuador Revista espacios Vol. 41}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.revistaespacios.com/a20v41n23/20412310.html
+      \endverb
+      \verb{url}
+      \verb https://www.revistaespacios.com/a20v41n23/20412310.html
+      \endverb
+    \endentry
+    \entry{q}{online}{}{}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labeltitlesource}{title}
+      \field{title}{Glasdoor recorte}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.glassdoor.com/Community/index.htm
+      \endverb
+      \verb{url}
+      \verb https://www.glassdoor.com/Community/index.htm
+      \endverb
+    \endentry
+    \entry{e}{online}{}{}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labeltitlesource}{title}
+      \field{title}{La gamificación como estrategia metodológica en el contexto educativo universitario}
+      \field{urlyear}{2016}
+      \field{year}{2016}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://redicces.org.sv/jspui/handle/10972/3182
+      \endverb
+      \verb{url}
+      \verb http://redicces.org.sv/jspui/handle/10972/3182
+      \endverb
+    \endentry
+    \entry{f}{online}{}{}
+      \name{author}{3}{}{%
+        {{hash=ee78af052909228c098bfd096e1907fe}{%
+           family={Cornellà},
+           familyi={C\bibinitperiod},
+           given={Pere},
+           giveni={P\bibinitperiod}}}%
+        {{hash=d680a12607f4308ec8e130ee3b4ba0d4}{%
+           family={Estebanell},
+           familyi={E\bibinitperiod},
+           given={Meritxell},
+           giveni={M\bibinitperiod}}}%
+        {{hash=cb3e22c9dd83b1a3741e2d9956fd1082}{%
+           family={Brusi},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{23e6a4e1a1c7a877e3abd1cdc56d9b3f}
+      \strng{fullhash}{356ca05d6802f18678d86743deca5a2b}
+      \strng{fullhashraw}{356ca05d6802f18678d86743deca5a2b}
+      \strng{bibnamehash}{356ca05d6802f18678d86743deca5a2b}
+      \strng{authorbibnamehash}{356ca05d6802f18678d86743deca5a2b}
+      \strng{authornamehash}{23e6a4e1a1c7a877e3abd1cdc56d9b3f}
+      \strng{authorfullhash}{356ca05d6802f18678d86743deca5a2b}
+      \strng{authorfullhashraw}{356ca05d6802f18678d86743deca5a2b}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Gamificación y aprendizaje basado en juegos}
+      \field{urlyear}{2020}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://raco.cat/index.php/ECT/article/view/372920
+      \endverb
+      \verb{url}
+      \verb https://raco.cat/index.php/ECT/article/view/372920
+      \endverb
+    \endentry
+    \entry{g}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=ce84c5061fb138a57166f45282184bfe}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod},
+           given={La\bibnamedelima enciclopedia\bibnamedelima libre},
+           giveni={L\bibinitperiod\bibinitdelim e\bibinitperiod\bibinitdelim l\bibinitperiod}}}%
+      }
+      \strng{namehash}{ce84c5061fb138a57166f45282184bfe}
+      \strng{fullhash}{ce84c5061fb138a57166f45282184bfe}
+      \strng{fullhashraw}{ce84c5061fb138a57166f45282184bfe}
+      \strng{bibnamehash}{ce84c5061fb138a57166f45282184bfe}
+      \strng{authorbibnamehash}{ce84c5061fb138a57166f45282184bfe}
+      \strng{authornamehash}{ce84c5061fb138a57166f45282184bfe}
+      \strng{authorfullhash}{ce84c5061fb138a57166f45282184bfe}
+      \strng{authorfullhashraw}{ce84c5061fb138a57166f45282184bfe}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Gamification}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Gamification
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Gamification
+      \endverb
+    \endentry
+    \entry{h}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=1586631065802311cd699a74a0b9dae5}{%
+           family={O.\bibnamedelimi Marrero\bibnamedelima Sánchez},
+           familyi={O\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={R.\bibnamedelimi M.\bibnamedelimi Amar\bibnamedelimb y\bibnamedelimb J.\bibnamedelimi X.\bibnamedelimi Triadú},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim y\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim X\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{1586631065802311cd699a74a0b9dae5}
+      \strng{fullhash}{1586631065802311cd699a74a0b9dae5}
+      \strng{fullhashraw}{1586631065802311cd699a74a0b9dae5}
+      \strng{bibnamehash}{1586631065802311cd699a74a0b9dae5}
+      \strng{authorbibnamehash}{1586631065802311cd699a74a0b9dae5}
+      \strng{authornamehash}{1586631065802311cd699a74a0b9dae5}
+      \strng{authorfullhash}{1586631065802311cd699a74a0b9dae5}
+      \strng{authorfullhashraw}{1586631065802311cd699a74a0b9dae5}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Habilidades blandas: necesarias para la formación integral del estudiante universitario}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://revistas.ecotec.edu.ec/index.php/ecociencia/article/view/144
+      \endverb
+      \verb{url}
+      \verb https://revistas.ecotec.edu.ec/index.php/ecociencia/article/view/144
+      \endverb
+    \endentry
+    \entry{i}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=d4b7370df2a84f7eb2afdb2f0bd602fc}{%
+           family={Betancourt},
+           familyi={B\bibinitperiod},
+           given={Alberto\bibnamedelima León},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{d4b7370df2a84f7eb2afdb2f0bd602fc}
+      \strng{fullhash}{d4b7370df2a84f7eb2afdb2f0bd602fc}
+      \strng{fullhashraw}{d4b7370df2a84f7eb2afdb2f0bd602fc}
+      \strng{bibnamehash}{d4b7370df2a84f7eb2afdb2f0bd602fc}
+      \strng{authorbibnamehash}{d4b7370df2a84f7eb2afdb2f0bd602fc}
+      \strng{authornamehash}{d4b7370df2a84f7eb2afdb2f0bd602fc}
+      \strng{authorfullhash}{d4b7370df2a84f7eb2afdb2f0bd602fc}
+      \strng{authorfullhashraw}{d4b7370df2a84f7eb2afdb2f0bd602fc}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{La metodología de sistemas y la solución de problemas sociales}
+      \field{year}{1980}
+      \verb{urlraw}
+      \verb https://www.icesi.edu.co/revistas/index.php/publicaciones_icesi/article/view/772
+      \endverb
+      \verb{url}
+      \verb https://www.icesi.edu.co/revistas/index.php/publicaciones_icesi/article/view/772
+      \endverb
+    \endentry
+    \entry{j}{online}{}{}
+      \name{author}{3}{}{%
+        {{hash=e354e144f7f81709eb59a5918e8b93c0}{%
+           family={Sergio},
+           familyi={S\bibinitperiod},
+           given={Zepeda\bibnamedelima Hernández},
+           giveni={Z\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=3d4276c127058eb65c465ed63d20ddf5}{%
+           family={Rocío},
+           familyi={R\bibinitperiod},
+           given={Abascal\bibnamedelima Mena},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=b411c1872acf50b9fa1af31a1fdbc8e5}{%
+           family={Erick},
+           familyi={E\bibinitperiod},
+           given={López\bibnamedelima Ornelas},
+           giveni={L\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{45ea1d2700cd8579a89a1e528529c5cf}
+      \strng{fullhash}{2e8da3c2384fee0b631c0cebe7a313bf}
+      \strng{fullhashraw}{2e8da3c2384fee0b631c0cebe7a313bf}
+      \strng{bibnamehash}{2e8da3c2384fee0b631c0cebe7a313bf}
+      \strng{authorbibnamehash}{2e8da3c2384fee0b631c0cebe7a313bf}
+      \strng{authornamehash}{45ea1d2700cd8579a89a1e528529c5cf}
+      \strng{authorfullhash}{2e8da3c2384fee0b631c0cebe7a313bf}
+      \strng{authorfullhashraw}{2e8da3c2384fee0b631c0cebe7a313bf}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{INTEGRACIÓN DE GAMIFICACIÓN Y APRENDIZAJE ACTIVO EN EL AULA Ra Ximhai, vol. 12, núm. 6}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://www.redalyc.org/pdf/461/46148194022.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.redalyc.org/pdf/461/46148194022.pdf
+      \endverb
+    \endentry
+    \entry{k}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=a0b83bf874530f677af195561b99c75e}{%
+           family={Concari},
+           familyi={C\bibinitperiod},
+           given={Sonia\bibnamedelima Beatriz},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{a0b83bf874530f677af195561b99c75e}
+      \strng{fullhash}{a0b83bf874530f677af195561b99c75e}
+      \strng{fullhashraw}{a0b83bf874530f677af195561b99c75e}
+      \strng{bibnamehash}{a0b83bf874530f677af195561b99c75e}
+      \strng{authorbibnamehash}{a0b83bf874530f677af195561b99c75e}
+      \strng{authornamehash}{a0b83bf874530f677af195561b99c75e}
+      \strng{authorfullhash}{a0b83bf874530f677af195561b99c75e}
+      \strng{authorfullhashraw}{a0b83bf874530f677af195561b99c75e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Tecnologías emergentes ¿cuáles usamos?}
+      \field{year}{2014}
+      \verb{urlraw}
+      \verb http://www.lajpe.org/sep14/13_LAJPE_899_Sonia_Concari.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.lajpe.org/sep14/13_LAJPE_899_Sonia_Concari.pdf
+      \endverb
+    \endentry
+    \entry{l}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=24c4d3c95c21425d7cb5f0a0095258b3}{%
+           family={Colman},
+           familyi={C\bibinitperiod},
+           given={Helen},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{24c4d3c95c21425d7cb5f0a0095258b3}
+      \strng{fullhash}{24c4d3c95c21425d7cb5f0a0095258b3}
+      \strng{fullhashraw}{24c4d3c95c21425d7cb5f0a0095258b3}
+      \strng{bibnamehash}{24c4d3c95c21425d7cb5f0a0095258b3}
+      \strng{authorbibnamehash}{24c4d3c95c21425d7cb5f0a0095258b3}
+      \strng{authornamehash}{24c4d3c95c21425d7cb5f0a0095258b3}
+      \strng{authorfullhash}{24c4d3c95c21425d7cb5f0a0095258b3}
+      \strng{authorfullhashraw}{24c4d3c95c21425d7cb5f0a0095258b3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{E-learning: Qué es y cómo funciona, beneficios del e-learning}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.ispring.es/blog/what-is-elearning
+      \endverb
+      \verb{url}
+      \verb https://www.ispring.es/blog/what-is-elearning
+      \endverb
+    \endentry
+    \entry{m}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=76b39bfc1406b4ee0e966e397f86632e}{%
+           family={Jinette\bibnamedelimb Ugalde\bibnamedelima Naranjo},
+           familyi={J\bibinitperiod\bibinitdelim U\bibinitperiod\bibinitdelim N\bibinitperiod},
+           given={Betzaida\bibnamedelimb Montero\bibnamedelima Ulate},
+           giveni={B\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim U\bibinitperiod},
+           suffix={Kattia\bibnamedelimb L.\bibnamedelimi Vasconcelos-Vásquez},
+           suffixi={K\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim V\bibinithyphendelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{76b39bfc1406b4ee0e966e397f86632e}
+      \strng{fullhash}{76b39bfc1406b4ee0e966e397f86632e}
+      \strng{fullhashraw}{76b39bfc1406b4ee0e966e397f86632e}
+      \strng{bibnamehash}{76b39bfc1406b4ee0e966e397f86632e}
+      \strng{authorbibnamehash}{76b39bfc1406b4ee0e966e397f86632e}
+      \strng{authornamehash}{76b39bfc1406b4ee0e966e397f86632e}
+      \strng{authorfullhash}{76b39bfc1406b4ee0e966e397f86632e}
+      \strng{authorfullhashraw}{76b39bfc1406b4ee0e966e397f86632e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{La gamificación favorece la competencia laboral}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://rabida.uhu.es/dspace/bitstream/handle/10272/21331/Gamificacion.pdf?sequence=2
+      \endverb
+      \verb{url}
+      \verb https://rabida.uhu.es/dspace/bitstream/handle/10272/21331/Gamificacion.pdf?sequence=2
+      \endverb
+    \endentry
+    \entry{n}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=9e971150c3468e97a1094dff94e95be6}{%
+           family={Ana\bibnamedelimb María\bibnamedelimb Ortiz\bibnamedelima Colón},
+           familyi={A\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim O\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Míriam\bibnamedelima AgredaI},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           suffix={Juan\bibnamedelima Jordán},
+           suffixi={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e971150c3468e97a1094dff94e95be6}
+      \strng{fullhash}{9e971150c3468e97a1094dff94e95be6}
+      \strng{fullhashraw}{9e971150c3468e97a1094dff94e95be6}
+      \strng{bibnamehash}{9e971150c3468e97a1094dff94e95be6}
+      \strng{authorbibnamehash}{9e971150c3468e97a1094dff94e95be6}
+      \strng{authornamehash}{9e971150c3468e97a1094dff94e95be6}
+      \strng{authorfullhash}{9e971150c3468e97a1094dff94e95be6}
+      \strng{authorfullhashraw}{9e971150c3468e97a1094dff94e95be6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Gamificación en educación: Una panorámica sobre el estado de la cuestión}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://dialnet.unirioja.es/servlet/articulo?codigo=7315128
+      \endverb
+      \verb{url}
+      \verb https://dialnet.unirioja.es/servlet/articulo?codigo=7315128
+      \endverb
+    \endentry
+    \entry{o}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=519ab87579585ec7a2824d27ee17b7c7}{%
+           family={DEPARTAMENTO\bibnamedelimb ADMINISTRATIVO\bibnamedelimb DE\bibnamedelima CIENCIA},
+           familyi={D\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={TECNOLOGÍA\bibnamedelimb E\bibnamedelimb INNOVACIÓN\bibnamedelimb -\bibnamedelima COLCIENCIAS},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim I\bibinitperiod\bibinitdelim \bibinithyphendelim \bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{519ab87579585ec7a2824d27ee17b7c7}
+      \strng{fullhash}{519ab87579585ec7a2824d27ee17b7c7}
+      \strng{fullhashraw}{519ab87579585ec7a2824d27ee17b7c7}
+      \strng{bibnamehash}{519ab87579585ec7a2824d27ee17b7c7}
+      \strng{authorbibnamehash}{519ab87579585ec7a2824d27ee17b7c7}
+      \strng{authornamehash}{519ab87579585ec7a2824d27ee17b7c7}
+      \strng{authorfullhash}{519ab87579585ec7a2824d27ee17b7c7}
+      \strng{authorfullhashraw}{519ab87579585ec7a2824d27ee17b7c7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{CONVOCATORIA CIERRE DE BRECHAS TECNOLÓGICAS}
+      \field{urlyear}{2018}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://minciencias.gov.co/sites/default/files/upload/convocatoria/anexo_1._technology_readiness_levels_-_trl.pdf
+      \endverb
+      \verb{url}
+      \verb https://minciencias.gov.co/sites/default/files/upload/convocatoria/anexo_1._technology_readiness_levels_-_trl.pdf
+      \endverb
+    \endentry
+    \entry{p}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=8de9e21d2f785fbb31cff0b1e4eb40d3}{%
+           family={Laoyan},
+           familyi={L\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{8de9e21d2f785fbb31cff0b1e4eb40d3}
+      \strng{fullhash}{8de9e21d2f785fbb31cff0b1e4eb40d3}
+      \strng{fullhashraw}{8de9e21d2f785fbb31cff0b1e4eb40d3}
+      \strng{bibnamehash}{8de9e21d2f785fbb31cff0b1e4eb40d3}
+      \strng{authorbibnamehash}{8de9e21d2f785fbb31cff0b1e4eb40d3}
+      \strng{authornamehash}{8de9e21d2f785fbb31cff0b1e4eb40d3}
+      \strng{authorfullhash}{8de9e21d2f785fbb31cff0b1e4eb40d3}
+      \strng{authorfullhashraw}{8de9e21d2f785fbb31cff0b1e4eb40d3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Scrumban: lo mejor de dos metodologías ágiles}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://asana.com/es/resources/scrumban
+      \endverb
+      \verb{url}
+      \verb https://asana.com/es/resources/scrumban
+      \endverb
+    \endentry
+    \entry{1}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=86446c8735c808f7cbf21ba108938c9b}{%
+           family={Yepes},
+           familyi={Y\bibinitperiod},
+           given={Teresita\bibnamedelima Alzate},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{86446c8735c808f7cbf21ba108938c9b}
+      \strng{fullhash}{86446c8735c808f7cbf21ba108938c9b}
+      \strng{fullhashraw}{86446c8735c808f7cbf21ba108938c9b}
+      \strng{bibnamehash}{86446c8735c808f7cbf21ba108938c9b}
+      \strng{authorbibnamehash}{86446c8735c808f7cbf21ba108938c9b}
+      \strng{authornamehash}{86446c8735c808f7cbf21ba108938c9b}
+      \strng{authorfullhash}{86446c8735c808f7cbf21ba108938c9b}
+      \strng{authorfullhashraw}{86446c8735c808f7cbf21ba108938c9b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Perspectivas en nutricion humana Escuela de Nutrición y Dietética de la Universidad de Antioquia Vol. 21, N.° 1}
+      \field{year}{2019}
+    \endentry
+    \entry{2}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=4b2fa886e48cb027497b9225b45ce2fc}{%
+           family={Sergio\bibnamedelimb Humberto\bibnamedelimb Barbosa\bibnamedelima Granados},
+           familyi={S\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={Ángela\bibnamedelimb María\bibnamedelimb Urrea\bibnamedelima Cuéllar},
+           giveni={Á\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim U\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{4b2fa886e48cb027497b9225b45ce2fc}
+      \strng{fullhash}{4b2fa886e48cb027497b9225b45ce2fc}
+      \strng{fullhashraw}{4b2fa886e48cb027497b9225b45ce2fc}
+      \strng{bibnamehash}{4b2fa886e48cb027497b9225b45ce2fc}
+      \strng{authorbibnamehash}{4b2fa886e48cb027497b9225b45ce2fc}
+      \strng{authornamehash}{4b2fa886e48cb027497b9225b45ce2fc}
+      \strng{authorfullhash}{4b2fa886e48cb027497b9225b45ce2fc}
+      \strng{authorfullhashraw}{4b2fa886e48cb027497b9225b45ce2fc}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Influencia del deporte y la actividad física en el estado de salud físico y mental}
+      \field{year}{2018}
+    \endentry
+    \entry{3}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=a13dbb2b51a0a2d8d4ca10112a7a6b0d}{%
+           family={González},
+           familyi={G\bibinitperiod},
+           given={Carina\bibnamedelimb Soledad\bibnamedelima González},
+           giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{a13dbb2b51a0a2d8d4ca10112a7a6b0d}
+      \strng{fullhash}{a13dbb2b51a0a2d8d4ca10112a7a6b0d}
+      \strng{fullhashraw}{a13dbb2b51a0a2d8d4ca10112a7a6b0d}
+      \strng{bibnamehash}{a13dbb2b51a0a2d8d4ca10112a7a6b0d}
+      \strng{authorbibnamehash}{a13dbb2b51a0a2d8d4ca10112a7a6b0d}
+      \strng{authornamehash}{a13dbb2b51a0a2d8d4ca10112a7a6b0d}
+      \strng{authorfullhash}{a13dbb2b51a0a2d8d4ca10112a7a6b0d}
+      \strng{authorfullhashraw}{a13dbb2b51a0a2d8d4ca10112a7a6b0d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Estrategias Gamificación aplicadas a la Educación y a la Salud}
+      \field{year}{2014}
+    \endentry
+    \entry{4}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=dc019bd7e8a43af7d100f057c7957a05}{%
+           family={León\bibnamedelimb Díaz\bibnamedelima Óscar},
+           familyi={L\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim Ó\bibinitperiod},
+           given={Santos\bibnamedelimb Pastor\bibnamedelimb María\bibnamedelima Luisa},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim L\bibinitperiod},
+           suffix={Martínez\bibnamedelimb Muñoz\bibnamedelimb Luis\bibnamedelima Fernando},
+           suffixi={M\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{dc019bd7e8a43af7d100f057c7957a05}
+      \strng{fullhash}{dc019bd7e8a43af7d100f057c7957a05}
+      \strng{fullhashraw}{dc019bd7e8a43af7d100f057c7957a05}
+      \strng{bibnamehash}{dc019bd7e8a43af7d100f057c7957a05}
+      \strng{authorbibnamehash}{dc019bd7e8a43af7d100f057c7957a05}
+      \strng{authornamehash}{dc019bd7e8a43af7d100f057c7957a05}
+      \strng{authorfullhash}{dc019bd7e8a43af7d100f057c7957a05}
+      \strng{authorfullhashraw}{dc019bd7e8a43af7d100f057c7957a05}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Gamificación en Educación Física}
+      \field{year}{2019}
+    \endentry
+    \entry{5}{online}{}{}
+      \name{author}{5}{}{%
+        {{hash=3f1b7f3abc5ab3adda86aac8e3115051}{%
+           family={Hernando},
+           familyi={H\bibinitperiod},
+           given={Meritxell\bibnamedelima Monguillot},
+           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=c9eb1ae317fb2eb4d63fbec028890395}{%
+           family={Arévalo},
+           familyi={A\bibinitperiod},
+           given={Carles\bibnamedelima González},
+           giveni={C\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=8e047f0b9a3e9bba327ecdbc27ad36d4}{%
+           family={Mon},
+           familyi={M\bibinitperiod},
+           given={Carles\bibnamedelima Zurita},
+           giveni={C\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+        {{hash=5c1cba05d50d97172322f8dbb20b2e9c}{%
+           family={Batet},
+           familyi={B\bibinitperiod},
+           given={Lluís\bibnamedelima Almirall},
+           giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=e17d47c065b818c6b642656be80f473d}{%
+           family={Catasús},
+           familyi={C\bibinitperiod},
+           given={Montse\bibnamedelima Guitert},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{13a08fd6e55c7d524b4c658dd6f6d58b}
+      \strng{fullhash}{837332afe9e72cc9fc1687de1a1a7f2c}
+      \strng{fullhashraw}{837332afe9e72cc9fc1687de1a1a7f2c}
+      \strng{bibnamehash}{837332afe9e72cc9fc1687de1a1a7f2c}
+      \strng{authorbibnamehash}{837332afe9e72cc9fc1687de1a1a7f2c}
+      \strng{authornamehash}{13a08fd6e55c7d524b4c658dd6f6d58b}
+      \strng{authorfullhash}{837332afe9e72cc9fc1687de1a1a7f2c}
+      \strng{authorfullhashraw}{837332afe9e72cc9fc1687de1a1a7f2c}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Play the Game: gamificación y hábitos saludables en educación física}
+      \field{year}{2015}
+    \endentry
+    \entry{6}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=0c2e016ac73b37dcff3f41caac738479}{%
+           family={Carnegie},
+           familyi={C\bibinitperiod},
+           given={Dale},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{0c2e016ac73b37dcff3f41caac738479}
+      \strng{fullhash}{0c2e016ac73b37dcff3f41caac738479}
+      \strng{fullhashraw}{0c2e016ac73b37dcff3f41caac738479}
+      \strng{bibnamehash}{0c2e016ac73b37dcff3f41caac738479}
+      \strng{authorbibnamehash}{0c2e016ac73b37dcff3f41caac738479}
+      \strng{authornamehash}{0c2e016ac73b37dcff3f41caac738479}
+      \strng{authorfullhash}{0c2e016ac73b37dcff3f41caac738479}
+      \strng{authorfullhashraw}{0c2e016ac73b37dcff3f41caac738479}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How to win friends and influence people}
+      \field{year}{2010}
+    \endentry
+    \entry{7}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=86dccc2f6a7cc3a8936497f256127b68}{%
+           family={Hill},
+           familyi={H\bibinitperiod},
+           given={Napoleon},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{86dccc2f6a7cc3a8936497f256127b68}
+      \strng{fullhash}{86dccc2f6a7cc3a8936497f256127b68}
+      \strng{fullhashraw}{86dccc2f6a7cc3a8936497f256127b68}
+      \strng{bibnamehash}{86dccc2f6a7cc3a8936497f256127b68}
+      \strng{authorbibnamehash}{86dccc2f6a7cc3a8936497f256127b68}
+      \strng{authornamehash}{86dccc2f6a7cc3a8936497f256127b68}
+      \strng{authorfullhash}{86dccc2f6a7cc3a8936497f256127b68}
+      \strng{authorfullhashraw}{86dccc2f6a7cc3a8936497f256127b68}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Think and Grow Rich}
+      \field{year}{2007}
+    \endentry
+    \entry{8}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=14af6353275d7e9fdfad858b60e4d7bc}{%
+           family={Maltz},
+           familyi={M\bibinitperiod},
+           given={Maxwell},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{14af6353275d7e9fdfad858b60e4d7bc}
+      \strng{fullhash}{14af6353275d7e9fdfad858b60e4d7bc}
+      \strng{fullhashraw}{14af6353275d7e9fdfad858b60e4d7bc}
+      \strng{bibnamehash}{14af6353275d7e9fdfad858b60e4d7bc}
+      \strng{authorbibnamehash}{14af6353275d7e9fdfad858b60e4d7bc}
+      \strng{authornamehash}{14af6353275d7e9fdfad858b60e4d7bc}
+      \strng{authorfullhash}{14af6353275d7e9fdfad858b60e4d7bc}
+      \strng{authorfullhashraw}{14af6353275d7e9fdfad858b60e4d7bc}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Psycho-Cybernetics}
+      \field{year}{1960 and 2002}
+    \endentry
+    \entry{9}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=4ec86d9f386adb1695a8b828c92e6ace}{%
+           family={Rand},
+           familyi={R\bibinitperiod},
+           given={Ayn},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4ec86d9f386adb1695a8b828c92e6ace}
+      \strng{fullhash}{4ec86d9f386adb1695a8b828c92e6ace}
+      \strng{fullhashraw}{4ec86d9f386adb1695a8b828c92e6ace}
+      \strng{bibnamehash}{4ec86d9f386adb1695a8b828c92e6ace}
+      \strng{authorbibnamehash}{4ec86d9f386adb1695a8b828c92e6ace}
+      \strng{authornamehash}{4ec86d9f386adb1695a8b828c92e6ace}
+      \strng{authorfullhash}{4ec86d9f386adb1695a8b828c92e6ace}
+      \strng{authorfullhashraw}{4ec86d9f386adb1695a8b828c92e6ace}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Atlas Shrugged}
+      \field{year}{1957}
+    \endentry
+    \entry{10}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=d80986deb500e8e6dc04ed7f664c5579}{%
+           family={Reverter\bibnamedelimb Masià\bibnamedelima Joaquín},
+           familyi={R\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim J\bibinitperiod},
+           given={Barbany\bibnamedelimb Cairó\bibnamedelimb Joan\bibnamedelima Ramon},
+           giveni={B\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{d80986deb500e8e6dc04ed7f664c5579}
+      \strng{fullhash}{d80986deb500e8e6dc04ed7f664c5579}
+      \strng{fullhashraw}{d80986deb500e8e6dc04ed7f664c5579}
+      \strng{bibnamehash}{d80986deb500e8e6dc04ed7f664c5579}
+      \strng{authorbibnamehash}{d80986deb500e8e6dc04ed7f664c5579}
+      \strng{authornamehash}{d80986deb500e8e6dc04ed7f664c5579}
+      \strng{authorfullhash}{d80986deb500e8e6dc04ed7f664c5579}
+      \strng{authorfullhashraw}{d80986deb500e8e6dc04ed7f664c5579}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Del gimnasio al ocio-salud}
+      \field{year}{2007}
+    \endentry
+    \entry{11}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=c7ec3edf9faccf97d48150bb444d70a0}{%
+           family={Franco},
+           familyi={F\bibinitperiod},
+           given={Paola\bibnamedelimb Andrea\bibnamedelima Lenis},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{c7ec3edf9faccf97d48150bb444d70a0}
+      \strng{fullhash}{c7ec3edf9faccf97d48150bb444d70a0}
+      \strng{fullhashraw}{c7ec3edf9faccf97d48150bb444d70a0}
+      \strng{bibnamehash}{c7ec3edf9faccf97d48150bb444d70a0}
+      \strng{authorbibnamehash}{c7ec3edf9faccf97d48150bb444d70a0}
+      \strng{authornamehash}{c7ec3edf9faccf97d48150bb444d70a0}
+      \strng{authorfullhash}{c7ec3edf9faccf97d48150bb444d70a0}
+      \strng{authorfullhashraw}{c7ec3edf9faccf97d48150bb444d70a0}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Desarrollo de Prototipo de sistema de recomendación para rutina de ejercicio cardiovascular}
+      \field{year}{2021}
+    \endentry
+    \entry{12}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=839f50fc4485f3de375cfcbab25258ba}{%
+           family={Marlon\bibnamedelimb Morales\bibnamedelima Cobo},
+           familyi={M\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Jhoan\bibnamedelimb Manuel\bibnamedelimb Vasquez\bibnamedelima Lenis},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{839f50fc4485f3de375cfcbab25258ba}
+      \strng{fullhash}{839f50fc4485f3de375cfcbab25258ba}
+      \strng{fullhashraw}{839f50fc4485f3de375cfcbab25258ba}
+      \strng{bibnamehash}{839f50fc4485f3de375cfcbab25258ba}
+      \strng{authorbibnamehash}{839f50fc4485f3de375cfcbab25258ba}
+      \strng{authornamehash}{839f50fc4485f3de375cfcbab25258ba}
+      \strng{authorfullhash}{839f50fc4485f3de375cfcbab25258ba}
+      \strng{authorfullhashraw}{839f50fc4485f3de375cfcbab25258ba}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Prototipo de sistema de recomendación para el apoyo a futbolistas amateur en el desarrollo de su entrenamiento deportivo de manera individual}
+      \field{year}{2021}
+    \endentry
+    \entry{13}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=de32a1f1c66a956ae1dedc83c8d922e4}{%
+           family={Estiven\bibnamedelimb Tapasco\bibnamedelima Ramirez},
+           familyi={E\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Nicolay\bibnamedelimb Velez\bibnamedelima Solarte},
+           giveni={N\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{de32a1f1c66a956ae1dedc83c8d922e4}
+      \strng{fullhash}{de32a1f1c66a956ae1dedc83c8d922e4}
+      \strng{fullhashraw}{de32a1f1c66a956ae1dedc83c8d922e4}
+      \strng{bibnamehash}{de32a1f1c66a956ae1dedc83c8d922e4}
+      \strng{authorbibnamehash}{de32a1f1c66a956ae1dedc83c8d922e4}
+      \strng{authornamehash}{de32a1f1c66a956ae1dedc83c8d922e4}
+      \strng{authorfullhash}{de32a1f1c66a956ae1dedc83c8d922e4}
+      \strng{authorfullhashraw}{de32a1f1c66a956ae1dedc83c8d922e4}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Desarrollo de prototipo de aplicación móvil para entrenamientos fisicos}
+      \field{year}{2022}
+    \endentry
+    \entry{14}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=d859ef8608382df16f1671c35d7dd289}{%
+           family={Escritor\bibnamedelimb original:Marco\bibnamedelima aurelio},
+           familyi={E\bibinitperiod\bibinitdelim o\bibinitperiod\bibinitdelim a\bibinitperiod},
+           given={Editor:\bibnamedelimb Sánchez\bibnamedelima Pacheco},
+           giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim P\bibinitperiod},
+           suffix={Asesor\bibnamedelimb Griego:Carlos\bibnamedelimb Garcia\bibnamedelima Gual},
+           suffixi={A\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{d859ef8608382df16f1671c35d7dd289}
+      \strng{fullhash}{d859ef8608382df16f1671c35d7dd289}
+      \strng{fullhashraw}{d859ef8608382df16f1671c35d7dd289}
+      \strng{bibnamehash}{d859ef8608382df16f1671c35d7dd289}
+      \strng{authorbibnamehash}{d859ef8608382df16f1671c35d7dd289}
+      \strng{authornamehash}{d859ef8608382df16f1671c35d7dd289}
+      \strng{authorfullhash}{d859ef8608382df16f1671c35d7dd289}
+      \strng{authorfullhashraw}{d859ef8608382df16f1671c35d7dd289}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Meditaciones de marco aurelio}
+      \field{year}{1977}
+    \endentry
+    \entry{15}{online}{}{}
+      \name{author}{3}{}{%
+        {{hash=a11b38cfc0e472c827123de69770745d}{%
+           family={Parra},
+           familyi={P\bibinitperiod},
+           given={Fernando\bibnamedelima Esteban},
+           giveni={F\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=7f8ccea7c06cc165d7e8878ba18ffa7c}{%
+           family={Parra},
+           familyi={P\bibinitperiod},
+           given={Luis\bibnamedelima Horacio},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=980ff1c20ac82d54355715aaaff95d1d}{%
+           family={Bille},
+           familyi={B\bibinitperiod},
+           given={Paola\bibnamedelimb Valeria\bibnamedelimb Tisiottiand\bibnamedelimb Dr.\bibnamedelimi Jose\bibnamedelimb Mateo\bibnamedelima Wille},
+           giveni={P\bibinitperiod\bibinitdelim V\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{3a8cac6b1641e3291f06613dfbb787e1}
+      \strng{fullhash}{b3c2792d37c50fb929700aad98933a83}
+      \strng{fullhashraw}{b3c2792d37c50fb929700aad98933a83}
+      \strng{bibnamehash}{b3c2792d37c50fb929700aad98933a83}
+      \strng{authorbibnamehash}{b3c2792d37c50fb929700aad98933a83}
+      \strng{authornamehash}{3a8cac6b1641e3291f06613dfbb787e1}
+      \strng{authorfullhash}{b3c2792d37c50fb929700aad98933a83}
+      \strng{authorfullhashraw}{b3c2792d37c50fb929700aad98933a83}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sindrome del tunel carpiano}
+      \field{year}{2007}
+    \endentry
+    \entry{16}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=0f71bad8dfd70f8f212fdcd8b97e7bd1}{%
+           family={Rafael\bibnamedelimb Gaia\bibnamedelimb Zurrido\bibnamedelima Saiz},
+           familyi={R\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim Z\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Juan\bibnamedelimb Polanco\bibnamedelima Torrico},
+           giveni={J\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{0f71bad8dfd70f8f212fdcd8b97e7bd1}
+      \strng{fullhash}{0f71bad8dfd70f8f212fdcd8b97e7bd1}
+      \strng{fullhashraw}{0f71bad8dfd70f8f212fdcd8b97e7bd1}
+      \strng{bibnamehash}{0f71bad8dfd70f8f212fdcd8b97e7bd1}
+      \strng{authorbibnamehash}{0f71bad8dfd70f8f212fdcd8b97e7bd1}
+      \strng{authornamehash}{0f71bad8dfd70f8f212fdcd8b97e7bd1}
+      \strng{authorfullhash}{0f71bad8dfd70f8f212fdcd8b97e7bd1}
+      \strng{authorfullhashraw}{0f71bad8dfd70f8f212fdcd8b97e7bd1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Terapia manual en el síndrome del túnel carpiano.}
+      \field{year}{2017}
+    \endentry
+    \entry{17}{online}{}{}
+      \name{author}{5}{}{%
+        {{hash=bce7bce9a07c540738b2d01042150989}{%
+           family={F.Araya-Quintanilla},
+           familyi={F\bibinithyphendelim Q\bibinitperiod}}}%
+        {{hash=1b3743b3e1533d3e38a8bfc050f46ed3}{%
+           family={N.Polanco-Cornejo},
+           familyi={N\bibinithyphendelim C\bibinitperiod}}}%
+        {{hash=b680c0b65fb9b564c95e5dac12d606e4}{%
+           family={A.Cassis-Mahaluf},
+           familyi={A\bibinithyphendelim M\bibinitperiod}}}%
+        {{hash=348afafd880c3ac1301bcddbcd68b31e}{%
+           family={V.Ramírez-Smith},
+           familyi={V\bibinithyphendelim S\bibinitperiod}}}%
+        {{hash=3fff10b795dde4efc517c575c95a7be8}{%
+           family={H.Gutiérrez-Espinoza},
+           familyi={H\bibinithyphendelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{1abb4353635180ef13eb312dc348b9b6}
+      \strng{fullhash}{0789b322c7881fbed7aef1b0261531c5}
+      \strng{fullhashraw}{0789b322c7881fbed7aef1b0261531c5}
+      \strng{bibnamehash}{0789b322c7881fbed7aef1b0261531c5}
+      \strng{authorbibnamehash}{0789b322c7881fbed7aef1b0261531c5}
+      \strng{authornamehash}{1abb4353635180ef13eb312dc348b9b6}
+      \strng{authorfullhash}{0789b322c7881fbed7aef1b0261531c5}
+      \strng{authorfullhashraw}{0789b322c7881fbed7aef1b0261531c5}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Efectividad de la movilización neurodinámica en el dolor y funcionalidad en sujetos con síndrome del túnel carpiano: revisión sistemática}
+      \field{year}{2018}
+    \endentry
+    \entry{18}{online}{}{}
+      \name{author}{6}{}{%
+        {{hash=a3fba743c040ed8bf85e3d2845da2763}{%
+           family={Lozano-Sánchez},
+           familyi={L\bibinithyphendelim S\bibinitperiod},
+           given={Antonio\bibnamedelima Miguel},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=349eae9531fc1e49ce2180f484e3b2c6}{%
+           family={Zurita-Ortega},
+           familyi={Z\bibinithyphendelim O\bibinitperiod},
+           given={Félix},
+           giveni={F\bibinitperiod}}}%
+        {{hash=4ae2129c40c01779ef9c6f7f1b406d93}{%
+           family={Ubago-Jiménez},
+           familyi={U\bibinithyphendelim J\bibinitperiod},
+           given={José\bibnamedelima Luis},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=74f7e42f9f6083e5be33ac6b17bc430a}{%
+           family={Puertas-Molero},
+           familyi={P\bibinithyphendelim M\bibinitperiod},
+           given={Pilar},
+           giveni={P\bibinitperiod}}}%
+        {{hash=92b89d06c7a9eb903e6c76c3a1a48ee4}{%
+           family={Ramírez-Granizo},
+           familyi={R\bibinithyphendelim G\bibinitperiod},
+           given={Irwin},
+           giveni={I\bibinitperiod}}}%
+        {{hash=75d498aed95d772426d3f7e667555641}{%
+           family={Núñez-Quiroga},
+           familyi={N\bibinithyphendelim Q\bibinitperiod},
+           given={Jose\bibnamedelima Iván},
+           giveni={J\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{1ca924f7bb61a9ac3a9c24dec0cc422c}
+      \strng{fullhash}{f9edb3b0ba806df9ccb13536e43019bc}
+      \strng{fullhashraw}{f9edb3b0ba806df9ccb13536e43019bc}
+      \strng{bibnamehash}{f9edb3b0ba806df9ccb13536e43019bc}
+      \strng{authorbibnamehash}{f9edb3b0ba806df9ccb13536e43019bc}
+      \strng{authornamehash}{1ca924f7bb61a9ac3a9c24dec0cc422c}
+      \strng{authorfullhash}{f9edb3b0ba806df9ccb13536e43019bc}
+      \strng{authorfullhashraw}{f9edb3b0ba806df9ccb13536e43019bc}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Videojuegos, práctica de actividad física, obesidad y hábitos sedentarios en escolares de entre 10 y 12 años de la provincia de Granada}
+      \field{year}{2019}
+    \endentry
+    \entry{19}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=5b1a9ab46a91a8480abd712ad50032f3}{%
+           family={Reyes},
+           familyi={R\bibinitperiod},
+           given={Nancy},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b1a9ab46a91a8480abd712ad50032f3}
+      \strng{fullhash}{5b1a9ab46a91a8480abd712ad50032f3}
+      \strng{fullhashraw}{5b1a9ab46a91a8480abd712ad50032f3}
+      \strng{bibnamehash}{5b1a9ab46a91a8480abd712ad50032f3}
+      \strng{authorbibnamehash}{5b1a9ab46a91a8480abd712ad50032f3}
+      \strng{authornamehash}{5b1a9ab46a91a8480abd712ad50032f3}
+      \strng{authorfullhash}{5b1a9ab46a91a8480abd712ad50032f3}
+      \strng{authorfullhashraw}{5b1a9ab46a91a8480abd712ad50032f3}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Motivación del estudiante y los entornos virtuales de aprendizaje (Educación a distancia y ruralidad)}
+      \field{year}{2011}
+    \endentry
+    \entry{20}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=5cd4c114e08e23305a71bf32e9a43af4}{%
+           family={Jose\bibnamedelimb Luis\bibnamedelimb Eguia\bibnamedelima (Editores)},
+           familyi={J\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim E\bibinitperiod\bibinitdelim (\bibinitperiod},
+           given={Ruth\bibnamedelimb S.\bibnamedelimi Contreras\bibnamedelima Espinosa},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim E\bibinitperiod},
+           prefix={y},
+           prefixi={y\bibinitperiod}}}%
+      }
+      \strng{namehash}{5cd4c114e08e23305a71bf32e9a43af4}
+      \strng{fullhash}{5cd4c114e08e23305a71bf32e9a43af4}
+      \strng{fullhashraw}{5cd4c114e08e23305a71bf32e9a43af4}
+      \strng{bibnamehash}{5cd4c114e08e23305a71bf32e9a43af4}
+      \strng{authorbibnamehash}{5cd4c114e08e23305a71bf32e9a43af4}
+      \strng{authornamehash}{5cd4c114e08e23305a71bf32e9a43af4}
+      \strng{authorfullhash}{5cd4c114e08e23305a71bf32e9a43af4}
+      \strng{authorfullhashraw}{5cd4c114e08e23305a71bf32e9a43af4}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Experiencias de gamificación en aulas}
+      \field{year}{2017}
+    \endentry
+    \entry{21}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=75236e310e4601101f7d0cc2a05661f5}{%
+           family={Paucar},
+           familyi={P\bibinitperiod},
+           given={Sandra\bibnamedelimb Lucía\bibnamedelima Simba},
+           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{75236e310e4601101f7d0cc2a05661f5}
+      \strng{fullhash}{75236e310e4601101f7d0cc2a05661f5}
+      \strng{fullhashraw}{75236e310e4601101f7d0cc2a05661f5}
+      \strng{bibnamehash}{75236e310e4601101f7d0cc2a05661f5}
+      \strng{authorbibnamehash}{75236e310e4601101f7d0cc2a05661f5}
+      \strng{authornamehash}{75236e310e4601101f7d0cc2a05661f5}
+      \strng{authorfullhash}{75236e310e4601101f7d0cc2a05661f5}
+      \strng{authorfullhashraw}{75236e310e4601101f7d0cc2a05661f5}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Gamificación Como Estrategia De Motivación En La Plataforma Virtual De La Educación Superior Presencial}
+      \field{year}{2017}
+    \endentry
+    \entry{22}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=02050d804a91d953c347216cbf5c063f}{%
+           family={Huaman\bibnamedelima Tupa},
+           familyi={H\bibinitperiod\bibinitdelim T\bibinitperiod},
+           given={Hugo\bibnamedelima Rodidardo},
+           giveni={H\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{02050d804a91d953c347216cbf5c063f}
+      \strng{fullhash}{02050d804a91d953c347216cbf5c063f}
+      \strng{fullhashraw}{02050d804a91d953c347216cbf5c063f}
+      \strng{bibnamehash}{02050d804a91d953c347216cbf5c063f}
+      \strng{authorbibnamehash}{02050d804a91d953c347216cbf5c063f}
+      \strng{authornamehash}{02050d804a91d953c347216cbf5c063f}
+      \strng{authorfullhash}{02050d804a91d953c347216cbf5c063f}
+      \strng{authorfullhashraw}{02050d804a91d953c347216cbf5c063f}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{La plataforma kahoot influye en la motivación durante la evaluación en los estudiantes de cuarto grado de primaria de la institución educativa nueva juventud de santa rita de siguas – Arequipa, 2020.}
+      \field{year}{2021}
+    \endentry
+    \entry{23}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=60fe4ce368c384510c892a644b8fd1e8}{%
+           family={Guadalupe\bibnamedelimb Noriega\bibnamedelima Aguilar},
+           familyi={G\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim A\bibinitperiod},
+           given={Giséle\bibnamedelimb Angulo\bibnamedelima Noriega},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim N\bibinitperiod},
+           suffix={Braulio\bibnamedelimb Angulo\bibnamedelima Arjona},
+           suffixi={B\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{60fe4ce368c384510c892a644b8fd1e8}
+      \strng{fullhash}{60fe4ce368c384510c892a644b8fd1e8}
+      \strng{fullhashraw}{60fe4ce368c384510c892a644b8fd1e8}
+      \strng{bibnamehash}{60fe4ce368c384510c892a644b8fd1e8}
+      \strng{authorbibnamehash}{60fe4ce368c384510c892a644b8fd1e8}
+      \strng{authornamehash}{60fe4ce368c384510c892a644b8fd1e8}
+      \strng{authorfullhash}{60fe4ce368c384510c892a644b8fd1e8}
+      \strng{authorfullhashraw}{60fe4ce368c384510c892a644b8fd1e8}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{La resiliencia en la educación, la escuela y la vida}
+      \field{year}{2015}
+    \endentry
+    \entry{24}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=d1359e8f43f353530be4010157e75444}{%
+           family={Angela\bibnamedelima Asensio-Martínez},
+           familyi={A\bibinitperiod\bibinitdelim A\bibinithyphendelim M\bibinitperiod},
+           given={Javier\bibnamedelima García-Campayo},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinithyphendelim C\bibinitperiod},
+           suffix={Rosa\bibnamedelima Magallón-Botaya},
+           suffixi={R\bibinitperiod\bibinitdelim M\bibinithyphendelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{d1359e8f43f353530be4010157e75444}
+      \strng{fullhash}{d1359e8f43f353530be4010157e75444}
+      \strng{fullhashraw}{d1359e8f43f353530be4010157e75444}
+      \strng{bibnamehash}{d1359e8f43f353530be4010157e75444}
+      \strng{authorbibnamehash}{d1359e8f43f353530be4010157e75444}
+      \strng{authornamehash}{d1359e8f43f353530be4010157e75444}
+      \strng{authorfullhash}{d1359e8f43f353530be4010157e75444}
+      \strng{authorfullhashraw}{d1359e8f43f353530be4010157e75444}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Resiliencia: Impacto Positivo En La Salud Física Y Mental}
+      \field{year}{2017}
+    \endentry
+    \entry{25}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=939b82b5604f00681048d6737fb71db8}{%
+           family={Debord},
+           familyi={D\bibinitperiod},
+           given={Guy},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{939b82b5604f00681048d6737fb71db8}
+      \strng{fullhash}{939b82b5604f00681048d6737fb71db8}
+      \strng{fullhashraw}{939b82b5604f00681048d6737fb71db8}
+      \strng{bibnamehash}{939b82b5604f00681048d6737fb71db8}
+      \strng{authorbibnamehash}{939b82b5604f00681048d6737fb71db8}
+      \strng{authornamehash}{939b82b5604f00681048d6737fb71db8}
+      \strng{authorfullhash}{939b82b5604f00681048d6737fb71db8}
+      \strng{authorfullhashraw}{939b82b5604f00681048d6737fb71db8}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{La Sociedad del Espectáculo}
+      \field{year}{1967}
+    \endentry
+    \entry{26}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=a5f5c7b0d315359b177316d3922dfe24}{%
+           family={Sonmez},
+           familyi={S\bibinitperiod},
+           given={JZ},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{a5f5c7b0d315359b177316d3922dfe24}
+      \strng{fullhash}{a5f5c7b0d315359b177316d3922dfe24}
+      \strng{fullhashraw}{a5f5c7b0d315359b177316d3922dfe24}
+      \strng{bibnamehash}{a5f5c7b0d315359b177316d3922dfe24}
+      \strng{authorbibnamehash}{a5f5c7b0d315359b177316d3922dfe24}
+      \strng{authornamehash}{a5f5c7b0d315359b177316d3922dfe24}
+      \strng{authorfullhash}{a5f5c7b0d315359b177316d3922dfe24}
+      \strng{authorfullhashraw}{a5f5c7b0d315359b177316d3922dfe24}
+      \field{extraname}{2}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Soft Skills: The software developer's life manual}
+      \field{year}{2015}
+    \endentry
+    \entry{14_1}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=34919e7d11a0714a193c9c830ac70c8b}{%
+           family={Marchal},
+           familyi={M\bibinitperiod},
+           given={Virginia\bibnamedelima Rivas},
+           giveni={V\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{34919e7d11a0714a193c9c830ac70c8b}
+      \strng{fullhash}{34919e7d11a0714a193c9c830ac70c8b}
+      \strng{fullhashraw}{34919e7d11a0714a193c9c830ac70c8b}
+      \strng{bibnamehash}{34919e7d11a0714a193c9c830ac70c8b}
+      \strng{authorbibnamehash}{34919e7d11a0714a193c9c830ac70c8b}
+      \strng{authornamehash}{34919e7d11a0714a193c9c830ac70c8b}
+      \strng{authorfullhash}{34919e7d11a0714a193c9c830ac70c8b}
+      \strng{authorfullhashraw}{34919e7d11a0714a193c9c830ac70c8b}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{SÍNDROME DEL TÚNEL CARPIANO PROTOCOLO DE TRATAMIENTO CONSERVADOR}
+      \field{year}{2023}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

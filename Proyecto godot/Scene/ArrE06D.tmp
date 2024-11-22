@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp0bpp2m04tvn"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Arrow_impulse.gd" id="1_lq0dv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khvoo"]
+
+[node name="Area2D" type="Area2D" groups=["impulse_areas"]]
+collision_layer = 128
+collision_mask = 2
+script = ExtResource("1_lq0dv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 0.755267
+shape = SubResource("RectangleShape2D_khvoo")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://op0oaeo6jk6j"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/portalScript.gd" id="1_ljsx5"]
+[ext_resource type="Texture2D" uid="uid://sqeroovwbvsw" path="res://Assets/Sprites/Tps.png" id="2_wn14g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6vcki"]
+radius = 18.0
+
+[node name="Portal" type="Area2D"]
+z_index = 1
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("1_ljsx5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+shape = SubResource("CircleShape2D_6vcki")
+
+[node name="GenericEstructure1-1-onGrass" type="Sprite2D" parent="."]
+position = Vector2(3, -36)
+scale = Vector2(0.665, 0.665)
+texture = ExtResource("2_wn14g")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

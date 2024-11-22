@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://l1hca8iurvfx"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Detector.gd" id="1_2l2dr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hpqta"]
+
+[node name="Detector" type="Area2D" groups=["Detectors"]]
+z_index = 2
+collision_layer = 64
+collision_mask = 4
+script = ExtResource("1_2l2dr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_hpqta")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

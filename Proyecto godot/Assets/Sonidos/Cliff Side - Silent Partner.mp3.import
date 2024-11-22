@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7mb87q83h2os"
+path="res://.godot/imported/Cliff Side - Silent Partner.mp3-c404f512d655fbb1129a3fc7da46d126.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sonidos/Cliff Side - Silent Partner.mp3"
+dest_files=["res://.godot/imported/Cliff Side - Silent Partner.mp3-c404f512d655fbb1129a3fc7da46d126.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

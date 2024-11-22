@@ -1,0 +1,16 @@
+[1] Config.pm:308> INFO - This is Biber 2.20
+[3] Config.pm:311> INFO - Logfile is '00_anteproyecto.blg'
+[317] biber-MSWIN64:340> INFO - === 
+[395] Biber.pm:420> INFO - Reading '00_anteproyecto.bcf'
+[792] Biber.pm:994> INFO - Found 43 citekeys in bib section 0
+[856] Biber.pm:4463> INFO - Processing section 0
+[898] Biber.pm:4654> INFO - Looking for bibtex file 'Bibliografia.bib' for section 0
+[1034] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1173] bibtex.pm:1519> INFO - Found BibTeX data source 'Bibliografia.bib'
+[1870] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1870] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1871] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[1994] bbl.pm:676> INFO - Writing '00_anteproyecto.bbl' with encoding 'UTF-8'
+[2055] bbl.pm:779> INFO - Output to 00_anteproyecto.bbl
+[2056] Biber.pm:131> WARN - legacy year field '1960 and 2002' in entry '8' is not an integer - this will probably not sort properly.
+[2057] Biber.pm:133> INFO - WARNINGS: 1

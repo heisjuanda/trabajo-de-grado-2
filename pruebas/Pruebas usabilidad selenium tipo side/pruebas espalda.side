@@ -1,0 +1,274 @@
+{
+  "id": "25f4b1a0-3b1e-4aaf-8ea5-b348203c4a79",
+  "version": "2.0",
+  "name": "softskills",
+  "url": "https://soft-skills-plataform-1lro.vercel.app",
+  "tests": [{
+    "id": "7359d7f0-4a8e-4d76-a425-d2bc56633b49",
+    "name": "Prueba  espalda",
+    "commands": [{
+      "id": "e6df9d4d-748d-477d-ae76-9cbe8edc1c6d",
+      "comment": "",
+      "command": "open",
+      "target": "/dashboard",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "500f05f6-cc73-45f0-9392-dc9990873101",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x784",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78fb16e4-6e13-4f24-808b-cc2a59e581a1",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.MuiGrid-root:nth-child(1) > .MuiPaper-root .MuiButtonBase-root",
+      "targets": [
+        ["css=.MuiGrid-root:nth-child(1) > .MuiPaper-root .MuiButtonBase-root", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div[2]/div/div/div/div[3]/a/button", "xpath:idRelative"],
+        ["xpath=//div[3]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5665fea8-7052-4dd5-832c-df92057c09e3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.MuiGrid-root:nth-child(1) > .MuiPaper-root .MuiButtonBase-root",
+      "targets": [
+        ["css=.MuiGrid-root:nth-child(1) > .MuiPaper-root .MuiButtonBase-root", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='root']/main/div[2]/div/div/div/div[3]/a/button", "xpath:idRelative"],
+        ["xpath=//div[3]/a/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "85be3674-4531-4232-90ed-31d0cfac4405",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ejercicio para espalda",
+      "targets": [
+        ["linkText=Ejercicio para espalda", "linkText"],
+        ["css=.flex:nth-child(1) a", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div[2]/div/h3/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/activity/FitnessEspalda')]", "xpath:href"],
+        ["xpath=//h3/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Ejercicio para espalda')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f06cea5f-dbc8-46ef-82d2-fc272d1ec573",
+      "comment": "",
+      "command": "click",
+      "target": "css=.close-button",
+      "targets": [
+        ["css=.close-button", "css:finder"],
+        ["xpath=//div[@id='root']/div/div[4]/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'X')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c575f51-70e4-48d2-a49e-30b054bc0f77",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-hlgwow",
+      "targets": [
+        ["css=.css-hlgwow", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77c5b04c-1f4d-4ebe-bfe8-445e1636169b",
+      "comment": "",
+      "command": "click",
+      "target": "id=react-select-2-option-0",
+      "targets": [
+        ["id=react-select-2-option-0", "id"],
+        ["css=#react-select-2-option-0", "css:finder"],
+        ["xpath=//div[@id='react-select-2-option-0']", "xpath:attributes"],
+        ["xpath=//div[@id='react-select-2-listbox']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3dac3686-8d1c-47f2-811e-75fe86d3db46",
+      "comment": "",
+      "command": "click",
+      "target": "css=.play",
+      "targets": [
+        ["css=.play", "css:finder"],
+        ["xpath=//div[@id='root']/div/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Play')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fab7d62e-0dac-4e83-af6e-d210b33f2b32",
+      "comment": "",
+      "command": "click",
+      "target": "css=.play",
+      "targets": [
+        ["css=.play", "css:finder"],
+        ["xpath=//div[@id='root']/div/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Stop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf08a40a-4782-43ef-96e9-4d853598f7cb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-19bb58m",
+      "targets": [
+        ["css=.css-19bb58m", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8e2688a-e987-405f-b637-caafd5a36e03",
+      "comment": "",
+      "command": "click",
+      "target": "id=react-select-2-option-1",
+      "targets": [
+        ["id=react-select-2-option-1", "id"],
+        ["css=#react-select-2-option-1", "css:finder"],
+        ["xpath=//div[@id='react-select-2-option-1']", "xpath:attributes"],
+        ["xpath=//div[@id='react-select-2-listbox']/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2daa225-f2b5-4e88-b4ee-37f87cdaa41b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hidden-scroll",
+      "targets": [
+        ["css=.hidden-scroll", "css:finder"],
+        ["xpath=//div[@id='root']/div", "xpath:idRelative"],
+        ["xpath=//div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c21651df-128c-47bd-b0d6-d4f1f2af63b0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.play",
+      "targets": [
+        ["css=.play", "css:finder"],
+        ["xpath=//div[@id='root']/div/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Play')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "19278f12-e023-4646-aa22-ebe590b809ac",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-19bb58m",
+      "targets": [
+        ["css=.css-19bb58m", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c597fdcc-51fe-41d8-8bf6-a59512e69abf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-19bb58m",
+      "targets": [
+        ["css=.css-19bb58m", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "be73fc43-ff49-4889-b801-57a45869d282",
+      "comment": "",
+      "command": "click",
+      "target": "css=.play",
+      "targets": [
+        ["css=.play", "css:finder"],
+        ["xpath=//div[@id='root']/div/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Stop')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa00dc02-950a-42d8-a55d-84dd548d9a06",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-19bb58m",
+      "targets": [
+        ["css=.css-19bb58m", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9def0678-3d94-4475-8e2e-977652b7cee7",
+      "comment": "",
+      "command": "click",
+      "target": "id=react-select-2-option-2",
+      "targets": [
+        ["id=react-select-2-option-2", "id"],
+        ["css=#react-select-2-option-2", "css:finder"],
+        ["xpath=//div[@id='react-select-2-option-2']", "xpath:attributes"],
+        ["xpath=//div[@id='react-select-2-listbox']/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34b5a09e-f02f-4689-b74a-984552862293",
+      "comment": "",
+      "command": "click",
+      "target": "css=.play",
+      "targets": [
+        ["css=.play", "css:finder"],
+        ["xpath=//div[@id='root']/div/button", "xpath:idRelative"],
+        ["xpath=//body/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Play')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7694403-dcc9-4e10-8f22-cc7b43bd3ebf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.css-19bb58m",
+      "targets": [
+        ["css=.css-19bb58m", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e1948c22-7573-4e48-9aa5-1de16c65fd73",
+      "comment": "",
+      "command": "click",
+      "target": "id=react-select-2-option-2",
+      "targets": [
+        ["id=react-select-2-option-2", "id"],
+        ["css=#react-select-2-option-2", "css:finder"],
+        ["xpath=//div[@id='react-select-2-option-2']", "xpath:attributes"],
+        ["xpath=//div[@id='react-select-2-listbox']/div[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "856fec14-1a6b-4dc5-8505-e72bf854ff05",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7359d7f0-4a8e-4d76-a425-d2bc56633b49"]
+  }],
+  "urls": ["https://soft-skills-plataform-1lro.vercel.app/"],
+  "plugins": []
+}

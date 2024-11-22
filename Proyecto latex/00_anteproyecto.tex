@@ -1,0 +1,115 @@
+\documentclass[letterpaper, 11pt, oneside]{book}
+
+\usepackage{graphicx} %Para imágenes
+\usepackage[utf8]{inputenc} %Para configuración de caracteres
+\usepackage[spanish]{babel} %Para configuración del idioma
+\usepackage{anysize} %Para usar márgenes
+\usepackage{tabularx} %Para que la tabla no se desborde
+\usepackage{float} %Para que la tabla aparezca en otra hoja y en el lugar donde se quiere
+\usepackage{multirow} %Para combinar filas
+\usepackage{longtable} %Para que la tabla se divida en páginas
+\usepackage{caption} %Espacio de la tabla y el titulo
+\usepackage[table]{xcolor} %Colores tabla
+\usepackage{csquotes}
+\usepackage{hyperref}
+\usepackage[backend=biber, style=ieee]{biblatex} %Bibliografía
+\usepackage{array}
+\addbibresource{Bibliografia.bib}
+
+\marginsize{2cm}{2cm}{1cm}{2cm} %{izquierda}{derecha}{arriba}{abajo}
+\newcolumntype{C}{>{\centering\arraybackslash}X} %Formato c y X de tabla
+\definecolor{naranja}{HTML}{c1bebf}
+
+
+
+\begin{document}
+\include{01_portada}
+\include{02_contraportada}
+%Portada y contraportada
+\portada
+\contraportada
+\jurados{Juan Camilo Azcarate Cardenas}{Msc Joshua David Triana Madrid}{}
+\agradecimientos
+
+%Tablas de contenido
+\renewcommand{\contentsname}{Tabla de Contenido}
+\tableofcontents
+\thispagestyle{empty}
+
+\renewcommand{\listfigurename}{Lista de Figuras}
+\listoffigures 
+\thispagestyle{empty}
+
+\renewcommand{\listtablename}{Lista de tablas}
+\listoftables
+\thispagestyle{empty}
+
+%Cuerpo del proyecto
+
+%Resumen
+\chapter*{Resumen}
+\input{03_resumen}
+\thispagestyle{empty}
+
+%Abstract
+\chapter*{Abstract}
+\input{12_abstract}
+\thispagestyle{empty}
+
+%Introducción
+\setcounter{page}{1}
+\chapter{Introducción}
+\input{04_introduccion}
+
+%Formulación del problema
+\chapter{Formulación del problema}
+\input{05_formulacion_problema}
+
+%Marco de referencia
+\chapter{Marco de referencia}
+\input{06_marco_referencial}
+
+%Alcance del problema
+\chapter{Alcance del problema}
+\input{07_alcance_problema}
+
+%Metodologías
+\chapter{Metodologías}
+\input{08_metodologias}
+
+%Progama de hitos
+%\chapter{Progama de hitos}
+%\input{09_programa_hitos}
+
+%Presupuesto
+%\chapter{Presupuesto}
+%\input{10_presupuesto}
+
+%literatura
+\chapter{Revision de literatura}
+\input{13_revision_de_literatura}
+
+%desarrollo
+\chapter{Desarrollo de los modulos}
+\input{14_desarrollo}
+%pruebas
+
+\chapter{Pruebas de los modulos}
+\input{15_pruebas}
+
+
+%Resultados
+\chapter{Resultados}
+\input{16_resultados}
+%conclusiones
+\chapter{Conclusiones y trabajos futuros}
+\input{17_conclusiones}
+
+%Bibliografía
+\printbibliography
+
+%Anexos
+\chapter{Anexos}
+\input{18_anexos}
+
+\end{document}

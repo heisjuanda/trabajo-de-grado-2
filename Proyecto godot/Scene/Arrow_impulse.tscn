@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dp0bpp2m04tvn"]
+
+[ext_resource type="Script" path="res://Assets/Scripts/Arrow_impulse.gd" id="1_lq0dv"]
+[ext_resource type="Texture2D" uid="uid://cxco468mo03i1" path="res://Assets/Sprites/Arrows.png" id="2_2hh5i"]
+[ext_resource type="AudioStream" uid="uid://bvvwp2x6a2x40" path="res://Assets/Sonidos/m-tyre-boing-3-84512.mp3" id="3_k6env"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_khvoo"]
+size = Vector2(17.5205, 10.8787)
+
+[node name="Area2D" type="Area2D" groups=["impulse_areas"]]
+z_index = 1
+collision_layer = 128
+collision_mask = 2
+script = ExtResource("1_lq0dv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(3.64966, 0.965349)
+rotation = 0.755267
+shape = SubResource("RectangleShape2D_khvoo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -2)
+texture = ExtResource("2_2hh5i")
+hframes = 6
+vframes = 4
+frame = 5
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_k6env")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
