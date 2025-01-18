@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.17)  22 NOV 2024 17:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.11.17)  18 JAN 2025 18:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -711,34 +711,19 @@ LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 
-Overfull \hbox (5.25468pt too wide) in paragraph at lines 13--13
- [][] [][]\OT1/cmr/m/n/10.95 M^^Sodu-lo fit-ness, ima-gen de las ins-truc-cio-nes so-bre ga-mi-fi-ca-ci^^Son del t^^Sunel car-piano,Elaboraci^^Son 
- []
-
-
-Overfull \hbox (21.43633pt too wide) in paragraph at lines 24--24
- [][] [][]\OT1/cmr/m/n/10.95 Imagen de re-fe-ren-cia so-bre ins-truc-cio-nes de ga-mi-fi-ca-ci^^Son pa-ra los m^^Sodu-los con-jun-tos,Elaboraci^^Son 
- []
-
-
-Overfull \hbox (8.05298pt too wide) in paragraph at lines 25--25
- [][] [][]\OT1/cmr/m/n/10.95 Imagen de re-fe-ren-cia so-bre re-sul-ta-dos de ga-mi-fi-ca-ci^^Son pa-ra los m^^Sodu-los con-jun-tos,Elaboraci^^Son 
- []
-
-
 
 [5
 
 ]
 
-LaTeX Info: Redefining \sptext on input line 46.
-LaTeX Info: Redefining \. on input line 46.
-LaTeX Info: Redefining \% on input line 46.
+LaTeX Info: Redefining \sptext on input line 45.
+LaTeX Info: Redefining \. on input line 45.
+LaTeX Info: Redefining \% on input line 45.
 [6]
 
-LaTeX Info: Redefining \sptext on input line 62.
-LaTeX Info: Redefining \. on input line 62.
-LaTeX Info: Redefining \% on input line 62.
+LaTeX Info: Redefining \sptext on input line 61.
+LaTeX Info: Redefining \. on input line 61.
+LaTeX Info: Redefining \% on input line 61.
 [7])
 \tf@lof=\write6
 \openout6 = `00_anteproyecto.lof'.
@@ -863,7 +848,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--12
 
  []
 
-<Imagenes/glasdoor.png, id=556, 869.2475pt x 1151.30125pt>
+<Imagenes/glasdoor.png, id=557, 869.2475pt x 1151.30125pt>
 File: Imagenes/glasdoor.png Graphic file (type png)
 <use Imagenes/glasdoor.png>
 Package pdftex.def Info: Imagenes/glasdoor.png  used on input line 16.
@@ -1074,7 +1059,7 @@ LaTeX Info: Redefining \% on input line 77.
 [13]
 Cap\'{\i }tulo 5.
 (08_metodologias.tex
-<Imagenes/COL.png, id=627, 803.0pt x 501.875pt>
+<Imagenes/COL.png, id=628, 803.0pt x 501.875pt>
 File: Imagenes/COL.png Graphic file (type png)
 <use Imagenes/COL.png>
 Package pdftex.def Info: Imagenes/COL.png  used on input line 7.
@@ -2287,7 +2272,7 @@ LaTeX Info: Redefining \% on input line 93.
 [30]
 Cap\'{\i }tulo 7.
 (14_desarrollo.tex
-<Imagenes/Fitness1.png, id=758, 426.84468pt x 180.675pt>
+<Imagenes/Fitness1.png, id=759, 426.84468pt x 180.675pt>
 File: Imagenes/Fitness1.png Graphic file (type png)
 <use Imagenes/Fitness1.png>
 Package pdftex.def Info: Imagenes/Fitness1.png  used on input line 11.
@@ -2297,17 +2282,17 @@ Package pdftex.def Info: Imagenes/Fitness1.png  used on input line 11.
 [31
 
 ]
-<Imagenes/Fitness2.png, id=766, 405.01312pt x 29.35968pt>
+<Imagenes/Fitness2.png, id=767, 405.01312pt x 29.35968pt>
 File: Imagenes/Fitness2.png Graphic file (type png)
 <use Imagenes/Fitness2.png>
 Package pdftex.def Info: Imagenes/Fitness2.png  used on input line 21.
 (pdftex.def)             Requested size: 300.29344pt x 21.76881pt.
-<Imagenes/tutorial-muñeca.png, id=767, 412.54124pt x 414.04688pt>
+<Imagenes/tutorial-muñeca.png, id=768, 412.54124pt x 414.04688pt>
 File: Imagenes/tutorial-muñeca.png Graphic file (type png)
 <use Imagenes/tutorial-muñeca.png>
 Package pdftex.def Info: Imagenes/tutorial-muñeca.png  used on input line 29.
 (pdftex.def)             Requested size: 250.24199pt x 251.15933pt.
-<Imagenes/Fitness3.png, id=768, 487.8225pt x 363.60844pt>
+<Imagenes/Fitness3.png, id=769, 487.8225pt x 363.60844pt>
 File: Imagenes/Fitness3.png Graphic file (type png)
 <use Imagenes/Fitness3.png>
 Package pdftex.def Info: Imagenes/Fitness3.png  used on input line 42.
@@ -2317,12 +2302,12 @@ Package pdftex.def Info: Imagenes/Fitness3.png  used on input line 42.
 LaTeX Info: Redefining \. on input line 45.
 LaTeX Info: Redefining \% on input line 45.
 [32 <./Imagenes/Fitness1.png> <./Imagenes/Fitness2.png> <./Imagenes/tutorial-muñeca.png>]
-<Imagenes/Fitness4.png, id=776, 63.98906pt x 73.02281pt>
+<Imagenes/Fitness4.png, id=777, 63.98906pt x 73.02281pt>
 File: Imagenes/Fitness4.png Graphic file (type png)
 <use Imagenes/Fitness4.png>
 Package pdftex.def Info: Imagenes/Fitness4.png  used on input line 53.
 (pdftex.def)             Requested size: 50.05145pt x 57.118pt.
-<Imagenes/Fitness5.png, id=777, 103.88812pt x 31.61812pt>
+<Imagenes/Fitness5.png, id=778, 103.88812pt x 31.61812pt>
 File: Imagenes/Fitness5.png Graphic file (type png)
 <use Imagenes/Fitness5.png>
 Package pdftex.def Info: Imagenes/Fitness5.png  used on input line 60.
@@ -2332,12 +2317,12 @@ Package pdftex.def Info: Imagenes/Fitness5.png  used on input line 60.
 LaTeX Info: Redefining \. on input line 64.
 LaTeX Info: Redefining \% on input line 64.
 [33 <./Imagenes/Fitness3.png> <./Imagenes/Fitness4.png>]
-<Imagenes/tuto-espalda.png, id=785, 1031.855pt x 1031.855pt>
+<Imagenes/tuto-espalda.png, id=786, 1031.855pt x 1031.855pt>
 File: Imagenes/tuto-espalda.png Graphic file (type png)
 <use Imagenes/tuto-espalda.png>
 Package pdftex.def Info: Imagenes/tuto-espalda.png  used on input line 68.
 (pdftex.def)             Requested size: 250.24199pt x 250.2324pt.
-<Imagenes/Nivel1.png, id=786, 958.3303pt x 538.26094pt>
+<Imagenes/Nivel1.png, id=787, 958.3303pt x 538.26094pt>
 File: Imagenes/Nivel1.png Graphic file (type png)
 <use Imagenes/Nivel1.png>
 Package pdftex.def Info: Imagenes/Nivel1.png  used on input line 80.
@@ -2347,12 +2332,12 @@ Package pdftex.def Info: Imagenes/Nivel1.png  used on input line 80.
 LaTeX Info: Redefining \. on input line 84.
 LaTeX Info: Redefining \% on input line 84.
 [34 <./Imagenes/Fitness5.png> <./Imagenes/tuto-espalda.png>]
-<Imagenes/Nivel2.png, id=793, 957.5775pt x 537.50812pt>
+<Imagenes/Nivel2.png, id=794, 957.5775pt x 537.50812pt>
 File: Imagenes/Nivel2.png Graphic file (type png)
 <use Imagenes/Nivel2.png>
 Package pdftex.def Info: Imagenes/Nivel2.png  used on input line 92.
 (pdftex.def)             Requested size: 350.33727pt x 196.65222pt.
-<Imagenes/Nivel3.png, id=794, 960.58875pt x 539.01375pt>
+<Imagenes/Nivel3.png, id=795, 960.58875pt x 539.01375pt>
 File: Imagenes/Nivel3.png Graphic file (type png)
 <use Imagenes/Nivel3.png>
 Package pdftex.def Info: Imagenes/Nivel3.png  used on input line 102.
@@ -2362,7 +2347,7 @@ Package pdftex.def Info: Imagenes/Nivel3.png  used on input line 102.
 LaTeX Info: Redefining \. on input line 106.
 LaTeX Info: Redefining \% on input line 106.
 [35 <./Imagenes/Nivel1.png> <./Imagenes/Nivel2.png>]
-<Imagenes/Nivel4.png, id=803, 962.09438pt x 539.01375pt>
+<Imagenes/Nivel4.png, id=804, 962.09438pt x 539.01375pt>
 File: Imagenes/Nivel4.png Graphic file (type png)
 <use Imagenes/Nivel4.png>
 Package pdftex.def Info: Imagenes/Nivel4.png  used on input line 111.
@@ -2372,7 +2357,7 @@ Package pdftex.def Info: Imagenes/Nivel4.png  used on input line 111.
 LaTeX Info: Redefining \. on input line 118.
 LaTeX Info: Redefining \% on input line 118.
 [36 <./Imagenes/Nivel3.png> <./Imagenes/Nivel4.png>]
-<Imagenes/Nivel5.png, id=812, 955.31906pt x 539.76656pt>
+<Imagenes/Nivel5.png, id=813, 955.31906pt x 539.76656pt>
 File: Imagenes/Nivel5.png Graphic file (type png)
 <use Imagenes/Nivel5.png>
 Package pdftex.def Info: Imagenes/Nivel5.png  used on input line 121.
@@ -2384,17 +2369,12 @@ LaTeX Info: Redefining \% on input line 97.
 [37 <./Imagenes/Nivel5.png>]
 Cap\'{\i }tulo 8.
 (15_pruebas.tex
-<Imagenes/Imagen11.png, id=819, 874.01532pt x 263.48438pt>
+<Imagenes/Imagen11.png, id=820, 874.01532pt x 263.48438pt>
 File: Imagenes/Imagen11.png Graphic file (type png)
 <use Imagenes/Imagen11.png>
 Package pdftex.def Info: Imagenes/Imagen11.png  used on input line 11.
 (pdftex.def)             Requested size: 500.484pt x 150.87917pt.
-
-Underfull \hbox (badness 1205) in paragraph at lines 12--12
-[]\OT1/cmr/m/n/10.95 Figura 8.1: |Ima-gen de re-fe-ren-cia so-bre ins-truc-cio-nes de ga-mi-fi-ca-ci^^Son pa-ra los m^^Sodu-los con-jun-
- []
-
-<Imagenes/Imagen12.png, id=820, 1008.01593pt x 168.63pt>
+<Imagenes/Imagen12.png, id=821, 1008.01593pt x 168.63pt>
 File: Imagenes/Imagen12.png Graphic file (type png)
 <use Imagenes/Imagen12.png>
 Package pdftex.def Info: Imagenes/Imagen12.png  used on input line 17.
@@ -2454,12 +2434,12 @@ LaTeX Info: Redefining \% on input line 102.
 [40]
 Cap\'{\i }tulo 9.
 (16_resultados.tex
-<Imagenes/fc1.png, id=839, 2204.235pt x 1047.915pt>
+<Imagenes/fc1.png, id=840, 2204.235pt x 1047.915pt>
 File: Imagenes/fc1.png Graphic file (type png)
 <use Imagenes/fc1.png>
 Package pdftex.def Info: Imagenes/fc1.png  used on input line 9.
 (pdftex.def)             Requested size: 350.33727pt x 166.55052pt.
-<Imagenes/fc2.png, id=840, 2204.235pt x 1047.915pt>
+<Imagenes/fc2.png, id=841, 2204.235pt x 1047.915pt>
 File: Imagenes/fc2.png Graphic file (type png)
 <use Imagenes/fc2.png>
 Package pdftex.def Info: Imagenes/fc2.png  used on input line 20.
@@ -2469,12 +2449,12 @@ Package pdftex.def Info: Imagenes/fc2.png  used on input line 20.
 [41
 
  <./Imagenes/fc1.png>]
-<Imagenes/fc3.png, id=846, 2204.235pt x 1047.915pt>
+<Imagenes/fc3.png, id=847, 2204.235pt x 1047.915pt>
 File: Imagenes/fc3.png Graphic file (type png)
 <use Imagenes/fc3.png>
 Package pdftex.def Info: Imagenes/fc3.png  used on input line 28.
 (pdftex.def)             Requested size: 350.33727pt x 166.55052pt.
-<Imagenes/fc4.png, id=847, 2204.235pt x 1047.915pt>
+<Imagenes/fc4.png, id=848, 2204.235pt x 1047.915pt>
 File: Imagenes/fc4.png Graphic file (type png)
 <use Imagenes/fc4.png>
 Package pdftex.def Info: Imagenes/fc4.png  used on input line 38.
@@ -2484,12 +2464,12 @@ Package pdftex.def Info: Imagenes/fc4.png  used on input line 38.
 LaTeX Info: Redefining \. on input line 42.
 LaTeX Info: Redefining \% on input line 42.
 [42 <./Imagenes/fc2.png> <./Imagenes/fc3.png>]
-<Imagenes/fc5.png, id=854, 2204.235pt x 1047.915pt>
+<Imagenes/fc5.png, id=855, 2204.235pt x 1047.915pt>
 File: Imagenes/fc5.png Graphic file (type png)
 <use Imagenes/fc5.png>
 Package pdftex.def Info: Imagenes/fc5.png  used on input line 47.
 (pdftex.def)             Requested size: 350.33727pt x 166.55052pt.
-<Imagenes/fc6.png, id=855, 2204.235pt x 1047.915pt>
+<Imagenes/fc6.png, id=856, 2204.235pt x 1047.915pt>
 File: Imagenes/fc6.png Graphic file (type png)
 <use Imagenes/fc6.png>
 Package pdftex.def Info: Imagenes/fc6.png  used on input line 57.
@@ -2499,12 +2479,12 @@ Package pdftex.def Info: Imagenes/fc6.png  used on input line 57.
 LaTeX Info: Redefining \. on input line 61.
 LaTeX Info: Redefining \% on input line 61.
 [43 <./Imagenes/fc4.png> <./Imagenes/fc5.png>]
-<Imagenes/fc7.png, id=863, 2204.235pt x 1047.915pt>
+<Imagenes/fc7.png, id=864, 2204.235pt x 1047.915pt>
 File: Imagenes/fc7.png Graphic file (type png)
 <use Imagenes/fc7.png>
 Package pdftex.def Info: Imagenes/fc7.png  used on input line 66.
 (pdftex.def)             Requested size: 350.33727pt x 166.55052pt.
-<Imagenes/fc8.png, id=864, 2204.235pt x 1047.915pt>
+<Imagenes/fc8.png, id=865, 2204.235pt x 1047.915pt>
 File: Imagenes/fc8.png Graphic file (type png)
 <use Imagenes/fc8.png>
 Package pdftex.def Info: Imagenes/fc8.png  used on input line 76.
@@ -2514,12 +2494,12 @@ Package pdftex.def Info: Imagenes/fc8.png  used on input line 76.
 LaTeX Info: Redefining \. on input line 80.
 LaTeX Info: Redefining \% on input line 80.
 [44 <./Imagenes/fc6.png> <./Imagenes/fc7.png>]
-<Imagenes/fc9.png, id=871, 2204.235pt x 1047.915pt>
+<Imagenes/fc9.png, id=872, 2204.235pt x 1047.915pt>
 File: Imagenes/fc9.png Graphic file (type png)
 <use Imagenes/fc9.png>
 Package pdftex.def Info: Imagenes/fc9.png  used on input line 85.
 (pdftex.def)             Requested size: 350.33727pt x 166.55052pt.
-<Imagenes/fc10.png, id=872, 2204.235pt x 1047.915pt>
+<Imagenes/fc10.png, id=873, 2204.235pt x 1047.915pt>
 File: Imagenes/fc10.png Graphic file (type png)
 <use Imagenes/fc10.png>
 Package pdftex.def Info: Imagenes/fc10.png  used on input line 95.
@@ -2529,12 +2509,12 @@ Package pdftex.def Info: Imagenes/fc10.png  used on input line 95.
 LaTeX Info: Redefining \. on input line 99.
 LaTeX Info: Redefining \% on input line 99.
 [45 <./Imagenes/fc8.png> <./Imagenes/fc9.png>]
-<Imagenes/fc11.png, id=879, 2204.235pt x 1047.915pt>
+<Imagenes/fc11.png, id=880, 2204.235pt x 1047.915pt>
 File: Imagenes/fc11.png Graphic file (type png)
 <use Imagenes/fc11.png>
 Package pdftex.def Info: Imagenes/fc11.png  used on input line 105.
 (pdftex.def)             Requested size: 350.33727pt x 166.55052pt.
-<Imagenes/fd1.png, id=880, 2204.235pt x 1047.915pt>
+<Imagenes/fd1.png, id=881, 2204.235pt x 1047.915pt>
 File: Imagenes/fd1.png Graphic file (type png)
 <use Imagenes/fd1.png>
 Package pdftex.def Info: Imagenes/fd1.png  used on input line 117.
@@ -2544,12 +2524,12 @@ Package pdftex.def Info: Imagenes/fd1.png  used on input line 117.
 LaTeX Info: Redefining \. on input line 121.
 LaTeX Info: Redefining \% on input line 121.
 [46 <./Imagenes/fc10.png> <./Imagenes/fc11.png>]
-<Imagenes/fd2.png, id=887, 2204.235pt x 1047.915pt>
+<Imagenes/fd2.png, id=888, 2204.235pt x 1047.915pt>
 File: Imagenes/fd2.png Graphic file (type png)
 <use Imagenes/fd2.png>
 Package pdftex.def Info: Imagenes/fd2.png  used on input line 127.
 (pdftex.def)             Requested size: 350.33727pt x 166.55052pt.
-<Imagenes/fd3.png, id=888, 2204.235pt x 1047.915pt>
+<Imagenes/fd3.png, id=889, 2204.235pt x 1047.915pt>
 File: Imagenes/fd3.png Graphic file (type png)
 <use Imagenes/fd3.png>
 Package pdftex.def Info: Imagenes/fd3.png  used on input line 136.
@@ -2559,12 +2539,12 @@ Package pdftex.def Info: Imagenes/fd3.png  used on input line 136.
 LaTeX Info: Redefining \. on input line 140.
 LaTeX Info: Redefining \% on input line 140.
 [47 <./Imagenes/fd1.png> <./Imagenes/fd2.png>]
-<Imagenes/fd4.png, id=895, 2204.235pt x 1047.915pt>
+<Imagenes/fd4.png, id=896, 2204.235pt x 1047.915pt>
 File: Imagenes/fd4.png Graphic file (type png)
 <use Imagenes/fd4.png>
 Package pdftex.def Info: Imagenes/fd4.png  used on input line 146.
 (pdftex.def)             Requested size: 350.33727pt x 166.55052pt.
-<Imagenes/fd5.png, id=896, 2204.235pt x 1047.915pt>
+<Imagenes/fd5.png, id=897, 2204.235pt x 1047.915pt>
 File: Imagenes/fd5.png Graphic file (type png)
 <use Imagenes/fd5.png>
 Package pdftex.def Info: Imagenes/fd5.png  used on input line 155.
@@ -2574,12 +2554,12 @@ Package pdftex.def Info: Imagenes/fd5.png  used on input line 155.
 LaTeX Info: Redefining \. on input line 159.
 LaTeX Info: Redefining \% on input line 159.
 [48 <./Imagenes/fd3.png> <./Imagenes/fd4.png>]
-<Imagenes/fd6.png, id=903, 2204.235pt x 1047.915pt>
+<Imagenes/fd6.png, id=904, 2204.235pt x 1047.915pt>
 File: Imagenes/fd6.png Graphic file (type png)
 <use Imagenes/fd6.png>
 Package pdftex.def Info: Imagenes/fd6.png  used on input line 165.
 (pdftex.def)             Requested size: 350.33727pt x 166.55052pt.
-<Imagenes/fd7.png, id=904, 2204.235pt x 1047.915pt>
+<Imagenes/fd7.png, id=905, 2204.235pt x 1047.915pt>
 File: Imagenes/fd7.png Graphic file (type png)
 <use Imagenes/fd7.png>
 Package pdftex.def Info: Imagenes/fd7.png  used on input line 174.
@@ -2589,12 +2569,12 @@ Package pdftex.def Info: Imagenes/fd7.png  used on input line 174.
 LaTeX Info: Redefining \. on input line 178.
 LaTeX Info: Redefining \% on input line 178.
 [49 <./Imagenes/fd5.png> <./Imagenes/fd6.png>]
-<Imagenes/fd8.png, id=912, 2204.235pt x 1047.915pt>
+<Imagenes/fd8.png, id=913, 2204.235pt x 1047.915pt>
 File: Imagenes/fd8.png Graphic file (type png)
 <use Imagenes/fd8.png>
 Package pdftex.def Info: Imagenes/fd8.png  used on input line 184.
 (pdftex.def)             Requested size: 350.33727pt x 166.55052pt.
-<Imagenes/fd9.png, id=913, 2204.235pt x 1047.915pt>
+<Imagenes/fd9.png, id=914, 2204.235pt x 1047.915pt>
 File: Imagenes/fd9.png Graphic file (type png)
 <use Imagenes/fd9.png>
 Package pdftex.def Info: Imagenes/fd9.png  used on input line 193.
@@ -2604,12 +2584,12 @@ Package pdftex.def Info: Imagenes/fd9.png  used on input line 193.
 LaTeX Info: Redefining \. on input line 197.
 LaTeX Info: Redefining \% on input line 197.
 [50 <./Imagenes/fd7.png> <./Imagenes/fd8.png>]
-<Imagenes/fd10.png, id=920, 2204.235pt x 1047.915pt>
+<Imagenes/fd10.png, id=921, 2204.235pt x 1047.915pt>
 File: Imagenes/fd10.png Graphic file (type png)
 <use Imagenes/fd10.png>
 Package pdftex.def Info: Imagenes/fd10.png  used on input line 203.
 (pdftex.def)             Requested size: 350.33727pt x 166.55052pt.
-<Imagenes/fd11.png, id=921, 2204.235pt x 1120.185pt>
+<Imagenes/fd11.png, id=922, 2204.235pt x 1120.185pt>
 File: Imagenes/fd11.png Graphic file (type png)
 <use Imagenes/fd11.png>
 Package pdftex.def Info: Imagenes/fd11.png  used on input line 212.
@@ -2619,12 +2599,12 @@ Package pdftex.def Info: Imagenes/fd11.png  used on input line 212.
 LaTeX Info: Redefining \. on input line 216.
 LaTeX Info: Redefining \% on input line 216.
 [51 <./Imagenes/fd9.png> <./Imagenes/fd10.png>]
-<Imagenes/fd12.png, id=928, 2204.235pt x 1047.915pt>
+<Imagenes/fd12.png, id=929, 2204.235pt x 1047.915pt>
 File: Imagenes/fd12.png Graphic file (type png)
 <use Imagenes/fd12.png>
 Package pdftex.def Info: Imagenes/fd12.png  used on input line 222.
 (pdftex.def)             Requested size: 350.33727pt x 166.55052pt.
-<Imagenes/mc1.png, id=929, 2204.235pt x 1047.915pt>
+<Imagenes/mc1.png, id=930, 2204.235pt x 1047.915pt>
 File: Imagenes/mc1.png Graphic file (type png)
 <use Imagenes/mc1.png>
 Package pdftex.def Info: Imagenes/mc1.png  used on input line 236.
@@ -2634,12 +2614,12 @@ Package pdftex.def Info: Imagenes/mc1.png  used on input line 236.
 LaTeX Info: Redefining \. on input line 240.
 LaTeX Info: Redefining \% on input line 240.
 [52 <./Imagenes/fd11.png> <./Imagenes/fd12.png>]
-<Imagenes/mc2.png, id=936, 2204.235pt x 1047.915pt>
+<Imagenes/mc2.png, id=937, 2204.235pt x 1047.915pt>
 File: Imagenes/mc2.png Graphic file (type png)
 <use Imagenes/mc2.png>
 Package pdftex.def Info: Imagenes/mc2.png  used on input line 247.
 (pdftex.def)             Requested size: 350.33727pt x 166.55052pt.
-<Imagenes/mc3.png, id=937, 2204.235pt x 1047.915pt>
+<Imagenes/mc3.png, id=938, 2204.235pt x 1047.915pt>
 File: Imagenes/mc3.png Graphic file (type png)
 <use Imagenes/mc3.png>
 Package pdftex.def Info: Imagenes/mc3.png  used on input line 256.
@@ -2649,12 +2629,12 @@ Package pdftex.def Info: Imagenes/mc3.png  used on input line 256.
 LaTeX Info: Redefining \. on input line 260.
 LaTeX Info: Redefining \% on input line 260.
 [53 <./Imagenes/mc1.png> <./Imagenes/mc2.png>]
-<Imagenes/mc4.png, id=944, 2204.235pt x 1047.915pt>
+<Imagenes/mc4.png, id=945, 2204.235pt x 1047.915pt>
 File: Imagenes/mc4.png Graphic file (type png)
 <use Imagenes/mc4.png>
 Package pdftex.def Info: Imagenes/mc4.png  used on input line 267.
 (pdftex.def)             Requested size: 350.33727pt x 166.55052pt.
-<Imagenes/mc5.png, id=945, 2204.235pt x 1047.915pt>
+<Imagenes/mc5.png, id=946, 2204.235pt x 1047.915pt>
 File: Imagenes/mc5.png Graphic file (type png)
 <use Imagenes/mc5.png>
 Package pdftex.def Info: Imagenes/mc5.png  used on input line 276.
@@ -2664,12 +2644,12 @@ Package pdftex.def Info: Imagenes/mc5.png  used on input line 276.
 LaTeX Info: Redefining \. on input line 280.
 LaTeX Info: Redefining \% on input line 280.
 [54 <./Imagenes/mc3.png> <./Imagenes/mc4.png>]
-<Imagenes/mc6.png, id=952, 2204.235pt x 1047.915pt>
+<Imagenes/mc6.png, id=953, 2204.235pt x 1047.915pt>
 File: Imagenes/mc6.png Graphic file (type png)
 <use Imagenes/mc6.png>
 Package pdftex.def Info: Imagenes/mc6.png  used on input line 287.
 (pdftex.def)             Requested size: 350.33727pt x 166.55052pt.
-<Imagenes/mc7.png, id=953, 2204.235pt x 1047.915pt>
+<Imagenes/mc7.png, id=954, 2204.235pt x 1047.915pt>
 File: Imagenes/mc7.png Graphic file (type png)
 <use Imagenes/mc7.png>
 Package pdftex.def Info: Imagenes/mc7.png  used on input line 296.
@@ -2679,12 +2659,12 @@ Package pdftex.def Info: Imagenes/mc7.png  used on input line 296.
 LaTeX Info: Redefining \. on input line 300.
 LaTeX Info: Redefining \% on input line 300.
 [55 <./Imagenes/mc5.png> <./Imagenes/mc6.png>]
-<Imagenes/mc8.png, id=961, 2204.235pt x 1047.915pt>
+<Imagenes/mc8.png, id=962, 2204.235pt x 1047.915pt>
 File: Imagenes/mc8.png Graphic file (type png)
 <use Imagenes/mc8.png>
 Package pdftex.def Info: Imagenes/mc8.png  used on input line 307.
 (pdftex.def)             Requested size: 350.33727pt x 166.55052pt.
-<Imagenes/mc9.png, id=962, 2204.235pt x 1047.915pt>
+<Imagenes/mc9.png, id=963, 2204.235pt x 1047.915pt>
 File: Imagenes/mc9.png Graphic file (type png)
 <use Imagenes/mc9.png>
 Package pdftex.def Info: Imagenes/mc9.png  used on input line 318.
@@ -2694,12 +2674,12 @@ Package pdftex.def Info: Imagenes/mc9.png  used on input line 318.
 LaTeX Info: Redefining \. on input line 322.
 LaTeX Info: Redefining \% on input line 322.
 [56 <./Imagenes/mc7.png> <./Imagenes/mc8.png>]
-<Imagenes/mc10.png, id=969, 2204.235pt x 1047.915pt>
+<Imagenes/mc10.png, id=970, 2204.235pt x 1047.915pt>
 File: Imagenes/mc10.png Graphic file (type png)
 <use Imagenes/mc10.png>
 Package pdftex.def Info: Imagenes/mc10.png  used on input line 329.
 (pdftex.def)             Requested size: 350.33727pt x 166.55052pt.
-<Imagenes/mc11.png, id=970, 2204.235pt x 1047.915pt>
+<Imagenes/mc11.png, id=971, 2204.235pt x 1047.915pt>
 File: Imagenes/mc11.png Graphic file (type png)
 <use Imagenes/mc11.png>
 Package pdftex.def Info: Imagenes/mc11.png  used on input line 338.
@@ -2709,7 +2689,7 @@ Package pdftex.def Info: Imagenes/mc11.png  used on input line 338.
 LaTeX Info: Redefining \. on input line 342.
 LaTeX Info: Redefining \% on input line 342.
 [57 <./Imagenes/mc9.png> <./Imagenes/mc10.png>]
-<Imagenes/Nc1.png, id=977, 2204.235pt x 1120.185pt>
+<Imagenes/Nc1.png, id=978, 2204.235pt x 1120.185pt>
 File: Imagenes/Nc1.png Graphic file (type png)
 <use Imagenes/Nc1.png>
 Package pdftex.def Info: Imagenes/Nc1.png  used on input line 349.
@@ -2719,12 +2699,12 @@ Package pdftex.def Info: Imagenes/Nc1.png  used on input line 349.
 LaTeX Info: Redefining \. on input line 356.
 LaTeX Info: Redefining \% on input line 356.
 [58 <./Imagenes/mc11.png> <./Imagenes/Nc1.png>]
-<Imagenes/Nc2.png, id=984, 2204.235pt x 1120.185pt>
+<Imagenes/Nc2.png, id=985, 2204.235pt x 1120.185pt>
 File: Imagenes/Nc2.png Graphic file (type png)
 <use Imagenes/Nc2.png>
 Package pdftex.def Info: Imagenes/Nc2.png  used on input line 359.
 (pdftex.def)             Requested size: 350.33727pt x 178.03677pt.
-<Imagenes/Nc3.png, id=985, 2204.235pt x 1120.185pt>
+<Imagenes/Nc3.png, id=986, 2204.235pt x 1120.185pt>
 File: Imagenes/Nc3.png Graphic file (type png)
 <use Imagenes/Nc3.png>
 Package pdftex.def Info: Imagenes/Nc3.png  used on input line 369.
@@ -2734,7 +2714,7 @@ Package pdftex.def Info: Imagenes/Nc3.png  used on input line 369.
 LaTeX Info: Redefining \. on input line 374.
 LaTeX Info: Redefining \% on input line 374.
 [59 <./Imagenes/Nc2.png>]
-<Imagenes/Nc4.png, id=991, 2204.235pt x 1120.185pt>
+<Imagenes/Nc4.png, id=992, 2204.235pt x 1120.185pt>
 File: Imagenes/Nc4.png Graphic file (type png)
 <use Imagenes/Nc4.png>
 Package pdftex.def Info: Imagenes/Nc4.png  used on input line 379.
@@ -2744,12 +2724,12 @@ Package pdftex.def Info: Imagenes/Nc4.png  used on input line 379.
 LaTeX Info: Redefining \. on input line 386.
 LaTeX Info: Redefining \% on input line 386.
 [60 <./Imagenes/Nc3.png> <./Imagenes/Nc4.png>]
-<Imagenes/Nc5.png, id=998, 2204.235pt x 1120.185pt>
+<Imagenes/Nc5.png, id=999, 2204.235pt x 1120.185pt>
 File: Imagenes/Nc5.png Graphic file (type png)
 <use Imagenes/Nc5.png>
 Package pdftex.def Info: Imagenes/Nc5.png  used on input line 389.
 (pdftex.def)             Requested size: 350.33727pt x 178.03677pt.
-<Imagenes/Nc6.png, id=999, 2204.235pt x 1120.185pt>
+<Imagenes/Nc6.png, id=1000, 2204.235pt x 1120.185pt>
 File: Imagenes/Nc6.png Graphic file (type png)
 <use Imagenes/Nc6.png>
 Package pdftex.def Info: Imagenes/Nc6.png  used on input line 399.
@@ -2759,7 +2739,7 @@ Package pdftex.def Info: Imagenes/Nc6.png  used on input line 399.
 LaTeX Info: Redefining \. on input line 404.
 LaTeX Info: Redefining \% on input line 404.
 [61 <./Imagenes/Nc5.png>]
-<Imagenes/Nc7.png, id=1006, 2204.235pt x 1120.185pt>
+<Imagenes/Nc7.png, id=1007, 2204.235pt x 1120.185pt>
 File: Imagenes/Nc7.png Graphic file (type png)
 <use Imagenes/Nc7.png>
 Package pdftex.def Info: Imagenes/Nc7.png  used on input line 409.
@@ -2769,7 +2749,7 @@ Package pdftex.def Info: Imagenes/Nc7.png  used on input line 409.
 LaTeX Info: Redefining \. on input line 416.
 LaTeX Info: Redefining \% on input line 416.
 [62 <./Imagenes/Nc6.png> <./Imagenes/Nc7.png>]
-<Imagenes/Nc8.png, id=1013, 2204.235pt x 1120.185pt>
+<Imagenes/Nc8.png, id=1014, 2204.235pt x 1120.185pt>
 File: Imagenes/Nc8.png Graphic file (type png)
 <use Imagenes/Nc8.png>
 Package pdftex.def Info: Imagenes/Nc8.png  used on input line 419.
@@ -2836,17 +2816,17 @@ Cap\'{\i }tulo 11.
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 3.
 
-<Imagenes/Imagen4.png, id=1074, 865.73438pt x 222.07968pt>
+<Imagenes/Imagen4.png, id=1075, 865.73438pt x 222.07968pt>
 File: Imagenes/Imagen4.png Graphic file (type png)
 <use Imagenes/Imagen4.png>
 Package pdftex.def Info: Imagenes/Imagen4.png  used on input line 7.
 (pdftex.def)             Requested size: 500.484pt x 128.38611pt.
-<Imagenes/Imagen5.png, id=1075, 1016.29688pt x 175.40532pt>
+<Imagenes/Imagen5.png, id=1076, 1016.29688pt x 175.40532pt>
 File: Imagenes/Imagen5.png Graphic file (type png)
 <use Imagenes/Imagen5.png>
 Package pdftex.def Info: Imagenes/Imagen5.png  used on input line 14.
 (pdftex.def)             Requested size: 500.484pt x 86.38025pt.
-<Imagenes/Imagen7.png, id=1076, 872.50969pt x 273.27094pt>
+<Imagenes/Imagen7.png, id=1077, 872.50969pt x 273.27094pt>
 File: Imagenes/Imagen7.png Graphic file (type png)
 <use Imagenes/Imagen7.png>
 Package pdftex.def Info: Imagenes/Imagen7.png  used on input line 22.
@@ -2856,17 +2836,17 @@ Package pdftex.def Info: Imagenes/Imagen7.png  used on input line 22.
 [69
 
  <./Imagenes/Imagen4.png> <./Imagenes/Imagen5.png>]
-<Imagenes/Imagen8.png, id=1083, 1011.02719pt x 141.52875pt>
+<Imagenes/Imagen8.png, id=1084, 1011.02719pt x 141.52875pt>
 File: Imagenes/Imagen8.png Graphic file (type png)
 <use Imagenes/Imagen8.png>
 Package pdftex.def Info: Imagenes/Imagen8.png  used on input line 29.
 (pdftex.def)             Requested size: 500.484pt x 70.06018pt.
-<Imagenes/Imagen9.png, id=1084, 871.00406pt x 266.49562pt>
+<Imagenes/Imagen9.png, id=1085, 871.00406pt x 266.49562pt>
 File: Imagenes/Imagen9.png Graphic file (type png)
 <use Imagenes/Imagen9.png>
 Package pdftex.def Info: Imagenes/Imagen9.png  used on input line 36.
 (pdftex.def)             Requested size: 500.484pt x 153.12805pt.
-<Imagenes/Imagen10.png, id=1085, 1007.26312pt x 186.6975pt>
+<Imagenes/Imagen10.png, id=1086, 1007.26312pt x 186.6975pt>
 File: Imagenes/Imagen10.png Graphic file (type png)
 <use Imagenes/Imagen10.png>
 Package pdftex.def Info: Imagenes/Imagen10.png  used on input line 43.
@@ -2901,15 +2881,15 @@ Package logreq Info: Writing requests to '00_anteproyecto.run.xml'.
 Here is how much of TeX's memory you used:
  21370 strings out of 473682
  380450 string characters out of 5735770
- 1348650 words of memory out of 5000000
+ 1347661 words of memory out of 5000000
  43923 multiletter control sequences out of 15000+600000
  565151 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  75i,13n,81p,1266b,2778s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\juanc\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk><D:/Miketx/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/Miketx/fonts/type1/public/amsfonts/cm/cmbx12.pfb><D:/Miketx/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/Miketx/fonts/type1/public/amsfonts/cm/cmr12.pfb><D:/Miketx/fonts/type1/public/amsfonts/cm/cmr17.pfb><D:/Miketx/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/Miketx/fonts/type1/public/amsfonts/cm/cmr8.pfb><D:/Miketx/fonts/type1/public/amsfonts/cm/cmsl10.pfb><D:/Miketx/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/Miketx/fonts/type1/public/amsfonts/cm/cmtt10.pfb><D:/Miketx/fonts/type1/public/amsfonts/latxfont/lasy10.pfb>
-Output written on 00_anteproyecto.pdf (83 pages, 6615952 bytes).
+Output written on 00_anteproyecto.pdf (83 pages, 6616281 bytes).
 PDF statistics:
- 1209 PDF objects out of 1440 (max. 8388607)
+ 1210 PDF objects out of 1440 (max. 8388607)
  257 named destinations out of 1000 (max. 500000)
  686 words of extra memory for PDF output out of 10000 (max. 10000000)
 
