@@ -1,0 +1,47 @@
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.button-ia-section-main {
+  background-color: var(--secondary-color);
+  color: white;
+  border: 3px solid var(--secondary-color);
+  border-radius: 10px;
+  width: 200px;
+
+  cursor: pointer;
+  transition: 0.2s;
+
+  font-family: 14px;
+  &:hover {
+    background-color: var(--primary-color);
+    color: #634aff;
+  }
+  &:active{
+    transform: scale(1.01);
+  }
+}
+
+.button-ia-section-secondary {
+  background-color: var(--primary-color);
+  color: #634aff;
+  border: 3px solid var(--primary-color);
+  border-radius: 10px;
+  width: 230px;
+
+  cursor: pointer;
+  margin: 20px 8%;
+  transition: 0.2s;
+
+  font-family: 14px;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  &:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+}

@@ -12,6 +12,8 @@ import JigSaw from "./components/customactivities/jigsaw/JigSaw";
 import Muñeca from "./components/customactivities/FitnessMuñeca/FitnessMuñeca";
 import Espalda from "./components/customactivities/FitnessEspalda/FitnessEspalda";
 import Hercules from "./components/customactivities/mindsetHercules/Hercules";
+import DebateIA from "./components/customactivities/pensamientoCritico/DebateIA";
+import DebateStart from "./components/customactivities/pensamientoCritico/views/DebateStart";
 function App() {
   return (
     <Router>
@@ -30,6 +32,8 @@ function App() {
         <Route path="/activity/fitnessmuñeca" element={<Muñeca />} />
         <Route path="/activity/fitnessespalda" element={<Espalda />} />
         <Route path="/activity/GameMindset" element={<Hercules />} />
+        <Route path="/activity/debate-ia" element={<DebateIA />} />
+        <Route path="/activity/debate-ia/topic-start" element={<DebateStart />} />
       </Routes>
     </Router>
   );

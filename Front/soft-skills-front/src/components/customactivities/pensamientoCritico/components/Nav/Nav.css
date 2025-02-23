@@ -1,0 +1,18 @@
+.nav-ia-section {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    padding: 20px 0px 20px 30px;
+
+    font-size: 16px;
+
+    color: black;
+
+    & > div {
+        &:first-child {
+            font-weight: 700;
+        }
+        cursor: pointer;
+    }
+}

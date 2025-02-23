@@ -1,0 +1,128 @@
+.chat-ia-user__response {
+  margin: 10px auto 10px auto;
+
+  flex: 1;
+
+  width: 80vw;
+  padding: 15px;
+  min-width: 200px;
+  max-width: 1200px;
+  height: max-content;
+  min-height: 300px;
+  max-height: none;
+  overflow-y: scroll;
+  background-color: var(--primary-color);
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary-color) var(--primary-color);
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+    border: 2px solid #f1f1f1;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
+  -webkit-mask-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    180deg,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+.chat-ia-user {
+  margin: 10px auto 10px auto;
+
+  width: calc(80vw + 15px);
+  min-width: 200px;
+  max-width: 1200px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  & label {
+    font-size: 18px;
+  }
+
+  & .chat-input {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+
+    & textarea {
+      width: 100%;
+
+      resize: vertical;
+      border: none;
+      border-radius: 10px;
+      padding: 2px 5px 2px 5px;
+      background-color: var(--primary-color);
+
+      margin-right: 20px;
+
+      font-size: 16px;
+      font-weight: 200;
+
+      color: rgb(20, 20, 39);
+
+      &:focus {
+        outline: none;
+      }
+      &:disabled {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  & button {
+    border: 3px solid var(--secondary-color);
+    border-radius: 50%;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    &:hover {
+      background-color: var(--secondary-color);
+    }
+    &:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+    &:active {
+      transform: scale(1.1);
+    }
+  }
+}
