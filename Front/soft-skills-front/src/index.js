@@ -16,6 +16,7 @@ root.render(
     clientId="bto2ydLzgWbCGhWWF0pnnej6364BcnKB"
     authorizationParams={{ redirect_uri: window.location.origin }}
     onRedirectCallback={onRedirectCallback}
+    cacheLocation="localstorage"
   >
     <App />
   </Auth0Provider>

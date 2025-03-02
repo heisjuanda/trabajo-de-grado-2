@@ -99,7 +99,7 @@
     }
   }
 
-  & button {
+  & button, .feedback-btn {
     border: 3px solid var(--secondary-color);
     border-radius: 50%;
 
@@ -114,15 +114,27 @@
 
     transition: 0.2s;
 
+    color: var(--secondary-color);
+
     &:hover {
       background-color: var(--secondary-color);
+
+    color: var(--primary-color);
+
     }
     &:disabled {
       opacity: 0.7;
       cursor: not-allowed;
     }
     &:active {
-      transform: scale(1.1);
+      transform: scale(1.01);
     }
+  }
+
+  .feedback-btn {
+    width: 100% !important;
+    height: 50px !important;
+
+    border-radius: 10px !important;
   }
 }

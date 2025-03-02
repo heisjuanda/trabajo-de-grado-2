@@ -1,5 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
+import { toast } from "react-toastify";
+
 
 import sendBlue from "../../assets/send-blue.png";
 import sendWhite from "../../assets/send-white.png";
@@ -19,13 +21,28 @@ import { IA_CHAT_RESPONSE_CONTEXT } from "../../constantes/debateIdeas";
 import "./Chat.css";
 
 const Chat = ({ setFeedback }) => {
+  const totalRounds = 10;
   const [imageButton, setImageButton] = useState(sendBlue);
   const [isLoading, setIsLoading] = useState(false);
   const [userResponse, setUserResponse] = useState("");
   const [messages, setMessages] = useState([]);
   const [round, setRound] = useState(0);
+  const [hideSendButton, setHideSendButton] = useState(false);
 
   const containerRef = useRef(null);
+  const textareaRef = useRef(null);
+  const sendButtonRef = useRef(null);
+
+  const notifyLoading = () => toast.info('Generando feedback...', {
+    position: "top-right",
+    autoClose: 2000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: false,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    });
 
   const sendUserResponse = () => {
     if (!userResponse.trim()) return;
@@ -100,14 +117,13 @@ const Chat = ({ setFeedback }) => {
     setUserResponse(event.target.value);
   };
 
-  useEffect(() => {
-    if (!round || round < 9) return;
-
+  const getFeedback = () => {
     const rawContext = getSessionStorageValues(IA_CHAT_RESPONSE_CONTEXT);
     const context = JSON.parse(rawContext);
     const dataToSend = {
       contexto: context.debate_completo,
     };
+    notifyLoading()
     axios
       .post(
         `${process.env.REACT_APP_API_HOST}/debate-topics/dar-feedback`,
@@ -120,11 +136,25 @@ const Chat = ({ setFeedback }) => {
       })
       .catch((error) => {
         console.error("Error al obtener la respuesta de la IA:", error);
+
+        setHideSendButton(false);
+        if (sendButtonRef.current) {
+          sendButtonRef.current.remove("feedback-btn");
+        }
       })
       .finally(() => {
         setIsLoading(false);
       });
+  };
 
+  useEffect(() => {
+    if (!round || round < totalRounds) return;
+
+    setHideSendButton(true);
+
+    if (sendButtonRef.current) {
+      sendButtonRef.current.classList.add("feedback-btn");
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [round]);
 
@@ -133,6 +163,12 @@ const Chat = ({ setFeedback }) => {
       containerRef.current.scrollTop = containerRef.current.scrollHeight;
     }
   }, [messages]);
+
+  useEffect(() => {
+    if (!isLoading && textareaRef.current) {
+      textareaRef.current.focus();
+    }
+  }, [isLoading]);
 
   return (
     <>
@@ -146,29 +182,37 @@ const Chat = ({ setFeedback }) => {
         ))}
       </div>
       <div className="chat-ia-user">
-        <label htmlFor="user-response">Envar Mensaje</label>
+        {!hideSendButton && (
+          <label htmlFor="user-response">Enviar Mensaje</label>
+        )}
         <div className="chat-input">
-          <textarea
-            minLength="10"
-            required
-            title="user response"
-            id="user-response"
-            placeholder="Tu Opinión Aquí..."
-            onKeyDown={onKey}
-            onChange={onChange}
-            value={userResponse}
-            disabled={isLoading}
-          />
+          {!hideSendButton && (
+            <textarea
+              minLength="10"
+              required
+              title="user response"
+              id="user-response"
+              placeholder="Tu Opinión Aquí..."
+              onKeyDown={onKey}
+              onChange={onChange}
+              value={userResponse}
+              disabled={isLoading}
+              ref={textareaRef}
+            />
+          )}
           <button
             onMouseEnter={onEnter}
             onMouseLeave={onLeave}
-            onClick={sendUserResponse}
+            onClick={round < totalRounds ? sendUserResponse : getFeedback}
             disabled={isLoading}
+            ref={sendButtonRef}
           >
             {isLoading ? (
               <Loader />
-            ) : (
+            ) : round < totalRounds ? (
               <img alt="Send" src={imageButton} width="25px" height="25px" />
+            ) : (
+              "Obtener Feedback"
             )}
           </button>
         </div>

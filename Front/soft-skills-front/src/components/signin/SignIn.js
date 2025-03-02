@@ -12,11 +12,14 @@ import { Navigate } from "react-router-dom";
 const defaultTheme = createTheme();
 
 export default function SignIn() {
-  const { loginWithRedirect, isAuthenticated } = useAuth0();
+  const { loginWithRedirect, isAuthenticated, user } = useAuth0();
 
   if (isAuthenticated) {
     return <Navigate to="/dashboard" />;
   }
+
+  console.log("a ", user)
+  console.log("is ", isAuthenticated)
 
   return (
     <ThemeProvider theme={defaultTheme}>

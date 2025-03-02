@@ -1,0 +1,80 @@
+.debate-reports__section {
+  font-family: "Roboto", serif;
+
+  & header {
+    width: 60vw;
+    height: max-content;
+    border-radius: 10px;
+    padding: 15px;
+
+    margin: 0px auto 10px auto;
+
+    & h1,
+    h3 {
+      max-width: 50vw;
+      min-width: 200px;
+      margin-inline: auto;
+
+      font-family: 25px;
+      font-weight: 700;
+    }
+  }
+
+  & h2 {
+    width: 200px;
+    margin-inline: auto;
+
+    font-family: 15px;
+    font-weight: 300;
+  }
+
+  & .reports-container {
+    position: relative;
+
+    max-height: 350px;
+    height: max-content;
+    & .pagination {
+      position: absolute;
+      bottom: -20px;
+      transform: translateX(-50%);
+      left: 50%;
+
+      width: 150px;
+      margin-inline: auto;
+      padding: 15px;
+
+      display: flex;
+      flex-direction: row;
+      gap: 5px;
+
+      font-size: 12px;
+
+      & button {
+        width: 30px;
+
+        border: none;
+        border-radius: 10px;
+        background-color: var(--secondary-color);
+        color: white;
+
+        transition: 0.25s;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.7;
+        }
+        &:disabled {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+
+  & .selected-report__container {
+    margin-top: 20px;
+
+    & h3 {
+      font-size: 20px;
+      padding: 20px 20px 0px 20px;
+    }
+  }
+}

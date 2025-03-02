@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
 
 import Nav from "./components/Nav/Nav";
 import InputSelection from "./components/InputSelection/InputSelection";
@@ -41,12 +42,25 @@ const DebateIA = () => {
       })
       .catch((error) => {
         console.error("Error al obtejer los temas:", error);
+        notifyFailure()
         removeSessionStorageValue();
       })
       .finally(() => {
         setIsLoading(false);
       });
   };
+
+  const notifyFailure = () =>
+    toast.error("Error al obtener el tema", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
 
   return (
     <section className="debate-ia-section">
@@ -68,6 +82,7 @@ const DebateIA = () => {
       </div>
 
       <BoxInfo topic={topic} />
+      <ToastContainer />
     </section>
   );
 };

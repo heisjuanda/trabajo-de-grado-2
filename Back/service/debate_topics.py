@@ -1,13 +1,13 @@
 import os
 import random
 from fastapi import Depends
-from sqlmodel import Session
+from sqlmodel import Session, select
 
 from groq import Groq
 
 from database import get_session
 from errors import Missing
-from model.debate_topics import DebateTopic
+from model.debate_topics import DebateTopic, DebateReportRequest
 
 
 def generate_random_between(lower_bound, upper_bound):
@@ -85,3 +85,14 @@ def summary_generator(debate_texto):
         ],
     )
     return chat_completion.choices[0].message.content
+
+def save_report(report: DebateReportRequest, db: Session = Depends(get_session)) -> DebateReportRequest:
+    db.add(report)
+    db.commit()
+    db.refresh(report)
+    return report
+
+def get_user_reports(email: str, db: Session = Depends(get_session)) -> list[DebateReportRequest]:
+    statement = select(DebateReportRequest).where(email == DebateReportRequest.email)
+    results = db.exec(statement)
+    return results.all()

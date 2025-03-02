@@ -10,9 +10,17 @@
     color: black;
 
     & > div {
+        cursor: pointer;
+        
         &:first-child {
             font-weight: 700;
+
+            cursor: default;
         }
-        cursor: pointer;
+    }
+    & > div:not(:first-child) {
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }

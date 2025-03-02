@@ -3,8 +3,8 @@ from sqlmodel import Session
 
 from database import get_session
 from errors import Missing
-from model.debate_topics import DebateTopicRead, DebateRoundRequest, DebateDebateFeedbackRequest
-from service.debate_topics import read_topic, generate_argument, summary_generator
+from model.debate_topics import DebateTopicRead, DebateRoundRequest, DebateDebateFeedbackRequest, DebateReportRequest
+from service.debate_topics import read_topic, generate_argument, summary_generator, save_report, get_user_reports
 
 router = APIRouter()
 
@@ -51,3 +51,32 @@ def procesar_debate(data: DebateDebateFeedbackRequest):
     return {
         "feedback": feedback,
     }
+
+@router.post(
+    "/reports",
+    summary="Crea un reporte de debate",
+    response_model=DebateReportRequest,
+)
+def create_report(report: DebateReportRequest, db: Session = Depends(get_session)):
+    try:
+        return save_report(report, db)
+    except Exception as e:
+        db.rollback()
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Error al guardar el reporte"
+        )
+
+@router.get(
+    "/reports/{email}",
+    summary="Obtiene los reportes de debate de un usuario",
+    response_model=list[DebateReportRequest],
+)
+def read_reports(email: str, db: Session = Depends(get_session)):
+    reports = get_user_reports(email, db)
+    if not reports:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="No se encontraron reportes para este usuario"
+        )
+    return reports

@@ -27,6 +27,7 @@
     "react-router-dom": "^6.21.3",
     "react-scripts": "^5.0.1",
     "react-select": "^5.8.0",
+    "react-toastify": "^11.0.5",
     "react-webcam": "^7.2.0",
     "reactstrap": "^9.2.2",
     "text-encoding-polyfill": "^0.6.7",

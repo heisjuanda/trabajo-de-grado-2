@@ -148,3 +148,4 @@ export const ALL_IDEAS = [
 
 export const IA_TOPIC_QUESTION_INDEX = "question";
 export const IA_CHAT_RESPONSE_CONTEXT = "context-chat";
+export const IA_FEEDBACK_RESPONSE = "feedback"

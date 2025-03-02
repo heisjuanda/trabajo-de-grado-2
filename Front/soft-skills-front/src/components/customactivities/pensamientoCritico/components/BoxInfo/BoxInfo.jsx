@@ -1,12 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+
+import useWindowWidth from "../../Hooks/useWindow";
+
 import { ALL_IDEAS } from "../../constantes/debateIdeas";
+
 import ideaIcon from "../../assets/idea-topic.png";
 import dropdownImage from "../../assets/dropdown.png";
 
 import "./BoxInfo.css";
 
 const BoxInfo = ({ topic, isFullScreen, question, dropdown = false }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const width = useWindowWidth();
 
   const toggleDropdown = () => setIsOpen((prev) => !prev);
 
@@ -38,6 +44,7 @@ const BoxInfo = ({ topic, isFullScreen, question, dropdown = false }) => {
                 flexDirection: "row",
                 gap: "10px",
                 alignContent: "center",
+                justifyContent: "space-between"
               }
             : {}
         }
@@ -64,7 +71,7 @@ const BoxInfo = ({ topic, isFullScreen, question, dropdown = false }) => {
             </button>
           )}
         </div>
-        {showClosed && (
+        {showClosed && width >= 480 && (
           <p>{isFullScreen && question ? question : topicDescription}</p>
         )}
       </div>
