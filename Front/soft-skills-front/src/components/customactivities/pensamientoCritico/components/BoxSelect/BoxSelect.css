@@ -1,0 +1,44 @@
+.box-select {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+
+    width: 240px;
+
+    margin-inline: auto;
+
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    padding: 15px;
+
+    & > div:first-child {
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: flex-start;
+    }
+    & h2 {
+        font-size: 18px;
+        margin: 0 0 5px 0;
+    }
+    & p {
+        font-size: 14px;
+        margin: 0 0 8px 0;
+
+        height: 68px;
+    }
+    & span {
+        font-size: 12px;
+        margin: 0 0 8px 0;
+        opacity: 0.8;
+    }
+    & button {
+        width: 100%;
+        padding: 4px;
+
+        & p {
+            font-weight: 500 !important;
+            margin: 0 !important;
+            height: auto !important;
+        }
+    }
+}

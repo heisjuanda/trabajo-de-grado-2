@@ -38,6 +38,7 @@ class DebateReportRequest(SQLModel, table=True):
     email: str
     chat: str
     full_report: str
+    rating: int
 
     class Config:
         json_schema_extra = {
@@ -47,5 +48,6 @@ class DebateReportRequest(SQLModel, table=True):
                 "email": "jdma253gmail.com",
                 "chat": "chat",
                 "full_report": "report",
+                "rating": 0,
             }
         }

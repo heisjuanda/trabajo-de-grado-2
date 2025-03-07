@@ -1,23 +1,26 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
-import './Nav.css'
+import "./Nav.css";
 
 const Nav = () => {
-    const history = useNavigate()
+  const history = useNavigate();
 
-    const goToDebate = () => {
-        history("/activity/debate-ia")
-    }
-    const goToReport = () => {
-        history("/activity/debate-ia/reports")
-    }
-    return (
-        <nav className='nav-ia-section'>
-            <div>IA Debate</div>
-            <div onClick={goToDebate}>Debates</div>
-            <div onClick={goToReport}>Reporte</div>
-        </nav>
-    )
-}
+  const goToDebate = () => {
+    history("/activity/debate-ia/start");
+  };
+  const goToReport = () => {
+    history("/activity/debate-ia/reports");
+  };
+  const goToMainPage = () => {
+    history("/activity/debate-ia");
+  };
+  return (
+    <nav className="nav-ia-section">
+      <div onClick={goToMainPage}>IA Debate</div>
+      <div onClick={goToDebate}>Debates</div>
+      <div onClick={goToReport}>Reporte</div>
+    </nav>
+  );
+};
 
 export default Nav;

@@ -73,7 +73,24 @@ def generate_argument(contexto, respuesta_usuario, ronda):
 def summary_generator(debate_texto):
     API_KEY = os.getenv("GROG_API")
     client = Groq(api_key=API_KEY)
-    summary_prompt = f"Da feedback retroalimentario para el usuario que participo en este debate, da consejos de mejora y reconoce lo que hizo bien:\n\n{debate_texto}"
+    summary_prompt = f"""
+    Provee un feedback crítico y constructivo para el usuario que participó en el siguiente debate. 
+    Identifica y destaca:
+    - **Aspectos Positivos:** Reconoce lo que hizo bien.
+    - **Áreas de Mejora:** Señala de forma clara los puntos que requieren fortalecerse.
+    - **Sugerencias:** Ofrece recomendaciones prácticas para mejorar en futuras intervenciones.
+    Además, asigna una calificación final en una escala del 0 al 10, siendo 10 la máxima excelencia, en el siguiente formato:
+    **Calificación Final:** [valor]
+
+    La respuesta debe estar en formato Markdown, cumpliendo estas pautas:
+    1. Cada sección debe iniciar con un título en negrita (por ejemplo, **Aspectos Positivos:**).
+    2. Cada ítem dentro de una sección se debe listar en una línea nueva, precedido por un guion (-) o numeración.
+    3. La línea de la calificación final debe estar al final de la respuesta.
+
+    Debate:
+    {debate_texto}
+    """
+
     chat_completion = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
         messages=[

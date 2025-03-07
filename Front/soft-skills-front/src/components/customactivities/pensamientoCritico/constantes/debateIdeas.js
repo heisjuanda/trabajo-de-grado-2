@@ -16,6 +16,10 @@ import strike from "../assets/strike.png";
 import talk from "../assets/talk.png";
 import tech from "../assets/tech.png";
 import testTube from "../assets/test-tube.png";
+import forum from '../../../../resources/icons/forum.png'
+import educationIcon from '../../../../resources/icons/education.png'
+import puzzle from '../../../../resources/icons/puzzle.png'
+
 
 export const ALL_IDEAS = [
   {
@@ -145,6 +149,33 @@ export const ALL_IDEAS = [
       "Discute las preguntas más profundas de la existencia, el propósito de la vida y las teorías existenciales.",
   },
 ];
+
+export const ALL_SECTIONS = [
+  {
+    description: "Participe en debates que invitan a la reflexión con nuestro Al sobre temas controvertidos. Desafía tusy refuerza tus argumentos.",
+    icon: forum,
+    type: "INTERACTIVO",
+    title: "Debate IA",
+    link: "/activity/debate-ia/start",
+    buttonText: "Empezar Debate",
+  },
+  {
+    description: "Vídeos de expertos sobre: Sesgos cognitivos, falacias lógicas y técnicas eficaces de resolución de problemas.",
+    icon: educationIcon,
+    type: "EDUCACIÓN",
+    title: "Pensamiento Crítico Vídeos",
+    link: "https://youtube.com/playlist?list=PLIOoQ_S_XkkER5m5VKZ1lWqCKqyl8STYk&si=276dx4IIVOJKXjzj",
+    buttonText: "Ver Ahora",
+  },
+  {
+    description: "Desafíate a ti mismo con rompecabezas interactivos juegos de lógica y rompecabezas diseñados para agudizar su pensamiento analítico.",
+    icon: puzzle,
+    type: "PRÁCTICA",
+    title: "Juegos Mentales y Puzzles",
+    link: "https://www.juegos-mentales.com/",
+    buttonText: "Jugar Juegos",
+  },
+]
 
 export const IA_TOPIC_QUESTION_INDEX = "question";
 export const IA_CHAT_RESPONSE_CONTEXT = "context-chat";

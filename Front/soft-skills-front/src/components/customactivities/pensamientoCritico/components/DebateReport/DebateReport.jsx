@@ -134,6 +134,7 @@ const DebateReport = () => {
               userName={user.given_name}
               userPicture={user.picture}
               setSelectedReportID={setSelectedReportID}
+              rating={report.rating}
             />
           ))}
           {currentReports.length === 0 && <h2>No hay reportes</h2>}

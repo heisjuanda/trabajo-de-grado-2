@@ -82,6 +82,7 @@ const DebateStart = () => {
         email: user.email,
         chat: getSessionStorageValues(IA_CHAT_RESPONSE_CONTEXT),
         full_report: rawFeedback,
+        rating: userFeedback.rating || 0,
       };
       axios
         .post(

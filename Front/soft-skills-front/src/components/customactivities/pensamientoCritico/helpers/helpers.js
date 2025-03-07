@@ -33,36 +33,36 @@ export const getSessionStorageValues = (
 export function parseDynamicFeedback(text) {
   const result = { sections: [] };
 
-  const sectionRegex = /\*\*(.+?)\*\*\s*\n([\s\S]*?)(?=\n\s*\*\*|$)/gi;
+  const ratingRegex = /\*\*Calificación Final:\*\*\s*(\d+)/i;
+  const ratingMatch = text.match(ratingRegex);
+  console.log(ratingMatch)
+  if (ratingMatch) {
+    result.rating = parseInt(ratingMatch[1], 10);
+  }
 
+  const sectionRegex = /\*\*(.+?)\*\*\s*\n([\s\S]*?)(?=\n\*\*|$)/gi;
   let sectionMatch;
   while ((sectionMatch = sectionRegex.exec(text)) !== null) {
     const sectionTitle = sectionMatch[1].trim();
     const sectionContent = sectionMatch[2].trim();
 
-    const items = sectionContent
-      .split(/(\n\s*(\d+\.|\-|\*)\s+)/g)
-      .filter((part) => part && !/^\d+\.$|^[\-\*]$/.test(part))
-      .map((item) => item.trim().replace(/\*\*/g, "")) // Eliminar negritas
-      .filter((item) => item.length > 0)
-      .reduce((acc, item) => {
-        const cleanedItem = item.replace(/^\d+\.?\s*/, "");
-        if (cleanedItem) acc.push(cleanedItem);
-        return acc;
-      }, []);
+    const rawItems = sectionContent.split("\n")
+      .map(item => item.trim())
+      .filter(item => item.length > 0 && item !== "-");
 
-    const processedItems = items.map((item) => {
-      const hasDescription = /:\s/.test(item);
-      return hasDescription
-        ? {
-            title: item.split(":")[0].trim(),
-            details: item
-              .split(":")[1]
-              .split(/(?<=\.)\s+(?=\S)/)
-              .map((d) => d.trim())
-              .filter((d) => d),
-          }
-        : item;
+    const processedItems = rawItems.map(item => {
+      const cleanedItem = item.replace(/^[-\d\.\s]+/, "");
+      if (cleanedItem.includes(":")) {
+        const parts = cleanedItem.split(":");
+        const title = parts[0].trim();
+        const details = parts.slice(1)
+          .join(":")
+          .split(/(?<=\.)\s+(?=\S)/)
+          .map(d => d.trim())
+          .filter(d => d);
+        return { title, details };
+      }
+      return cleanedItem;
     });
 
     result.sections.push({
@@ -73,6 +73,7 @@ export function parseDynamicFeedback(text) {
 
   return result;
 }
+
 
 export function getFormattedDate() {
   const date = new Date();

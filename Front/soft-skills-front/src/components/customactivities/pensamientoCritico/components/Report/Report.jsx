@@ -2,7 +2,14 @@ import { parseUserFriendlyDate } from "../../helpers/helpers";
 
 import "./Report.css";
 
-const Report = ({ userName, userPicture, date, id, setSelectedReportID }) => {
+const Report = ({
+  userName,
+  userPicture,
+  date,
+  id,
+  setSelectedReportID,
+  rating,
+}) => {
   return (
     <div
       onClick={() => {
@@ -14,9 +21,12 @@ const Report = ({ userName, userPicture, date, id, setSelectedReportID }) => {
         <img width="35px" height="35px" src={userPicture} alt="user profile" />
       </div>
       <div>
-        <p>{userName}</p>
+        <p style={{ opacity: "0.5" }}>{userName}</p>
       </div>
-      <p>{parseUserFriendlyDate(date)}</p>
+      <div>
+        <p>Calificación: {rating} </p>
+      </div>
+      <p style={{ opacity: "0.5" }}>{parseUserFriendlyDate(date)}</p>
     </div>
   );
 };

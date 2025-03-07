@@ -14,8 +14,6 @@
         
         &:first-child {
             font-weight: 700;
-
-            cursor: default;
         }
     }
     & > div:not(:first-child) {
