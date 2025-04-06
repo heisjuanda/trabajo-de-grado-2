@@ -16,6 +16,7 @@ import DebateIA from "./components/customactivities/pensamientoCritico/DebateIA"
 import DebateStart from "./components/customactivities/pensamientoCritico/views/DebateStart/DebateStart";
 import DebateReport from "./components/customactivities/pensamientoCritico/components/DebateReport/DebateReport";
 import Main from "./components/customactivities/pensamientoCritico/views/Main/Main";
+import OratoryView from "./components/customactivities/oratoria/Main";
 function App() {
   return (
     <Router>
@@ -38,6 +39,7 @@ function App() {
         <Route path="/activity/debate-ia/start" element={<DebateIA />} />
         <Route path="/activity/debate-ia/topic-start" element={<DebateStart />} />
         <Route path="/activity/debate-ia/reports" element={<DebateReport />} />
+        <Route path="/activity/oratoria" element={<OratoryView />} />
       </Routes>
     </Router>
   );
