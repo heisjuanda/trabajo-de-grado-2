@@ -9,7 +9,7 @@ import dropdownImage from "../../assets/dropdown.png";
 
 import "./BoxInfo.css";
 
-const BoxInfo = ({ topic, isFullScreen, question, dropdown = false }) => {
+const BoxInfo = ({ topic, isFullScreen, question, dropdown = false, allIdeas = ALL_IDEAS }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const width = useWindowWidth();
@@ -19,11 +19,11 @@ const BoxInfo = ({ topic, isFullScreen, question, dropdown = false }) => {
   const showClosed = !isOpen && dropdown;
 
   const topicTitle = topic
-    ? ALL_IDEAS[topic].option
+    ? allIdeas[topic].option
     : "Selecciona un Tema para mostrar su titulo";
 
   const topicDescription = topic
-    ? ALL_IDEAS[topic].description
+    ? allIdeas[topic].description
     : "Selecciona un Tema para mostrar la descripción";
 
   return (
@@ -44,7 +44,7 @@ const BoxInfo = ({ topic, isFullScreen, question, dropdown = false }) => {
                 flexDirection: "row",
                 gap: "10px",
                 alignContent: "center",
-                justifyContent: "space-between"
+                justifyContent:"space-around"
               }
             : {}
         }
@@ -52,7 +52,7 @@ const BoxInfo = ({ topic, isFullScreen, question, dropdown = false }) => {
         <img
           width={showClosed ? "41px" : "30px"}
           height={showClosed ? "41px" : ""}
-          src={topic ? ALL_IDEAS[topic].icon : ideaIcon}
+          src={topic ? allIdeas[topic].icon : ideaIcon}
           alt="Idea icon"
         />
         <div className="drop-down__container">

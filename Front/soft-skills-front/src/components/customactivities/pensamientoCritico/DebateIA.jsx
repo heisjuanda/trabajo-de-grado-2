@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import Nav from "./components/Nav/Nav";
 import InputSelection from "./components/InputSelection/InputSelection";
 import Button from "./components/Button/Button";
+import JuanDabot from "../oratoria/components/JuanDabot/JuanDabot";
 
 import { ALL_IDEAS } from "./constantes/debateIdeas";
 
@@ -68,7 +69,7 @@ const DebateIA = () => {
       <header>
         <h1>Empezar Nuevo Debate</h1>
         <div>
-          <InputSelection options={ALL_IDEAS} onSelect={handleSelection} />
+          <InputSelection options={ALL_IDEAS} onSelect={handleSelection} textLabel="Tema de debate:" />
         </div>
       </header>
       <div className="start-debate__button">
@@ -83,6 +84,7 @@ const DebateIA = () => {
 
       <BoxInfo topic={topic} />
       <ToastContainer />
+      <JuanDabot />
     </section>
   );
 };

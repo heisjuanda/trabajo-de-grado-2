@@ -1,0 +1,51 @@
+.oratory-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+  }
+  
+  .oratory-section {
+    margin-bottom: 32px;
+  }
+  
+  .oratory-title {
+    font-size: 22px;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 6px;
+    margin-bottom: 12px;
+  }
+  
+  .oratory-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #333333;
+  }
+  
+  .oratory-item {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  
+  .oratory-subtitle {
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 6px;
+  }
+  
+  .oratory-sublist {
+    list-style-type: square;
+    padding-left: 20px;
+    margin-top: 4px;
+  }
+  
+  .oratory-subitem {
+    margin-bottom: 4px;
+    color: #666;
+  }
+  

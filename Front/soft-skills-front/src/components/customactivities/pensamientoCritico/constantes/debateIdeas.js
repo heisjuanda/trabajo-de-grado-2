@@ -152,7 +152,7 @@ export const ALL_IDEAS = [
 
 export const ALL_SECTIONS = [
   {
-    description: "Participe en debates que invitan a la reflexión con nuestro Al sobre temas controvertidos. Desafía tusy refuerza tus argumentos.",
+    description: "Participe en debates que invitan a la reflexión con nuestro Al sobre temas controvertidos. Desafía y refuerza tus argumentos.",
     icon: forum,
     type: "INTERACTIVO",
     title: "Debate IA",
@@ -163,7 +163,7 @@ export const ALL_SECTIONS = [
     description: "Vídeos de expertos sobre: Sesgos cognitivos, falacias lógicas y técnicas eficaces de resolución de problemas.",
     icon: educationIcon,
     type: "EDUCACIÓN",
-    title: "Pensamiento Crítico Vídeos",
+    title: "Vídeos",
     link: "https://youtube.com/playlist?list=PLIOoQ_S_XkkER5m5VKZ1lWqCKqyl8STYk&si=276dx4IIVOJKXjzj",
     buttonText: "Ver Ahora",
   },
@@ -171,7 +171,7 @@ export const ALL_SECTIONS = [
     description: "Desafíate a ti mismo con rompecabezas interactivos juegos de lógica y rompecabezas diseñados para agudizar su pensamiento analítico.",
     icon: puzzle,
     type: "PRÁCTICA",
-    title: "Juegos Mentales y Puzzles",
+    title: "Puzzles",
     link: "https://www.juegos-mentales.com/",
     buttonText: "Jugar Juegos",
   },

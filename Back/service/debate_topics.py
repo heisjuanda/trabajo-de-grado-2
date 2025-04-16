@@ -2,6 +2,7 @@ import os
 import random
 from fastapi import Depends
 from sqlmodel import Session, select
+from dotenv import load_dotenv
 
 from groq import Groq
 
@@ -38,7 +39,7 @@ def get_random_topic(id: int):
         16: generate_random_between(401, 425),
     }
 
-    return all_topics.get(id, generate_random_between(1, 50))
+    return all_topics.get(id, generate_random_between(0, 16))
 
 
 def read_topic(id: int, db: Session = Depends(get_session)) -> DebateTopic:
@@ -51,7 +52,8 @@ def read_topic(id: int, db: Session = Depends(get_session)) -> DebateTopic:
 
 
 def generate_argument(contexto, respuesta_usuario, ronda):
-    API_KEY = os.getenv("GROG_API")
+    load_dotenv()
+    API_KEY = os.getenv("GROG_API_LLAMA")
     client = Groq(api_key=API_KEY)
     prompt = (
         f"Contexto: {contexto}\n"
@@ -71,7 +73,8 @@ def generate_argument(contexto, respuesta_usuario, ronda):
 
 
 def summary_generator(debate_texto):
-    API_KEY = os.getenv("GROG_API")
+    load_dotenv()
+    API_KEY = os.getenv("GROG_API_LLAMA")
     client = Groq(api_key=API_KEY)
     summary_prompt = f"""
     Provee un feedback crítico y constructivo para el usuario que participó en el siguiente debate. 

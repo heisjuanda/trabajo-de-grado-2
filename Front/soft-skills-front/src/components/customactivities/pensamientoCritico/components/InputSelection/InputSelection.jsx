@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import "./InputSelection.css"
 
-function InputSelection({ options, onSelect }) {
+function InputSelection({ options, onSelect, textLabel }) {
   const [selectedValue, setSelectedValue] = useState("");
 
   const handleChange = (event) => {
@@ -12,7 +12,7 @@ function InputSelection({ options, onSelect }) {
 
   return (
     <div className="input-select">
-      <label className="input-select__label"><b>Tema de debate:</b></label>
+      <label className="input-select__label"><b>{textLabel}</b></label>
       <select
         className="input-select__field"
         value={selectedValue} 

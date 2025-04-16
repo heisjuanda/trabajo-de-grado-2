@@ -14,9 +14,11 @@ import Espalda from "./components/customactivities/FitnessEspalda/FitnessEspalda
 import Hercules from "./components/customactivities/mindsetHercules/Hercules";
 import DebateIA from "./components/customactivities/pensamientoCritico/DebateIA";
 import DebateStart from "./components/customactivities/pensamientoCritico/views/DebateStart/DebateStart";
-import DebateReport from "./components/customactivities/pensamientoCritico/components/DebateReport/DebateReport";
-import Main from "./components/customactivities/pensamientoCritico/views/Main/Main";
+import DebateReport from "./components/customactivities/pensamientoCritico/views/DebateReport/DebateReport";
+import MainDebate from "./components/customactivities/pensamientoCritico/views/Main/MainDebate";
 import OratoryView from "./components/customactivities/oratoria/Main";
+import OratorIA from "./components/customactivities/oratoria/views/OratoryStart/OratorIA";
+import MainOratory from "./components/customactivities/oratoria/views/Main/MainOratory";
 function App() {
   return (
     <Router>
@@ -35,11 +37,13 @@ function App() {
         <Route path="/activity/fitnessmuñeca" element={<Muñeca />} />
         <Route path="/activity/fitnessespalda" element={<Espalda />} />
         <Route path="/activity/GameMindset" element={<Hercules />} />
-        <Route path="/activity/debate-ia" element={<Main />} />
+        <Route path="/activity/debate-ia" element={<MainDebate />} />
         <Route path="/activity/debate-ia/start" element={<DebateIA />} />
         <Route path="/activity/debate-ia/topic-start" element={<DebateStart />} />
         <Route path="/activity/debate-ia/reports" element={<DebateReport />} />
-        <Route path="/activity/oratoria" element={<OratoryView />} />
+        <Route path="/activity/oratoria" element={<MainOratory />} />
+        <Route path="/activity/oratoria/start" element={<OratorIA />} />
+        <Route path="/activity/oratoria/topic-start" element={<OratoryView />} />
       </Routes>
     </Router>
   );

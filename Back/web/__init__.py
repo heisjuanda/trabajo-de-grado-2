@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from web import comment, course, user, activity, answer, debate_ia
+from web import comment, course, user, activity, answer, debate_ia, oratory_ia
 
 api = APIRouter()
 
@@ -38,5 +38,11 @@ api.include_router(
 api.include_router(
     debate_ia.router,
     prefix="/debate-topics",
+    tags=["Temas"],
+)
+
+api.include_router(
+    oratory_ia.router,
+    prefix="/oratory-topics",
     tags=["Temas"],
 )

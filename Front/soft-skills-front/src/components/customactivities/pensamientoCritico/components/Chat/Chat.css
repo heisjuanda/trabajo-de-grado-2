@@ -78,9 +78,10 @@
       width: 100%;
 
       resize: vertical;
+      min-height: 25px;
       border: none;
       border-radius: 10px;
-      padding: 2px 5px 2px 5px;
+      padding: 5px;
       background-color: var(--primary-color);
 
       margin-right: 20px;
