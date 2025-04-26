@@ -55,28 +55,15 @@ const ReportDetail = ({ report }) => {
         <div
           key={index}
           style={{
-            margin: "8px 0",
-            padding: "10px",
-            borderRadius: "15px",
             backgroundColor: isUser ? "#e3f2fd" : "#f5f5f5",
             alignSelf: isUser ? "flex-start" : "flex-end",
-            maxWidth: "80%",
-            position: "relative",
           }}
         >
-          <div
-            style={{
-              fontSize: "0.8em",
-              color: "#666",
-              marginBottom: "4px",
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-          >
+          <div>
             <span>{isUser ? "👤 Usuario" : "🤖 IA"}</span>
             <span>{round}</span>
           </div>
-          <div style={{ color: "#333" }}>
+          <div>
             {msg.split(": ").slice(1).join(": ")}
           </div>
         </div>
@@ -85,86 +72,27 @@ const ReportDetail = ({ report }) => {
   };
 
   return (
-    <div
-      className="report-detail"
-      style={{ padding: "0px 20px 20px 20px", fontFamily: "Arial, sans-serif" }}
-    >
-      <details style={{ marginBottom: "20px", padding: "0px 15px 0px 15px" }}>
-        <summary
-          style={{
-            cursor: "pointer",
-            fontSize: "14px",
-            fontWeight: "bold",
-            padding: "10px",
-            background: "#f0f0f0",
-            borderRadius: "5px",
-          }}
-        >
-          Reporte Completo
-        </summary>
+    <div className="report-detail">
+      <details>
+        <summary>Reporte Completo</summary>
         {fullReport && fullReport.sections ? (
-          <div
-            className="full-report"
-            style={{
-              background: "#ffffff",
-              border: "1px solid #e0e0e0",
-              borderRadius: "8px",
-              boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-              padding: "15px",
-              marginTop: "10px",
-              maxHeight: "400px",
-              overflowY: "auto",
-              fontSize: "14px",
-              color: "#333",
-              lineHeight: "1.5",
-            }}
-          >
+          <div className="full-report">
             {fullReport.sections.map((section, index) => (
-              <div
-                key={index}
-                className="report-section"
-                style={{ marginBottom: "20px" }}
-              >
-                <h4 style={{ marginBottom: "5px" }}>{section.title}</h4>
+              <div key={index} className="report-section">
+                <h4>{section.title}</h4>
                 {section.items && renderItems(section.items)}
               </div>
             ))}
           </div>
         ) : (
-          <p style={{ padding: "10px" }}>No hay detalles del reporte.</p>
+          <p>No hay detalles del reporte.</p>
         )}
       </details>
 
-      <details style={{ marginBottom: "20px", padding: "0px 15px 0px 15px" }}>
-        <summary
-          style={{
-            cursor: "pointer",
-            fontSize: "14px",
-            fontWeight: "bold",
-            padding: "10px",
-            background: "#f0f0f0",
-            borderRadius: "5px",
-          }}
-        >
-          Chat
-        </summary>
-        <div
-          className="chat-container"
-          style={{
-            background: "#ffffff",
-            border: "1px solid #e0e0e0",
-            borderRadius: "8px",
-            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-            padding: "15px",
-            marginTop: "10px",
-            maxHeight: "400px",
-            overflowY: "auto",
-            fontSize: "14px",
-            color: "#333",
-            lineHeight: "1.5",
-          }}
-        >
-          { renderChat()}
+      <details>
+        <summary>Chat</summary>
+        <div className="chat-container">
+          {renderChat()}
         </div>
       </details>
     </div>

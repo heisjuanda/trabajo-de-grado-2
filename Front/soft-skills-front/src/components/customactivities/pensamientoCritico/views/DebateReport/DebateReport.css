@@ -34,47 +34,93 @@
     max-height: 350px;
     height: max-content;
     & .pagination {
-      position: absolute;
-      bottom: -70px;
-      transform: translateX(-50%);
-      left: 50%;
-
-      width: 150px;
-      margin-inline: auto;
-      padding: 15px;
+      position: relative;
+      bottom: auto;
+      transform: none;
+      left: auto;
 
       display: flex;
-      flex-direction: row;
-      gap: 5px;
+      justify-content: center;
+      align-items: center;
+      margin: 25px auto;
+      gap: 15px;
+      width: 60vw;
 
-      font-size: 12px;
+      font-size: 14px;
 
       & button {
-        width: 30px;
-
-        border: none;
-        border-radius: 10px;
-        background-color: var(--secondary-color);
-        color: white;
-
-        transition: 0.25s;
+        width: auto;
+        background: #f0f4ff;
+        color: #4f46e5;
+        border: 1px solid #e0e6ff;
+        border-radius: 6px;
+        padding: 8px 12px;
+        font-weight: bold;
         cursor: pointer;
-        &:hover {
-          opacity: 0.7;
+        transition: all 0.2s ease;
+
+        &:hover:not(:disabled) {
+          background: #e0e6ff;
+          color: #4338ca;
+          opacity: 1;
         }
+        
         &:disabled {
+          opacity: 0.5;
           cursor: not-allowed;
         }
+      }
+
+      & span {
+        font-size: 14px;
+        color: #333;
       }
     }
   }
 
   & .selected-report__container {
-    margin-top: 50px;
+    width: 60vw;
+    margin: 80px auto 40px auto;
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    border-radius: 12px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
 
-    & h3 {
-      font-size: 20px;
-      padding: 20px 20px 0px 20px;
+    & header {
+      width: 100%;
+      background-color: #f0f4ff;
+      border-bottom: 1px solid #e0e6ff;
+      margin: 0;
+      padding: 15px 25px;
+      
+      & h3 {
+        margin: 0;
+        color: #4f46e5;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: center;
+      }
     }
+
+    & .report-detail {
+      padding: 20px 25px;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .selected-report__container {
+    margin: 150px auto 40px auto !important;
+  }
+}
+
+@media (max-width: 540px) {
+  .debate-reports__section .reports-container .pagination {
+    width: 90vw !important;
+  }
+  
+  .debate-reports__section .selected-report__container {
+    width: 90vw !important;
   }
 }

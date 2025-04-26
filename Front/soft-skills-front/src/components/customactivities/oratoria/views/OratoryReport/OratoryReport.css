@@ -190,12 +190,51 @@ summary:hover {
   margin-top: 50px;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 25px auto;
+  gap: 15px;
+  width: 60vw;
+}
+
+.pagination button {
+  background: #f0f4ff;
+  color: #4f46e5;
+  border: 1px solid #e0e6ff;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #e0e6ff;
+  color: #4338ca;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-size: 14px;
+  color: #333;
+}
+
 @media (max-width: 540px) {
   .recording-item button {
     width: 100% !important;
   }
 
   .recordings-list {
+    width: 90vw !important;
+  }
+  
+  .pagination {
     width: 90vw !important;
   }
 }

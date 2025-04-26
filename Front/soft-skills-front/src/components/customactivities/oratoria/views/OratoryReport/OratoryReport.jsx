@@ -17,6 +17,8 @@ const OratoryReport = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
+  const [currentPage, setCurrentPage] = useState(1);
+  const [recordingsPerPage] = useState(3);
 
   const notifySuccess = (message) => {
     toast.success(message);
@@ -78,13 +80,29 @@ const OratoryReport = () => {
     }
   }, [user, isAuthenticated, authLoading, navigate]);
 
-  // Función para parsear el JSON del feedback
   const parseFeedback = (feedbackJson) => {
     try {
       return JSON.parse(feedbackJson);
     } catch (error) {
       console.error("Error al parsear el feedback:", error);
       return null;
+    }
+  };
+
+  const indexOfLastRecording = currentPage * recordingsPerPage;
+  const indexOfFirstRecording = indexOfLastRecording - recordingsPerPage;
+  const currentRecordings = recordings.slice(indexOfFirstRecording, indexOfLastRecording);
+  const totalPages = Math.ceil(recordings.length / recordingsPerPage);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1);
+    }
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1);
     }
   };
 
@@ -122,7 +140,7 @@ const OratoryReport = () => {
         ) : (
           <>
             <div className="recordings-list">
-              {recordings.map((recording) => {
+              {currentRecordings.map((recording) => {
                 const feedback = parseFeedback(recording.feedback);
 
                 return (
@@ -198,6 +216,23 @@ const OratoryReport = () => {
                 );
               })}
             </div>
+
+            {recordings.length > recordingsPerPage && (
+              <div className="pagination">
+                <button onClick={handlePrevPage} disabled={currentPage === 1}>
+                  &#8592;
+                </button>
+                <span>
+                  Página {currentPage} de {totalPages}
+                </span>
+                <button
+                  onClick={handleNextPage}
+                  disabled={currentPage === totalPages}
+                >
+                  &#8594;
+                </button>
+              </div>
+            )}
 
             <div className="navigation-buttons">
               <Button
