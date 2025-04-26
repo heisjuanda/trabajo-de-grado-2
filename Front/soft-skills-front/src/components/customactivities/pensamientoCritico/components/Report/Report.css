@@ -53,3 +53,9 @@
     background-color: var(--primary-color);
   }
 }
+
+@media (max-width: 450px) {
+  .report-container {
+    width: 90vw !important;
+  }
+}

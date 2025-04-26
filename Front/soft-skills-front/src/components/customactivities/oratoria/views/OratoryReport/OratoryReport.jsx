@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 
 import Nav from "../../components/Nav/Nav";
 import Section from "../../components/Section/Section";
 import Button from "../../../pensamientoCritico/components/Button/Button";
+import Loader from "../../../pensamientoCritico/components/Loader/Loader";
 
 import "./OratoryReport.css";
 
@@ -16,10 +18,21 @@ const OratoryReport = () => {
   const [error, setError] = useState(null);
   const navigate = useNavigate();
 
+  const notifySuccess = (message) => {
+    toast.success(message);
+  };
+
+  const notifyError = (message) => {
+    toast.error(message);
+  };
+
+  const notifyInfo = (message) => {
+    toast.info(message);
+  };
+
   useEffect(() => {
-    // Verificar autenticación
     if (!authLoading && !isAuthenticated) {
-      //   navigate("/signin");
+      notifyError("Debes iniciar sesión para ver tu historial.");
       return;
     }
 
@@ -27,41 +40,33 @@ const OratoryReport = () => {
       if (!user || !user.email) return;
 
       setLoading(true);
+      notifyInfo("Cargando grabaciones...");
       setError(null);
 
       try {
-        console.log("Obteniendo grabaciones para:", user.email);
-
-        // Construye la URL con los parámetros de consulta manualmente para asegurar que
-        // se codifican correctamente
         const url = `${
           process.env.REACT_APP_API_HOST
         }/oratory-audio/list?user_email=${encodeURIComponent(
           user.email
         )}&skip=0&limit=100`;
 
-        console.log("URL de la petición:", url);
-
         const response = await axios.get(url);
 
-        console.log("Respuesta completa:", response);
         setRecordings(response.data || []);
+        notifySuccess("Grabaciones cargadas correctamente");
       } catch (error) {
         console.error("Error al obtener el reporte de oratoria:", error);
         setError(error.message || "Error al obtener las grabaciones");
+        notifyError(error.message || "Error al obtener las grabaciones");
 
-        // Información detallada para depuración
         if (error.response) {
-          // El servidor respondió con un código de estado fuera del rango 2xx
-          console.error("Datos de respuesta:", error.response.data);
-          console.error("Estado HTTP:", error.response.status);
-          console.error("Cabeceras:", error.response.headers);
+          notifyError(error.response.data);
+          notifyError(error.response.status);
+          notifyError(error.response.headers);
         } else if (error.request) {
-          // La petición fue realizada pero no se recibió respuesta
-          console.error("No se recibió respuesta del servidor:", error.request);
+          notifyError(error.request);
         } else {
-          // Algo ocurrió al preparar la petición
-          console.error("Error de configuración:", error.message);
+          notifyError(error.message);
         }
       } finally {
         setLoading(false);
@@ -91,7 +96,7 @@ const OratoryReport = () => {
       </header>
       <div className="oratory-report-container">
         {authLoading || loading ? (
-          <p>Cargando grabaciones...</p>
+          <Loader />
         ) : error ? (
           <div className="error-container">
             <p className="error-message">Error: {error}</p>
@@ -132,7 +137,7 @@ const OratoryReport = () => {
                         <strong>Calificación:</strong> {recording.calification}
                         /10
                       </p>
-                      <p>
+                      <p className="recording-duration">
                         <strong>Duración:</strong>{" "}
                         {Math.floor(recording.duration_ms / 1000)} segundos
                       </p>
@@ -199,13 +204,14 @@ const OratoryReport = () => {
                 className="back-button"
                 onclick={() => navigate("/activity/oratoria")}
                 content="Volver a Oratoria"
-                typeStyle="main"
+                typeStyle="secondary"
                 disabled={!loading}
               />
             </div>
           </>
         )}
       </div>
+      <ToastContainer />
     </section>
   );
 };

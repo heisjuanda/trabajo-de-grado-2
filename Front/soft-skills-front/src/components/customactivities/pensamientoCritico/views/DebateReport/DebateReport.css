@@ -35,7 +35,7 @@
     height: max-content;
     & .pagination {
       position: absolute;
-      bottom: -20px;
+      bottom: -70px;
       transform: translateX(-50%);
       left: 50%;
 
@@ -70,7 +70,7 @@
   }
 
   & .selected-report__container {
-    margin-top: 20px;
+    margin-top: 50px;
 
     & h3 {
       font-size: 20px;

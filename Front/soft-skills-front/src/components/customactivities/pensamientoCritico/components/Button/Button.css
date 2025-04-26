@@ -26,12 +26,11 @@ button:disabled {
 .button-ia-section-secondary {
   background-color: var(--primary-color);
   color: #634aff;
-  border: 3px solid var(--primary-color);
+  border: 0px solid var(--primary-color);
   border-radius: 10px;
   width: 230px;
 
   cursor: pointer;
-  margin: 20px 8%;
   transition: 0.2s;
 
   font-family: 14px;

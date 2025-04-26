@@ -79,3 +79,9 @@
     opacity: 0.7;
   }
 }
+
+@media (max-width: 450px) {
+  .topic-container {
+    margin-inline: 0px !important;
+  }
+}

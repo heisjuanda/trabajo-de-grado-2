@@ -16,7 +16,6 @@ import DebateIA from "./components/customactivities/pensamientoCritico/DebateIA"
 import DebateStart from "./components/customactivities/pensamientoCritico/views/DebateStart/DebateStart";
 import DebateReport from "./components/customactivities/pensamientoCritico/views/DebateReport/DebateReport";
 import MainDebate from "./components/customactivities/pensamientoCritico/views/Main/MainDebate";
-import OratoryView from "./components/customactivities/oratoria/Main";
 import OratorIA from "./components/customactivities/oratoria/views/OratorIA/OratorIA";
 import OratoryStart from "./components/customactivities/oratoria/views/OratoryStart/OratoryStart";
 import MainOratory from "./components/customactivities/oratoria/views/Main/MainOratory";
@@ -49,7 +48,6 @@ function App() {
         <Route path="/activity/oratoria" element={<MainOratory />} />
         <Route path="/activity/oratoria/start" element={<OratorIA />} />
         <Route path="/activity/oratoria/topic-start" element={<OratoryStart />} />
-        {/* <Route path="/activity/oratoria/topic-start" element={<OratoryView />} /> */}
         <Route path="/activity/oratoria-ejercicios" element={<OratoryMaterial />} />
         <Route path="/activity/oratoria-feedback" element={<OratoryFeedback />} />
         <Route path="/activity/oratoria/reports" element={<OratoryReport />} />

@@ -32,3 +32,13 @@
     max-width: 200px;
     line-height: 1.2;
 }
+
+@media (max-width: 450px) {
+    .juan-dabot-text {
+        display: none;
+    }
+
+    .juan-dabot-avatar {
+        margin: 0 !important;
+    }
+}

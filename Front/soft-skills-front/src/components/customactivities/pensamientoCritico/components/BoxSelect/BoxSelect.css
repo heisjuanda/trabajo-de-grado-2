@@ -44,3 +44,9 @@
         }
     }
 }
+
+@media (max-width: 450px) {
+  .box-select button {
+    margin-top: 25px !important;
+  }
+}

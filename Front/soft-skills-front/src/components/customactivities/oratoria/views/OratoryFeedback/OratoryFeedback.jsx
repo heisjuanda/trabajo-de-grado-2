@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 import Section from "../../components/Section/Section";
 import Nav from "../../components/Nav/Nav";
+import Button from "../../../pensamientoCritico/components/Button/Button";
 
 import { ORATORY_FEEDBACK_STORAGE_KEY } from "../../constantes/constants";
 
@@ -23,8 +24,8 @@ const OratoryFeedback = () => {
     setFeedback(feedback);
 
     return () => {
-      removeOratoryTopic()
-    }
+      removeOratoryTopic();
+    };
   }, []);
 
   if (!feedback) return <div>No hay feedback</div>;
@@ -34,9 +35,26 @@ const OratoryFeedback = () => {
       <Nav />
       <div className="oratory-feedback">
         <h1>Feedback de tu Discurso</h1>
-        <Section title="Resumen" content={feedback.resumen} />
-        <Section title="Sentimiento" content={feedback.sentimiento} />
-        <Section title="Temas clave" content={feedback.temas_clave} />
+        <div className="feedback-content">
+          <h6>Calificación: {feedback.calificacion + "🎯"}</h6>
+          <Section title="Resumen" content={feedback.resumen} />
+          <Section title="Sentimiento" content={feedback.sentimiento} />
+          <Section title="Temas clave" content={feedback.temas_clave} />
+        </div>
+        <div className="feedback-buttons">
+          <Button
+            onclick={() => history("/activity/oratoria/topic-start")}
+            content={"Nuevo discurso"}
+            disabled={true}
+            typeStyle="secondary"
+          />
+          <Button
+            onclick={() => history("/activity/oratoria/reports")}
+            content={"Ver reportes"}
+            disabled={true}
+            typeStyle="main"
+          />
+        </div>
       </div>
     </section>
   );

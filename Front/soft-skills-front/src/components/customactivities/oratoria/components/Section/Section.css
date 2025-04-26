@@ -1,14 +1,14 @@
 .section-container {
     background-color: var(--primary-color);
     border-radius: 10px;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.04);
     margin-bottom: 15px;
     overflow: hidden;
     transition: all 0.3s ease;
 
     width: 60vw;
     max-width: 1200px;
-    min-width: 300px;
+    min-width: 200px;
   }
   
   .section-header {
