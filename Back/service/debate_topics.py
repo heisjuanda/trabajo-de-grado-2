@@ -82,7 +82,7 @@ def summary_generator(debate_texto):
     - **Aspectos Positivos:** Reconoce lo que hizo bien.
     - **Áreas de Mejora:** Señala de forma clara los puntos que requieren fortalecerse.
     - **Sugerencias:** Ofrece recomendaciones prácticas para mejorar en futuras intervenciones.
-    Además, asigna una calificación final en una escala del 0 al 10, siendo 10 la máxima excelencia, en el siguiente formato:
+    Además, asigna una calificación final a la participación del usuario en el debate en una escala del 0 al 10, siendo 10 la máxima excelencia, en el siguiente formato:
     **Calificación Final:** [valor]
 
     La respuesta debe estar en formato Markdown, cumpliendo estas pautas:

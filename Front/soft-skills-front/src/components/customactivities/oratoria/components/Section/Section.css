@@ -1,0 +1,68 @@
+.section-container {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+    width: 60vw;
+    max-width: 1200px;
+    min-width: 300px;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--primary-color);
+    background-color: #f9f9f9;
+  }
+  
+  .section-title {
+    font-size: 16px;
+    margin: 0;
+    color: #333;
+    opacity: 0.8;
+  }
+  
+  .dropdown-icon {
+    font-size: 12px;
+    transition: transform 0.2s ease;
+    color: var(--secondary-color);
+  }
+  
+  .markdown-content {
+    padding: 1rem 1.5rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  .markdown-content h1,
+  .markdown-content h2,
+  .markdown-content h3 {
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    font-weight: 18px;
+  }
+
+  .markdown-content p {
+    font-size: 14px;
+  }
+  
+  .markdown-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+  }
+  
+  .markdown-content li {
+    margin-bottom: 0.4rem;
+  }
+  
+  .markdown-content strong {
+    font-weight: bold;
+  }
+  

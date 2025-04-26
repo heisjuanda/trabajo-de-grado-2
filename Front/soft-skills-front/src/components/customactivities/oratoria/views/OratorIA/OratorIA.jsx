@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 
@@ -7,20 +7,17 @@ import InputSelection from "../../../pensamientoCritico/components/InputSelectio
 import Button from "../../../pensamientoCritico/components/Button/Button";
 import JuanDabot from "../../components/JuanDabot/JuanDabot";
 
-import { ALL_DIFFICULTIES } from "../../constantes/constants";
+import { ALL_DIFFICULTIES, ORATORY_FEEDBACK_STORAGE_KEY } from "../../constantes/constants";
 
 import BoxInfo from "../../../pensamientoCritico/components/BoxInfo/BoxInfo";
 import Nav from "../../components/Nav/Nav";
-import OratoryResult from "../../components/OratoryResult/OratoryResult";
 
 import "./OratorIA.css";
-import { parseDynamicFeedback } from "../../../pensamientoCritico/helpers/helpers";
-import { saveOratoryTopic } from "../../helpers/helpers";
+import { parseOratoryTopic, saveOratoryTopic, removeOratoryTopic } from "../../helpers/helpers";
 
 const OratorIA = () => {
   const [difficulty, setDifficulty] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const [oratoryTopic, setOratoryTopic] = useState(null);
   const history = useNavigate();
 
   const handleSelection = (value) => {
@@ -33,30 +30,31 @@ const OratorIA = () => {
     axios
       .get(`${process.env.REACT_APP_API_HOST}/oratory-topics/${difficulty}`)
       .then((response) => {
-        // const debateInfo = {
-        //   question: response.data.question,
-        //   questionID: response.data.id,
-        //   topic: response.data.topic,
-        // };
-        // setSessionStorageValue(JSON.stringify(debateInfo));
-        // history("/activity/debate-ia/topic-start");
-        const parsedFeedback = parseDynamicFeedback(response.data.topic)
-        saveOratoryTopic(response.data.topic)
-        console.log(parsedFeedback)
-        setOratoryTopic(parsedFeedback)
+        const parsedTopic = parseOratoryTopic(response.data);
+        if (!parsedTopic) {
+          notifyFailure("Intentando nuevamente");
+          getRandomTopic();
+          return;
+        }
+        const topicToStore = {
+          ...parsedTopic,
+          difficulty: difficulty
+        }
+        saveOratoryTopic(topicToStore);
+        history("/activity/oratoria/topic-start");
       })
       .catch((error) => {
-        console.error("Error al obtejer los temas:", error);
+        console.error("Error al obtener los temas:", error);
         notifyFailure()
-        // removeSessionStorageValue();
+        removeOratoryTopic();
       })
       .finally(() => {
         setIsLoading(false);
       });
   };
 
-  const notifyFailure = () =>
-    toast.error("Error al obtener el tema", {
+  const notifyFailure = (additionalMessage = "") =>
+    toast.error("Error al obtener el tema" + additionalMessage, {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
@@ -66,6 +64,11 @@ const OratorIA = () => {
       progress: undefined,
       theme: "light",
     });
+
+  useEffect(() => {
+    removeOratoryTopic();
+    removeOratoryTopic(ORATORY_FEEDBACK_STORAGE_KEY);
+  }, []);
 
   return (
     <section className="orator-ia-section">
@@ -86,9 +89,8 @@ const OratorIA = () => {
         />
       </div>
 
-      <BoxInfo difficulty={difficulty} allIdeas={ALL_DIFFICULTIES} />
+      <BoxInfo topic={difficulty} allIdeas={ALL_DIFFICULTIES} />
       <ToastContainer />
-      {oratoryTopic && <OratoryResult result={oratoryTopic} />}
       <JuanDabot />
     </section>
   );

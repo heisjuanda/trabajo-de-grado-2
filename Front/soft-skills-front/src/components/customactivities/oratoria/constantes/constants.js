@@ -4,6 +4,8 @@ import expert from "../../../../resources/icons/expert.png"
 import microphone from "../../../../resources/icons/microphone.png"
 import talk from "../../../../resources/icons/talk.png"
 import video from "../../../../resources/icons/video.png"
+import book from "../../../../resources/icons/book.png"
+import game from "../../../../resources/icons/game.png"
 
 export const ALL_DIFFICULTIES = [
     {
@@ -30,6 +32,7 @@ export const ALL_DIFFICULTIES = [
 ]
 
 export const ORATORY_TOPIC_STORAGE_KEY = "oratoryTopic"
+export const ORATORY_FEEDBACK_STORAGE_KEY = "oratoryFeedback"
 
 export const ALL_SECTIONS = [
   {
@@ -37,7 +40,7 @@ export const ALL_SECTIONS = [
     icon: microphone,
     type: "INTERACTIVO",
     title: "Retos de Discurso",
-    link: "/activity/oratoria-retos/start",
+    link: "/activity/oratoria/start",
     buttonText: "Comenzar Reto",
   },
   {
@@ -45,15 +48,41 @@ export const ALL_SECTIONS = [
     icon: video,
     type: "EDUCACIÓN",
     title: "Vídeos de Oratoria",
-    link: "https://youtube.com/playlist?list=PLIOoQ_S_XkkEkdEjuhvdf7p7TTFgC2FbL",
+    link: "https://www.youtube.com/watch?v=dhQHPjmk0-k&list=PLIOoQ_S_XkkGK5QsmCII_yXFqvza7u62l",
     buttonText: "Ver Ahora",
   },
   {
     description: "Ejercicios breves de vocalización, improvisación y lenguaje corporal para fortalecer tu presencia escénica y fluidez.",
     icon: talk,
-    type: "PRÁCTICA",
+    type: "INTERACTIVO",
     title: "Ejercicios de Oratoria",
     link: "/activity/oratoria-ejercicios",
     buttonText: "Practicar",
   },
 ]
+
+export const MATERIALS = [
+  {
+    title: "Story Dice",
+    description: "Juego de dados para desarrollar habilidades de oratoria.",
+    icon: game,
+    type: "JUEGOS",
+    buttonText: "Jugar",
+    link: "https://davebirss.com/storydice/index.html",
+  },
+  {
+    title: "Materiales de Aprendizaje",
+    description: "En esta sección encontrarás materiales de aprendizaje para fortalecer tus habilidades oratorias.",
+    icon: book,
+    type: "MATERIAL",
+    buttonText: "Ver",
+    link: "https://www.toastmasters.org/Resources",
+  },
+]
+
+export const TIME_OUT_QUESTION = 45000;
+export const TIME_OUT_DISCURSE = [
+  90000,
+  140000,
+  180000,
+];

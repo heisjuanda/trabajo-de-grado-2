@@ -16,7 +16,7 @@ const Nav = () => {
   };
   return (
     <nav className="nav-oratoria-section">
-      <div onClick={goToMainPage}>Oratoria IA</div>
+      <div onClick={goToMainPage}>Orator-IA</div>
       <div onClick={goToDebate}>Empezar Discurso</div>
       <div onClick={goToReport}>Reporte</div>
     </nav>

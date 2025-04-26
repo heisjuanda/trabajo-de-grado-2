@@ -1,0 +1,183 @@
+.oratory-report-container {
+  font-family: 'Roboto', sans-serif;
+
+  & header {
+    width: 60vw;
+    height: max-content;
+    border-radius: 10px;
+    padding: 15px;
+
+    margin: 0px auto 10px auto;
+
+    & h1 {
+      max-width: 50vw;
+      min-width: 200px;
+      margin-inline: auto;
+
+      font-family: 25px;
+      font-weight: 700;
+    }
+  }
+}
+
+.recordings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60vw;
+  height: max-content;
+  border-radius: 10px;
+  padding: 1px;
+
+  margin: 0px auto 0px auto;
+}
+
+.recording-item {
+  background-color: var(--primary-color);
+  border-radius: 12px;
+  padding: 12px 24px 12px 24px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.recording-item h6 {
+  text-align: right;
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 16px;
+}
+
+.recording-item p {
+  margin: 8px 0;
+  opacity: 0.6;
+}
+
+.recording-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.recording-details p {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.recording-feedback {
+  background-color: var(--primary-color);
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+.recording-feedback h4 {
+  color: black;
+  opacity: 0.7;
+  margin-top: 0;
+  margin-bottom: 0px;
+}
+
+.transcript {
+  background-color: white;
+  padding: 10px;
+  border-radius: 4px;
+  border-left: 3px solid var(--secondary-color);
+  font-style: italic;
+  color: black;
+  opacity: 0.7;
+}
+
+.rating {
+  font-size: 12px;
+  color: var(--secondary-color);
+}
+
+.feedback-section {
+  margin-top: 0px;
+
+  & .section-container {
+    width: auto !important;
+  }
+}
+
+details {
+  cursor: pointer;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+summary {
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #f0f4ff;
+  color: #333;
+  transition: background-color 0.2s;
+}
+
+summary:hover {
+  background-color: #e0e6ff;
+}
+
+.feedback-content {
+  padding: 16px;
+  background-color: white;
+}
+
+.feedback-content h5 {
+  color: #333;
+  margin: 12px 0 0px 0;
+}
+
+.transcript {
+  padding: 12px;
+  background: #fafafa;
+  border-left: 4px solid #4f46e5;
+  margin: 0;
+  font-style: italic;
+  color: #555;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.back-button {
+  background: #4f46e5;
+  color: white;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.back-button:hover {
+  background: #4338ca;
+}
+
+.error-container {
+  background-color: #ffe4e6;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  color: #b91c1c;
+}
+
+.error-message {
+  margin-bottom: 12px;
+}
+
+.oratory-report-container > p {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  margin-top: 50px;
+}

@@ -1,13 +1,21 @@
-import BoxInfo from "../../../pensamientoCritico/components/BoxInfo/BoxInfo";
+import { useEffect } from "react";
 import BoxSelect from "../../../pensamientoCritico/components/BoxSelect/BoxSelect";
 import Nav from "../../components/Nav/Nav";
 import JuanDabot from "../../components/JuanDabot/JuanDabot";
 
-import { ALL_SECTIONS } from "../../constantes/constants";
+import { removeOratoryTopic } from "../../helpers/helpers";
+
+import { ALL_SECTIONS, ORATORY_FEEDBACK_STORAGE_KEY } from "../../constantes/constants";
 
 import "./Main.css";
 
 const MainOratory = () => {
+
+  useEffect(() => {
+    removeOratoryTopic()
+    removeOratoryTopic(ORATORY_FEEDBACK_STORAGE_KEY)
+  }, []);
+
   return (
     <section className="main-section">
       <Nav />

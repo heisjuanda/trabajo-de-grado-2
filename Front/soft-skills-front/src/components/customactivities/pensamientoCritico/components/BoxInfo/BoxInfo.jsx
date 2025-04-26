@@ -44,7 +44,8 @@ const BoxInfo = ({ topic, isFullScreen, question, dropdown = false, allIdeas = A
                 flexDirection: "row",
                 gap: "10px",
                 alignContent: "center",
-                justifyContent:"space-around"
+                justifyContent:"space-around",
+                alignItems:"center"
               }
             : {}
         }
@@ -78,7 +79,7 @@ const BoxInfo = ({ topic, isFullScreen, question, dropdown = false, allIdeas = A
       {(!dropdown || isOpen) && (
         <>
           <h3>
-            {isFullScreen ? ALL_IDEAS[topic].option : "Descripción del Tema"}
+            {isFullScreen ? allIdeas[topic].option : "Descripción del Tema"}
           </h3>
           <p>{isFullScreen && question ? question : topicDescription}</p>
         </>

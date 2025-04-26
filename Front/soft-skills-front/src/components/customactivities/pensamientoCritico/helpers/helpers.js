@@ -35,7 +35,6 @@ export function parseDynamicFeedback(text) {
 
   const ratingRegex = /\*\*Calificación Final:\*\*\s*(\d+)/i;
   const ratingMatch = text.match(ratingRegex);
-  console.log(ratingMatch)
   if (ratingMatch) {
     result.rating = parseInt(ratingMatch[1], 10);
   }
