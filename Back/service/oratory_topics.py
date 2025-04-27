@@ -311,15 +311,18 @@ def analyze_oratory_input(transcript: str, topic: dict, audio_bytes: bytes, audi
         tmp.flush()
         tmp_filename = tmp.name
 
-    with open(tmp_filename, "rb") as file:
-        transcription = whisper_client.audio.transcriptions.create(
-            file=(audio_filename, file.read()),
-            model="whisper-large-v3",
-            response_format="verbose_json",
-            language="es",
-        )
-
-    full_text = transcription.text
+    try:
+        with open(tmp_filename, "rb") as file:
+            transcription = whisper_client.audio.transcriptions.create(
+                file=(audio_filename, file.read()),
+                model="whisper-large-v3",
+                response_format="verbose_json",
+                language="es",
+            )
+        full_text = transcription.text
+    except Exception as e:
+        print(f"Error al transcribir con Whisper: {str(e)}")
+        full_text = f"[No se pudo obtener la transcripción con Whisper. Utiliza la transcripción del navegador]: {transcript}"
 
     summary_prompt = get_summary_prompt(transcript, topic, time, full_text, is_question)
     summary = client.chat.completions.create(
