@@ -65,6 +65,20 @@
     "@babel/plugin-transform-runtime": "^7.25.4",
     "@babel/preset-env": "^7.25.4",
     "@babel/preset-react": "^7.24.7",
-    "eslint-plugin-storybook": "^0.8.0"
+    "eslint-plugin-storybook": "^0.8.0",
+    "identity-obj-proxy": "^3.0.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(js|jsx)$": "babel-jest"
+    },
+    "transformIgnorePatterns": [
+      "node_modules/(?!(axios|react-router-dom)/)"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+      "axios": "<rootDir>/node_modules/axios/dist/axios.js",
+      "^react-markdown$": "<rootDir>/src/__mocks__/reactMarkdownMock.js"
+    }
   }
 }

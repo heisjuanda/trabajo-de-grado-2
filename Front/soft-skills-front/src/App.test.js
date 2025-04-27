@@ -1,8 +1,20 @@
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import App from './App';
 
-test('renders learn react link', () => {
+// Mock necesario para Auth0
+jest.mock('@auth0/auth0-react', () => ({
+  useAuth0: () => ({
+    isAuthenticated: false,
+    user: null,
+    isLoading: false,
+    loginWithRedirect: jest.fn(),
+    logout: jest.fn()
+  })
+}));
+
+test('renderiza el botón de inicio de sesión', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const loginButton = screen.getByText(/Iniciar sesión/i);
+  expect(loginButton).toBeInTheDocument();
 });
