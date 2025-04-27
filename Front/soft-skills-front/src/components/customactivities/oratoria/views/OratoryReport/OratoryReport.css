@@ -238,3 +238,24 @@ summary:hover {
     width: 90vw !important;
   }
 }
+
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
+}
+
+@media (max-width: 768px) {
+  .reports-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .reports-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+}

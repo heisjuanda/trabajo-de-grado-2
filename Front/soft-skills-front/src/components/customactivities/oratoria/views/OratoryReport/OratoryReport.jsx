@@ -8,6 +8,7 @@ import Nav from "../../components/Nav/Nav";
 import Section from "../../components/Section/Section";
 import Button from "../../../pensamientoCritico/components/Button/Button";
 import Loader from "../../../pensamientoCritico/components/Loader/Loader";
+import PerformanceMetrics from "../../../pensamientoCritico/components/PerformanceMetrics/PerformanceMetrics";
 
 import "./OratoryReport.css";
 
@@ -19,6 +20,7 @@ const OratoryReport = () => {
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
   const [recordingsPerPage] = useState(3);
+  const [showMetrics, setShowMetrics] = useState(false);
 
   const notifySuccess = (message) => {
     toast.success(message);
@@ -106,11 +108,28 @@ const OratoryReport = () => {
     }
   };
 
+  const toggleMetrics = () => {
+    setShowMetrics(!showMetrics);
+  };
+
+  const metricsData = recordings.map(recording => ({
+    rating: recording.calification,
+    created_at: recording.created_at
+  }));
+
   return (
     <section className="oratory-report-container">
       <Nav />
-      <header>
+      <header className="reports-header">
         <h1>Historial de Grabaciones de Oratoria</h1>
+        {recordings.length > 0 && (
+          <Button
+            onclick={toggleMetrics}
+            content={showMetrics ? 'Ver Grabaciones' : 'Ver Métricas'}
+            typeStyle="main"
+            disabled={recordings.length > 0}
+          />
+        )}
       </header>
       <div className="oratory-report-container">
         {authLoading || loading ? (
@@ -137,6 +156,8 @@ const OratoryReport = () => {
               typeStyle="main"
             />
           </div>
+        ) : showMetrics ? (
+          <PerformanceMetrics reports={metricsData} />
         ) : (
           <>
             <div className="recordings-list">

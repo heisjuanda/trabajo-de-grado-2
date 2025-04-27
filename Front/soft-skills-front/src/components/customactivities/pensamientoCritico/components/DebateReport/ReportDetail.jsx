@@ -50,7 +50,9 @@ const ReportDetail = ({ report }) => {
       const isUser = msg.startsWith("Usuario");
       const roundMatch = msg.match(/\(Ronda (\d+)\)/);
       const round = roundMatch ? `Ronda ${roundMatch[1]}` : "";
+      const message = msg.split(": ").slice(1).join(": ")
 
+      if (!message) return null;
       return (
         <div
           key={index}
@@ -64,7 +66,7 @@ const ReportDetail = ({ report }) => {
             <span>{round}</span>
           </div>
           <div>
-            {msg.split(": ").slice(1).join(": ")}
+            {message}
           </div>
         </div>
       );

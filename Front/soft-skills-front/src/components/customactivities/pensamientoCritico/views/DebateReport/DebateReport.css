@@ -124,3 +124,42 @@
     width: 90vw !important;
   }
 }
+
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.metrics-toggle-btn {
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.metrics-toggle-btn:hover {
+  background-color: #0d62d1;
+}
+
+.metrics-toggle-btn.active {
+  background-color: #34a853;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .reports-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .metrics-toggle-btn {
+    width: 100%;
+  }
+}

@@ -6,11 +6,12 @@ import { ToastContainer, toast } from "react-toastify";
 import Nav from "../../components/Nav/Nav";
 import Report from "../../components/Report/Report";
 import GenericLoader from "../../components/Loader/Generic";
-
+import PerformanceMetrics from "../../components/PerformanceMetrics/PerformanceMetrics";
 import ReportDetail from "../../components/DebateReport/ReportDetail";
 import JuanDabot from "../../../oratoria/components/JuanDabot/JuanDabot";
 
 import "./DebateReport.css";
+import Button from "../../components/Button/Button";
 
 const DebateReport = () => {
   const reportsPerPage = 4;
@@ -20,6 +21,7 @@ const DebateReport = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedReportID, setSelectedReportID] = useState(null);
   const [reportDetails, setReportDetails] = useState(null);
+  const [showMetrics, setShowMetrics] = useState(false);
 
   const { user } = useAuth0();
 
@@ -91,7 +93,6 @@ const DebateReport = () => {
     for (let index = 0; index < userReports.length; index++) {
       if (userReports[index].id === selectedReportID) {
         setReportDetails(userReports[index]);
-
         break;
       }
     }
@@ -117,14 +118,32 @@ const DebateReport = () => {
     }
   };
 
+  const toggleMetrics = () => {
+    setShowMetrics(!showMetrics);
+    if (!showMetrics) {
+      setSelectedReportID(null);
+      setReportDetails(null);
+    }
+  };
+
   return (
     <section className="debate-reports__section">
       <Nav />
-      <header>
+      <header className="reports-header">
         <h1>Reportes Recientes</h1>
+        <Button
+          onclick={toggleMetrics}
+          typeStyle="main"
+          content={showMetrics ? 'Ver Reportes' : 'Ver Métricas'}
+          disabled={userReports.length > 0}
+
+        />
       </header>
+      
       {isLoading ? (
         <GenericLoader />
+      ) : showMetrics ? (
+        <PerformanceMetrics reports={userReports} />
       ) : (
         <div className="reports-container">
           {currentReports.map((report, key) => (
@@ -157,7 +176,8 @@ const DebateReport = () => {
           )}
         </div>
       )}
-      {selectedReportID && (
+      
+      {selectedReportID && !showMetrics && (
         <div className="selected-report__container">
           <header>
             <h3>Report Details #{selectedReportID}</h3>
