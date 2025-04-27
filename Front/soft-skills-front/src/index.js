@@ -12,8 +12,8 @@ const onRedirectCallback = (appState) => {
 
 root.render(
   <Auth0Provider
-    domain="dev-55phdb8coth15677.us.auth0.com"
-    clientId="bto2ydLzgWbCGhWWF0pnnej6364BcnKB"
+    domain="dev-wqtg5nppjl05iie2.us.auth0.com"
+    clientId="43QdsbQUll7olZpndevvA9zHeDhbw8wA"
     authorizationParams={{ redirect_uri: window.location.origin }}
     onRedirectCallback={onRedirectCallback}
     cacheLocation="localstorage"
