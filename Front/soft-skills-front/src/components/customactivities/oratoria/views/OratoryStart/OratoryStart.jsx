@@ -212,7 +212,7 @@ const OratoryStart = () => {
         }
       );
       saveOratoryTopic(response.data.analysis, ORATORY_FEEDBACK_STORAGE_KEY);
-      notifySuccess("Audio enviado!, Feedback recibido!.");
+      notifySuccess("Audio enviado!, Feedback recibido y reporte guardado!.");
     } catch (error) {
       console.error("Error al enviar el audio al servidor:", error);
 

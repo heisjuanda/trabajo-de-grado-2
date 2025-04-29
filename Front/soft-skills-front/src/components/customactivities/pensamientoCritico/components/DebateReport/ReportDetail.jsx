@@ -1,5 +1,7 @@
 import React from "react";
 
+import Feedback from "../Feedback/Feedback";
+
 import "./ReportDetail.css";
 
 const ReportDetail = ({ report }) => {
@@ -79,12 +81,9 @@ const ReportDetail = ({ report }) => {
         <summary>Reporte Completo</summary>
         {fullReport && fullReport.sections ? (
           <div className="full-report">
-            {fullReport.sections.map((section, index) => (
-              <div key={index} className="report-section">
-                <h4>{section.title}</h4>
-                {section.items && renderItems(section.items)}
-              </div>
-            ))}
+            <Feedback 
+              data={fullReport} 
+            />
           </div>
         ) : (
           <p>No hay detalles del reporte.</p>

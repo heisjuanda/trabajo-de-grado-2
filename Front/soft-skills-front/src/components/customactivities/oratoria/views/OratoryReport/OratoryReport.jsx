@@ -9,18 +9,21 @@ import Section from "../../components/Section/Section";
 import Button from "../../../pensamientoCritico/components/Button/Button";
 import Loader from "../../../pensamientoCritico/components/Loader/Loader";
 import PerformanceMetrics from "../../../pensamientoCritico/components/PerformanceMetrics/PerformanceMetrics";
+import JuanDabot from "../../components/JuanDabot/JuanDabot";
 
 import "./OratoryReport.css";
 
 const OratoryReport = () => {
   const { user, isAuthenticated, isLoading: authLoading } = useAuth0();
   const [recordings, setRecordings] = useState([]);
+  const [filteredRecordings, setFilteredRecordings] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
   const [recordingsPerPage] = useState(3);
   const [showMetrics, setShowMetrics] = useState(false);
+  const [sortOrder, setSortOrder] = useState("date-desc");
 
   const notifySuccess = (message) => {
     toast.success(message);
@@ -33,6 +36,36 @@ const OratoryReport = () => {
   const notifyInfo = (message) => {
     toast.info(message);
   };
+
+  const sortRecordings = (recs, order) => {
+    const sortedRecordings = [...recs]; 
+    
+    switch (order) {
+      case "date-desc":
+        return sortedRecordings.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+      case "date-asc":
+        return sortedRecordings.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
+      case "rating-desc":
+        return sortedRecordings.sort((a, b) => (b.calification || 0) - (a.calification || 0));
+      case "rating-asc":
+        return sortedRecordings.sort((a, b) => (a.calification || 0) - (b.calification || 0));
+      default:
+        return sortedRecordings;
+    }
+  };
+
+  const handleSortChange = (e) => {
+    const newSortOrder = e.target.value;
+    setSortOrder(newSortOrder);
+    setFilteredRecordings(sortRecordings(recordings, newSortOrder));
+    setCurrentPage(1);
+  };
+
+  useEffect(() => {
+    if (recordings.length > 0) {
+      setFilteredRecordings(sortRecordings(recordings, sortOrder));
+    }
+  }, [sortOrder, recordings]);
 
   useEffect(() => {
     if (!authLoading && !isAuthenticated) {
@@ -55,8 +88,9 @@ const OratoryReport = () => {
         )}&skip=0&limit=100`;
 
         const response = await axios.get(url);
+        const recordingsData = response.data || [];
 
-        setRecordings(response.data || []);
+        setRecordings(recordingsData);
         notifySuccess("Grabaciones cargadas correctamente");
       } catch (error) {
         console.error("Error al obtener el reporte de oratoria:", error);
@@ -93,8 +127,8 @@ const OratoryReport = () => {
 
   const indexOfLastRecording = currentPage * recordingsPerPage;
   const indexOfFirstRecording = indexOfLastRecording - recordingsPerPage;
-  const currentRecordings = recordings.slice(indexOfFirstRecording, indexOfLastRecording);
-  const totalPages = Math.ceil(recordings.length / recordingsPerPage);
+  const currentRecordings = filteredRecordings.slice(indexOfFirstRecording, indexOfLastRecording);
+  const totalPages = Math.ceil(filteredRecordings.length / recordingsPerPage);
 
   const handleNextPage = () => {
     if (currentPage < totalPages) {
@@ -160,6 +194,21 @@ const OratoryReport = () => {
           <PerformanceMetrics reports={metricsData} />
         ) : (
           <>
+            <div className="reports-filters">
+              <label htmlFor="sort-order">Ordenar por:</label>
+              <select 
+                id="sort-order" 
+                value={sortOrder} 
+                onChange={handleSortChange}
+                className="filter-select"
+              >
+                <option value="date-desc">Fecha (más reciente primero)</option>
+                <option value="date-asc">Fecha (más antiguo primero)</option>
+                <option value="rating-desc">Calificación (mayor a menor)</option>
+                <option value="rating-asc">Calificación (menor a mayor)</option>
+              </select>
+            </div>
+            
             <div className="recordings-list">
               {currentRecordings.map((recording) => {
                 const feedback = parseFeedback(recording.feedback);
@@ -238,7 +287,7 @@ const OratoryReport = () => {
               })}
             </div>
 
-            {recordings.length > recordingsPerPage && (
+            {filteredRecordings.length > recordingsPerPage && (
               <div className="pagination">
                 <button onClick={handlePrevPage} disabled={currentPage === 1}>
                   &#8592;
@@ -268,6 +317,7 @@ const OratoryReport = () => {
         )}
       </div>
       <ToastContainer />
+      <JuanDabot />
     </section>
   );
 };

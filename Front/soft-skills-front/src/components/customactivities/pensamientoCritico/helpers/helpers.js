@@ -42,7 +42,12 @@ export function parseDynamicFeedback(text) {
   const sectionRegex = /\*\*(.+?)\*\*\s*\n([\s\S]*?)(?=\n\*\*|$)/gi;
   let sectionMatch;
   while ((sectionMatch = sectionRegex.exec(text)) !== null) {
-    const sectionTitle = sectionMatch[1].trim();
+    const sectionTitle = sectionMatch[1]
+      .trim()
+      .replace(/\*/g, '')
+      .replace(/\_/g, '')
+      .replace(/\`/g, '');
+    
     const sectionContent = sectionMatch[2].trim();
 
     const rawItems = sectionContent.split("\n")
@@ -50,15 +55,24 @@ export function parseDynamicFeedback(text) {
       .filter(item => item.length > 0 && item !== "-");
 
     const processedItems = rawItems.map(item => {
-      const cleanedItem = item.replace(/^[-\d\.\s]+/, "");
+      const cleanedItem = item.replace(/^[-*•\d\.\s]+/, "");
+      
       if (cleanedItem.includes(":")) {
         const parts = cleanedItem.split(":");
-        const title = parts[0].trim();
+        const title = parts[0]
+          .trim()
+          .replace(/\*/g, '')
+          .replace(/\_/g, '')
+          .replace(/\`/g, '');
+        
         const details = parts.slice(1)
           .join(":")
           .split(/(?<=\.)\s+(?=\S)/)
-          .map(d => d.trim())
+          .map(d => d.trim()
+            .replace(/^\s*[-*•]\s+/, '')
+          )
           .filter(d => d);
+        
         return { title, details };
       }
       return cleanedItem;
@@ -72,7 +86,6 @@ export function parseDynamicFeedback(text) {
 
   return result;
 }
-
 
 export function getFormattedDate() {
   const date = new Date();

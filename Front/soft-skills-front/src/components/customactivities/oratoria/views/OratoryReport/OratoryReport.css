@@ -259,3 +259,55 @@ summary:hover {
     margin-bottom: 10px;
   }
 }
+
+/* Añadimos estilos para los filtros, similar a los de DebateReport */
+.reports-filters {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 auto 20px auto;
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  width: 60%;
+  max-width: 600px;
+}
+
+.reports-filters label {
+  margin-right: 10px;
+  font-weight: 500;
+  color: #666;
+}
+
+.filter-select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: white;
+  font-size: 14px;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.filter-select:hover {
+  border-color: var(--primary-color, #ccc);
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: var(--secondary-color, #aaa);
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .reports-filters {
+    width: 90%;
+    justify-content: space-between;
+  }
+  
+  .filter-select {
+    max-width: 70%;
+  }
+}

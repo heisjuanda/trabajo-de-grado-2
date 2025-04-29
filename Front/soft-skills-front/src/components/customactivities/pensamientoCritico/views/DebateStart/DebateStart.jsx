@@ -5,25 +5,25 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 
 import Nav from "../../components/Nav/Nav";
+import Button from "../../components/Button/Button";
 import BoxInfo from "../../components/BoxInfo/BoxInfo";
-
-import "./DebateStart.css";
+import Chat from "../../components/Chat/Chat";
+import Feedback from "../../components/Feedback/Feedback";
 
 import {
   getFormattedDate,
   getSessionStorageValues,
-} from "../../helpers/helpers";
-import Chat from "../../components/Chat/Chat";
-import Feedback from "../../components/Feedback/Feedback";
-import {
-  removeSessionStorageValue,
   setSessionStorageValue,
+  removeSessionStorageValue
 } from "../../helpers/helpers";
+
 import {
   IA_CHAT_RESPONSE_CONTEXT,
   IA_FEEDBACK_RESPONSE,
   IA_TOPIC_QUESTION_INDEX,
 } from "../../constantes/debateIdeas";
+
+import "./DebateStart.css";
 
 const DebateStart = () => {
   const [question, setQuestion] = useState("");
@@ -114,7 +114,17 @@ const DebateStart = () => {
         question={question}
       />
       {userFeedback ? (
-        <Feedback data={userFeedback} />
+        <div className="debate-start-feedback-container">
+          <Feedback data={userFeedback} />
+          <Button 
+            content="Ver reportes" 
+            onclick={() => {
+              history("/activity/debate-ia/reports");
+            }}
+            typeStyle="main"
+            disabled={!!userFeedback}
+          />
+        </div>
       ) : (
         <Chat setFeedback={setUserFeedback} />
       )}

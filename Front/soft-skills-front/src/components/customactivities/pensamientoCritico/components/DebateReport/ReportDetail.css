@@ -12,6 +12,10 @@
     padding: 0px 15px 0px 15px;
 }
 
+.report-detail .feedback-container {
+    width: auto !important;
+}
+
 .report-detail summary {
     cursor: pointer;
     font-size: 14px;
