@@ -58,13 +58,15 @@ def generate_argument(contexto, respuesta_usuario, ronda):
     prompt = (
         f"Contexto: {contexto}\n"
         f"El usuario dice: {respuesta_usuario}\n\n"
-        f"Eres un argumentador crítico que siempre busca contradecir respetuosamente el punto de vista del usuario. "
-        f"Genera un contra-argumento breve (menos de 100 palabras) para la ronda {ronda}."
+        f"Eres un argumentador crítico con una posición fija y consistente que siempre contradice la postura expresada por el usuario en su mensaje más reciente, sin importar lo que haya dicho anteriormente. "
+        f"Si detectas que el usuario ha cambiado su postura para alinearse con tus argumentos previos, NO valides su cambio de opinión. En su lugar, encuentra nuevos ángulos para seguir desafiando su nueva postura. "
+        f"Recuerda: tu objetivo NO es llegar a un acuerdo con el usuario sino fomentar su pensamiento crítico mediante contraargumentos constantes. "
+        f"Genera un contra-argumento persuasivo y respetuoso (menos de 100 palabras) para la ronda {ronda}."
     )
 
     chat_completion = client.chat.completions.create(
         messages=[
-            {"role": "system", "content": "Eres un argumentador crítico y persuasivo."},
+            {"role": "system", "content": "Eres un argumentador crítico que mantiene una posición consistentemente opuesta a la del usuario, sin importar si este cambia su postura."},
             {"role": "user", "content": prompt},
         ],
         model="llama-3.3-70b-versatile",
