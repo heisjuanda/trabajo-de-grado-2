@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useNavigate } from "react-router-dom";
 
@@ -16,7 +17,7 @@ const MainDebate = () => {
   useEffect(() => {
     if (!isAuthenticated) navigate("/dashboard");
   }, [isAuthenticated, navigate]);
-  
+
   return (
     <section className="main-section">
       <Nav />
