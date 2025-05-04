@@ -1,19 +1,29 @@
 import { useEffect } from "react";
+import { useAuth0 } from "@auth0/auth0-react";
+import { useNavigate } from "react-router-dom";
+
 import BoxSelect from "../../../pensamientoCritico/components/BoxSelect/BoxSelect";
 import Nav from "../../components/Nav/Nav";
 import JuanDabot from "../../components/JuanDabot/JuanDabot";
 
 import { removeOratoryTopic } from "../../helpers/helpers";
 
-import { ALL_SECTIONS, ORATORY_FEEDBACK_STORAGE_KEY } from "../../constantes/constants";
+import {
+  ALL_SECTIONS,
+  ORATORY_FEEDBACK_STORAGE_KEY,
+} from "../../constantes/constants";
 
 import "./Main.css";
 
 const MainOratory = () => {
+  const { isAuthenticated } = useAuth0();
 
+  const navigate = useNavigate();
   useEffect(() => {
-    removeOratoryTopic()
-    removeOratoryTopic(ORATORY_FEEDBACK_STORAGE_KEY)
+    removeOratoryTopic();
+    removeOratoryTopic(ORATORY_FEEDBACK_STORAGE_KEY);
+
+    if (!isAuthenticated) navigate("/dashboard");
   }, []);
 
   return (
@@ -22,7 +32,9 @@ const MainOratory = () => {
       <header>
         <h1>Desarrolla Tus Habilidades De Oratoria</h1>
         <p>
-          La oratoria es la capacidad de expresar ideas y argumentos de manera clara y persuasiva. Implica utilizar técnicas de lenguaje, tono y estructura para transmitir mensajes efectivos.
+          La oratoria es la capacidad de expresar ideas y argumentos de manera
+          clara y persuasiva. Implica utilizar técnicas de lenguaje, tono y
+          estructura para transmitir mensajes efectivos.
         </p>
       </header>
       <div className="title-section">
