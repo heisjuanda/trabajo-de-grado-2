@@ -414,8 +414,16 @@ const OratoryStart = () => {
     }
 
     try {
-      // Configuramos el intervalo para capturar chunks más pequeños
-      recorder.start(1000); // Captura chunks cada segundo en lugar de al final
+      recorder.start(1000); 
+      
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+        navigator.userAgent
+      );
+      
+      if (isMobile) {
+        notifyInfo("Detectado dispositivo móvil - Habilitando modo de reconocimiento especial");
+      }
+      
       recognition.start();
       setIsRecording(true);
       notifyInfo("Grabación de audio y reconocimiento iniciados.");
@@ -506,7 +514,22 @@ const OratoryStart = () => {
 
       recognitionInstance.onend = () => {
         notifyInfo("Reconocimiento de voz terminado.");
-        stopRecording();
+        
+        if (isRecording && mediaRecorderRef.current?.state === "recording") {
+          try {
+            setTimeout(() => {
+              if (isRecording && mediaRecorderRef.current?.state === "recording") {
+                notifyInfo("Reiniciando reconocimiento de voz...");
+                recognitionInstance.start();
+              }
+            }, 300);
+          } catch (error) {
+            notifyFailure("Error al reiniciar el reconocimiento de voz: " + error.message);
+            stopRecording(true);
+          }
+        } else {
+          stopRecording();
+        }
       };
 
       recognitionInstance.onerror = (event) => {
