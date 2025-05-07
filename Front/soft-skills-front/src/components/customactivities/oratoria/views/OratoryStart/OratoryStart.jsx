@@ -104,6 +104,92 @@ const OratoryStart = () => {
     setOratoryTopic(topic);
   }, []);
 
+  const compressAudio = async (audioBlob) => {
+    if (audioBlob.size < 1000000) {
+      return audioBlob;
+    }
+
+    try {
+      notifyInfo("Comprimiendo audio para optimizar el envío...");
+      
+      const audioElement = new Audio();
+      audioElement.src = URL.createObjectURL(audioBlob);
+      
+      return new Promise((resolve) => {
+        audioElement.onloadedmetadata = async () => {
+          const originalDuration = audioElement.duration;
+          
+          const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+          const audioData = await audioBlob.arrayBuffer();
+          const audioBuffer = await audioContext.decodeAudioData(audioData);
+          
+          const offlineContext = new OfflineAudioContext(
+            1,
+            audioBuffer.sampleRate * originalDuration, 
+            22050
+          );
+          
+          const source = offlineContext.createBufferSource();
+          source.buffer = audioBuffer;
+          
+          source.connect(offlineContext.destination);
+          source.start(0);
+          
+          const renderedBuffer = await offlineContext.startRendering();
+          
+          const compressedBlob = bufferToWave(renderedBuffer, 0, renderedBuffer.length);
+          
+          notifySuccess(`Audio comprimido: ${(compressedBlob.size / 1024 / 1024).toFixed(2)}MB (reducción: ${((1 - compressedBlob.size / audioBlob.size) * 100).toFixed(0)}%)`);
+          
+          URL.revokeObjectURL(audioElement.src);
+          resolve(compressedBlob);
+        };
+      });
+    } catch (error) {
+      console.error("Error al comprimir audio:", error);
+      notifyWarning("No se pudo comprimir el audio, usando la versión original.");
+      return audioBlob;
+    }
+  };
+
+  const bufferToWave = (abuffer, offset, length) => {
+    const numOfChan = abuffer.numberOfChannels;
+    const size = length * numOfChan * 2 + 44;
+    const buffer = new ArrayBuffer(size);
+    const view = new DataView(buffer);
+    
+    writeUTFBytes(view, 0, 'RIFF');
+    view.setUint32(4, size - 8, true);
+    writeUTFBytes(view, 8, 'WAVE');
+    writeUTFBytes(view, 12, 'fmt ');
+    view.setUint32(16, 16, true);
+    view.setUint16(20, 1, true);
+    view.setUint16(22, numOfChan, true);
+    view.setUint32(24, abuffer.sampleRate, true);
+    view.setUint32(28, abuffer.sampleRate * 2 * numOfChan, true);
+    view.setUint16(32, numOfChan * 2, true);
+    view.setUint16(34, 16, true);
+    writeUTFBytes(view, 36, 'data');
+    view.setUint32(40, length * numOfChan * 2, true);
+    
+    const channel0 = abuffer.getChannelData(0);
+    let offset1 = 44;
+    for (let i = 0; i < length; i++) {
+      let sample = Math.max(-1, Math.min(1, channel0[i]));
+      sample = (0.5 + sample < 0 ? sample * 32768 : sample * 32767) | 0;
+      view.setInt16(offset1, sample, true);
+      offset1 += 2;
+    }
+    
+    return new Blob([buffer], { type: 'audio/wav' });
+  };
+
+  const writeUTFBytes = (view, offset, string) => {
+    for (let i = 0; i < string.length; i++) {
+      view.setUint8(offset + i, string.charCodeAt(i));
+    }
+  };
+
   const setupMediaRecorder = async () => {
     if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
       notifyFailure("getUserMedia no soportado");
@@ -116,16 +202,36 @@ const OratoryStart = () => {
       notifySuccess("Permiso de micrófono obtenido.");
 
       if (!permissionGranted || !isSupported) return;
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      
+      const constraints = { 
+        audio: {
+          echoCancellation: true,
+          noiseSuppression: true,
+          autoGainControl: true,
+          channelCount: 1,
+          sampleRate: 22050,
+        } 
+      };
+      
+      const stream = await navigator.mediaDevices.getUserMedia(constraints);
       mediaStreamRef.current = stream;
 
-      const options = { mimeType: "audio/webm;codecs=opus" };
+      const options = { 
+        mimeType: "audio/webm;codecs=opus",
+        audioBitsPerSecond: 16000
+      };
+      
       let recorder;
       try {
         recorder = new MediaRecorder(stream, options);
       } catch (err) {
-        notifyFailure("audio/webm no soportado, usando default.", err);
-        recorder = new MediaRecorder(stream);
+        notifyWarning("audio/webm con bitrate personalizado no soportado, usando configuración alternativa.");
+        try {
+          recorder = new MediaRecorder(stream, { mimeType: "audio/webm;codecs=opus" });
+        } catch (err2) {
+          notifyFailure("audio/webm no soportado, usando formato predeterminado.", err);
+          recorder = new MediaRecorder(stream);
+        }
       }
 
       mediaRecorderRef.current = recorder;
@@ -137,12 +243,18 @@ const OratoryStart = () => {
         }
       };
 
-      recorder.onstop = () => {
-        notifyInfo("MediaRecorder detenido.");
+      recorder.onstop = async () => {
+        notifyInfo("MediaRecorder detenido. Procesando audio...");
+        
         const audioBlob = new Blob(audioChunksRef.current, {
           type: recorder.mimeType || "audio/webm",
         });
-        const audioUrl = URL.createObjectURL(audioBlob);
+        
+        notifyInfo(`Tamaño original: ${(audioBlob.size / 1024 / 1024).toFixed(2)}MB`);
+        
+        const compressedBlob = await compressAudio(audioBlob);
+        
+        const audioUrl = URL.createObjectURL(compressedBlob);
         const filename = `grabacion-${new Date().toISOString()}.webm`;
 
         const currentFinalTranscript = finalTranscript + interimTranscript;
@@ -158,7 +270,7 @@ const OratoryStart = () => {
 
         audioChunksRef.current = [];
         stopMediaStream();
-        setBlob(audioBlob);
+        setBlob(compressedBlob);
       };
 
       recorder.onerror = (event) => {
@@ -202,6 +314,7 @@ const OratoryStart = () => {
       formData.append("time", totalTime);
       formData.append("is_question", isQuestion);
       formData.append("user_email", user.email);
+      
       const response = await axios.post(
         `${process.env.REACT_APP_API_HOST}/oratory-topics/oratory-analysis`,
         formData,
@@ -303,7 +416,8 @@ const OratoryStart = () => {
     }
 
     try {
-      recorder.start();
+      // Configuramos el intervalo para capturar chunks más pequeños
+      recorder.start(1000); // Captura chunks cada segundo en lugar de al final
       recognition.start();
       setIsRecording(true);
       notifyInfo("Grabación de audio y reconocimiento iniciados.");
