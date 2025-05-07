@@ -17,16 +17,19 @@ const Report = ({
       }}
       className="report-container"
     >
-      <div>
-        <img width="35px" height="35px" src={userPicture} alt="user profile" />
+      <div className="report-user-info">
+        <img className="report-user-avatar" src={userPicture} alt={`${userName} profile`} />
+        <span className="report-user-name">{userName}</span>
       </div>
-      <div>
-        <p style={{ opacity: "0.5" }}>{userName}</p>
+      <div className="report-details">
+        <div className="report-rating">
+          <span className="report-label">Calificación:</span>
+          <span className="report-rating-value">{rating}</span>
+        </div>
+        <div className="report-date">
+          <span>{parseUserFriendlyDate(date)}</span>
+        </div>
       </div>
-      <div>
-        <p>Calificación: {rating} </p>
-      </div>
-      <p style={{ opacity: "0.5" }}>{parseUserFriendlyDate(date)}</p>
     </div>
   );
 };
