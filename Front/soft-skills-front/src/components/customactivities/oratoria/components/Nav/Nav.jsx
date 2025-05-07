@@ -6,11 +6,13 @@ import "./Nav.css";
 
 const Nav = () => {
   const history = useNavigate();
-  const { isAuthenticated } = useAuth0();
+  const { isAuthenticated, isLoading } = useAuth0();
 
   useEffect(() => {
-    if (!isAuthenticated) history("/dashboard");
-  }, [isAuthenticated, history]);
+    if (!isLoading && !isAuthenticated) {
+      history("/dashboard");
+    }
+  }, [isAuthenticated, isLoading, history]);
 
   const goToDashboard = () => {
     history("/dashboard");
