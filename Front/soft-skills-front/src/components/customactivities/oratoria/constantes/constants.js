@@ -84,5 +84,5 @@ export const TIME_OUT_QUESTION = 40000;
 export const TIME_OUT_DISCURSE = [
   90000,
   120000,
-  120000,
+  180000,
 ];

@@ -250,8 +250,6 @@ const OratoryStart = () => {
           type: recorder.mimeType || "audio/webm",
         });
         
-        notifyInfo(`Tamaño original: ${(audioBlob.size / 1024 / 1024).toFixed(2)}MB`);
-        
         const compressedBlob = await compressAudio(audioBlob);
         
         const audioUrl = URL.createObjectURL(compressedBlob);
