@@ -102,7 +102,6 @@ def generate_oratory_topic(difficulty: int):
             print(f"Error también al usar Groq para generar tema de oratoria: {str(e2)}")
             raise ValueError("No se pudo generar un tema de oratoria. Por favor, intenta de nuevo más tarde.")
 
-
 def get_summary_prompt(transcript: str, topic: dict, time: int, full_text: str, is_question: bool):
     try:
         difficulty = int(topic.get('difficulty', 0))
@@ -329,8 +328,6 @@ def analyze_oratory_input(transcript: str, topic: dict, audio_bytes: bytes, audi
     if not GROQ_API_KEY:
         raise ValueError("Falta la clave de API GROG_API_WHISPER")
     
-    OPEN_API_CHAT_GPT = os.getenv("OPEN_API_CHAT_GPT")
-    
     client = Groq(api_key=API_KEY)
     whisper_client = Groq(api_key=GROQ_API_KEY)
 
@@ -376,42 +373,44 @@ def analyze_oratory_input(transcript: str, topic: dict, audio_bytes: bytes, audi
     sentiment_prompt = get_sentiment_prompt(transcript, topic, time, full_text)
     keywords_prompt = get_keywords_prompt(transcript, topic, full_text)
 
-    def get_analysis(prompt, system_message, analysis_type, is_large=False):
-        if OPEN_API_CHAT_GPT:
-            try:
-                import openai
-                openai.api_key = OPEN_API_CHAT_GPT
-                
-                response = openai.chat.completions.create(
-                    model="gpt-4o-mini", 
-                    messages=[
-                        {"role": "system", "content": system_message},
-                        {"role": "user", "content": prompt},
-                    ],
-                    timeout=15
-                )
-                return response.choices[0].message.content
-                
-            except Exception as e:
-                print(f"Error al usar ChatGPT para {analysis_type}: {str(e)}")
-        
-        try:
-            response = client.chat.completions.create(
-                model="llama-3.3-70b-versatile",
-                messages=[
-                    {"role": "system", "content": system_message},
-                    {"role": "user", "content": prompt},
-                ],
-                temperature=0,
-            )
-            return response.choices[0].message.content
-        except Exception as e:
-            print(f"Error al analizar {analysis_type} con Groq: {str(e)}")
-            return f"No se pudo generar el análisis de {analysis_type}. Por favor, intenta de nuevo más tarde."
+    try:
+        summary_response = client.chat.completions.create(
+            messages=[
+                {"role": "system", "content": summary_system},
+                {"role": "user", "content": summary_prompt}
+            ],
+            model="llama-3.3-70b-versatile"
+        )
+        summary = summary_response.choices[0].message.content
+    except Exception as e:
+        print(f"Error al generar resumen con Groq: {str(e)}")
+        summary = "No se pudo generar el análisis del discurso. Por favor, intenta de nuevo más tarde."
 
-    summary = get_analysis(summary_prompt, summary_system, "resumen", True)
-    sentiment = get_analysis(sentiment_prompt, sentiment_system, "sentimiento")
-    keywords = get_analysis(keywords_prompt, keywords_system, "palabras clave")
+    try:
+        sentiment_response = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[
+                {"role": "system", "content": sentiment_system},
+                {"role": "user", "content": sentiment_prompt}
+            ],
+        )
+        sentiment = sentiment_response.choices[0].message.content
+    except Exception as e:
+        print(f"Error al analizar sentimiento con Groq: {str(e)}")
+        sentiment = "No se pudo generar el análisis de sentimiento. Por favor, intenta de nuevo más tarde."
+
+    try:
+        keywords_response = client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[
+                {"role": "system", "content": keywords_system},
+                {"role": "user", "content": keywords_prompt}
+            ],
+        )
+        keywords = keywords_response.choices[0].message.content
+    except Exception as e:
+        print(f"Error al analizar palabras clave con Groq: {str(e)}")
+        keywords = "No se pudo generar el análisis de palabras clave. Por favor, intenta de nuevo más tarde."
 
     calificacion = 0
     match = re.search(r'\*\*Calificación:\*\*\s*(\d+)/10', summary)
