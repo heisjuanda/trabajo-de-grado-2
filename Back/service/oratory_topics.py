@@ -60,21 +60,50 @@ def build_oratory_prompt(difficulty: int) -> str:
 
 def generate_oratory_topic(difficulty: int):
     load_dotenv()
+    OPEN_API_CHAT_GPT = os.getenv("OPEN_API_CHAT_GPT")
+    if not OPEN_API_CHAT_GPT:
+        raise ValueError("Falta la clave de API OPEN_API_CHAT_GPT")
+    
     API_KEY = os.getenv("GROG_API")
     if not API_KEY:
-        raise Missing("Falta la clave de API GROG_API")
+        raise ValueError("Falta la clave de API GROG_API")
     
-    client = Groq(api_key=API_KEY)
     prompt = build_oratory_prompt(difficulty)
-
-    chat_completion = client.chat.completions.create(
-        messages=[
-            {"role": "system", "content": "Eres un argumentador crítico y persuasivo."},
-            {"role": "user", "content": prompt},
-        ],
-        model="llama-3.3-70b-versatile",
-    )
-    return chat_completion.choices[0].message.content
+    system_message = "Eres un experto en oratoria capaz de generar contenido para discursos."
+    
+    try:
+        import openai
+        openai.api_key = OPEN_API_CHAT_GPT
+        
+        response = openai.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": prompt},
+            ],
+            max_tokens=800,
+            temperature=0.7
+        )
+        return response.choices[0].message.content
+        
+    except Exception as e:
+        print(f"Error al usar ChatGPT para generar tema de oratoria: {str(e)}")
+        try:
+            client = Groq(api_key=API_KEY)
+            
+            chat_completion = client.chat.completions.create(
+                messages=[
+                    {"role": "system", "content": system_message},
+                    {"role": "user", "content": prompt},
+                ],
+                model="llama-3.3-70b-versatile",
+                temperature=0.7
+            )
+            return chat_completion.choices[0].message.content
+            
+        except Exception as e2:
+            print(f"Error también al usar Groq para generar tema de oratoria: {str(e2)}")
+            raise ValueError("No se pudo generar un tema de oratoria. Por favor, intenta de nuevo más tarde.")
 
 
 def get_summary_prompt(transcript: str, topic: dict, time: int, full_text: str, is_question: bool):

@@ -48,8 +48,7 @@ const DebateIA = () => {
         history("/activity/debate-ia/topic-start");
       })
       .catch((error) => {
-        console.error("Error al obtejer los temas:", error);
-        notifyFailure()
+        notifyFailure(`Error al obtener el tema: ${error}`);
         removeSessionStorageValue();
       })
       .finally(() => {
@@ -57,8 +56,8 @@ const DebateIA = () => {
       });
   };
 
-  const notifyFailure = () =>
-    toast.error("Error al obtener el tema", {
+  const notifyFailure = (message) =>
+    toast.error(message, {
       position: "top-right",
       autoClose: 5000,
       hideProgressBar: false,
