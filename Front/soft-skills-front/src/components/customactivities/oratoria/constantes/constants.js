@@ -83,6 +83,6 @@ export const MATERIALS = [
 export const TIME_OUT_QUESTION = 40000;
 export const TIME_OUT_DISCURSE = [
   90000,
-  110000,
-  120000,
+  100000,
+  100000,
 ];
