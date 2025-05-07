@@ -31,7 +31,7 @@ def procesar_ronda(data: DebateRoundRequest):
 
     debate_completo += f"Usuario (Ronda {ronda}): {respuesta_usuario}\n"
 
-    contra_argumento = generate_argument(contexto, respuesta_usuario, ronda)
+    contra_argumento = generate_argument(contexto, respuesta_usuario, ronda, debate_completo)
     debate_completo += f"IA (Ronda {ronda}): {contra_argumento}\n"
 
     return {

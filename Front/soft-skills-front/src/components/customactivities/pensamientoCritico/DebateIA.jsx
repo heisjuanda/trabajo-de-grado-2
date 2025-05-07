@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 
@@ -8,7 +8,7 @@ import InputSelection from "./components/InputSelection/InputSelection";
 import Button from "./components/Button/Button";
 import JuanDabot from "../oratoria/components/JuanDabot/JuanDabot";
 
-import { ALL_IDEAS } from "./constantes/debateIdeas";
+import { ALL_IDEAS, IA_FEEDBACK_RESPONSE, IA_CHAT_RESPONSE_CONTEXT, IA_TOPIC_QUESTION_INDEX } from "./constantes/debateIdeas";
 
 import "./DebateIA.css";
 import {
@@ -20,6 +20,12 @@ import BoxInfo from "./components/BoxInfo/BoxInfo";
 const DebateIA = () => {
   const [topic, setTopic] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    removeSessionStorageValue(IA_CHAT_RESPONSE_CONTEXT);
+    removeSessionStorageValue(IA_FEEDBACK_RESPONSE);
+    removeSessionStorageValue(IA_TOPIC_QUESTION_INDEX);
+  }, []);
 
   const history = useNavigate();
 

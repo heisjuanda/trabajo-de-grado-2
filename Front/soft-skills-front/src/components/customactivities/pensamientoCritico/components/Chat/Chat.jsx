@@ -24,6 +24,7 @@ const Chat = ({ setFeedback }) => {
   const totalRounds = 10;
   const [imageButton, setImageButton] = useState(sendBlue);
   const [isLoading, setIsLoading] = useState(false);
+  const [isLoadingFeedback, setIsLoadingFeedback] = useState(false);
   const [userResponse, setUserResponse] = useState("");
   const [messages, setMessages] = useState([]);
   const [round, setRound] = useState(0);
@@ -123,6 +124,7 @@ const Chat = ({ setFeedback }) => {
     const dataToSend = {
       contexto: context.debate_completo,
     };
+    setIsLoadingFeedback(true);
     notifyLoading()
     axios
       .post(
@@ -143,7 +145,7 @@ const Chat = ({ setFeedback }) => {
         }
       })
       .finally(() => {
-        setIsLoading(false);
+        setIsLoadingFeedback(false);
       });
   };
 
@@ -204,7 +206,7 @@ const Chat = ({ setFeedback }) => {
             onMouseEnter={onEnter}
             onMouseLeave={onLeave}
             onClick={round < totalRounds ? sendUserResponse : getFeedback}
-            disabled={isLoading}
+            disabled={isLoading || isLoadingFeedback}
             ref={sendButtonRef}
           >
             {isLoading ? (

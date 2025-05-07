@@ -51,12 +51,13 @@ def read_topic(id: int, db: Session = Depends(get_session)) -> DebateTopic:
     return topic
 
 
-def generate_argument(contexto, respuesta_usuario, ronda):
+def generate_argument(contexto, respuesta_usuario, ronda, debate_completo):
     load_dotenv()
     OPEN_API_CHAT_GPT = os.getenv("OPEN_API_CHAT_GPT")
 
     prompt = (
-        f"Contexto: {contexto}\n"
+        f"Pregunta del debate:{contexto}"
+        f"Ten en cuenta el contexto de todo el debate hasta el momento de la ronda {ronda}: {debate_completo}\n"
         f"El usuario dice: {respuesta_usuario}\n\n"
         f"Eres un argumentador crítico con una posición fija y consistente que siempre contradice la postura expresada por el usuario en su mensaje más reciente, sin importar lo que haya dicho anteriormente. "
         f"Si detectas que el usuario ha cambiado su postura para alinearse con tus argumentos previos, NO valides su cambio de opinión. En su lugar, encuentra nuevos ángulos para seguir desafiando su nueva postura. "
