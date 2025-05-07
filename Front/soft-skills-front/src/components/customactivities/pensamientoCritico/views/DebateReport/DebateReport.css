@@ -83,7 +83,7 @@
 
   & .selected-report__container {
     width: 60vw;
-    margin: 80px auto 40px auto;
+    margin: 140px auto 40px auto;
     background-color: white;
     border: 1px solid var(--primary-color);
     border-radius: 12px;
@@ -114,7 +114,25 @@
 
 @media (max-width: 660px) {
   .selected-report__container {
-    margin: 150px auto 40px auto !important;
+    margin: 145px auto 40px auto !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .selected-report__container {
+    margin: 65px auto 40px auto !important;
+  }
+}
+
+@media (max-width: 493px) {
+  .selected-report__container {
+    margin: 100px auto 40px auto !important;
+  }
+}
+
+@media (max-width: 465px) {
+  .selected-report__container {
+    margin: 200px auto 40px auto !important;
   }
 }
 
@@ -123,7 +141,7 @@
     width: 90vw !important;
   }
   
-  .debate-reports__section .selected-report__container {
+  .debate-reports__sction .selected-report__container {
     width: 90vw !important;
   }
 }
@@ -226,7 +244,6 @@
 
 .selected-report__container {
   width: 80%;
-  margin: 20px auto;
   padding: 20px;
   background-color: #f9f9f9;
   border-radius: 10px;
