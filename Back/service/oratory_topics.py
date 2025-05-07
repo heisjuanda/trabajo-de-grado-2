@@ -349,70 +349,62 @@ def analyze_oratory_input(transcript: str, topic: dict, audio_bytes: bytes, audi
         print(f"Error al transcribir con Whisper: {str(e)}")
         full_text = f"[No se pudo obtener la transcripción con Whisper. Utiliza la transcripción del navegador]: {transcript}"
 
-    summary_system = (
-        "Eres un experto en análisis de discursos. "
-        "Evalúa como si el orador fuera un humano hablando ante una audiencia real. "
-        "Asume que cualquier error o desvío del guion es responsabilidad del orador, no de la tecnología. "
-        "webApi y whisper son herramientas que sirven para saber lo que dijo el orador. "
-        "Tu objetivo es ayudarle a mejorar su claridad, impacto y dominio del tema."
-    )
-    
-    sentiment_system = (
-        "Eres un experto en análisis de emociones y sentimientos en discursos orales. "
-        "Tu tarea es identificar el tipo de sentimiento predominante, su impacto en la audiencia, y si el tono emocional coincide con la intención original del orador según su guion. "
-        "Debes ofrecer una evaluación clara y con justificación crítica."
-    )
-    
-    keywords_system = (
-        "Eres un experto en análisis lingüístico y en la identificación de palabras clave y entidades en discursos. "
-        "Tu tarea es extraer las palabras clave y entidades de la transcripción del discurso, compararlas con las frases clave que el orador debía usar y con el guion original, "
-        "y proporcionar una evaluación crítica sobre su relevancia y efectividad en el discurso."
-    )
-
     summary_prompt = get_summary_prompt(transcript, topic, time, full_text, is_question)
+    summary = client.chat.completions.create(
+        messages=[
+            {
+                "role": "system",
+                "content": (
+                    "Eres un experto en análisis de discursos. "
+                    "Evalúa como si el orador fuera un humano hablando ante una audiencia real. "
+                    "Asume que cualquier error o desvío del guion es responsabilidad del orador, no de la tecnología. "
+                    "webApi y whisper son herramientas que sirven para saber lo que dijo el orador"
+                    "Tu objetivo es ayudarle a mejorar su claridad, impacto y dominio del tema."
+                )
+            },
+            {"role": "user", "content": summary_prompt}
+        ],
+        temperature=0,
+        model="llama-3.3-70b-versatile"
+    ).choices[0].message.content
+
     sentiment_prompt = get_sentiment_prompt(transcript, topic, time, full_text)
+
+    sentiment = client.chat.completions.create(
+        model="llama-3.3-70b-versatile",
+        messages=[
+            {
+                "role": "system",
+                "content": (
+                    "Eres un experto en análisis de emociones y sentimientos en discursos orales. "
+                    "Tu tarea es identificar el tipo de sentimiento predominante, su impacto en la audiencia, y si el tono emocional coincide con la intención original del orador según su guion. "
+                    "Debes ofrecer una evaluación clara y con justificación crítica."
+                )
+            },
+            {"role": "user", "content": f"{sentiment_prompt}"}
+        ],
+        temperature=0,
+    ).choices[0].message.content
+
     keywords_prompt = get_keywords_prompt(transcript, topic, full_text)
-
-    try:
-        summary_response = client.chat.completions.create(
-            messages=[
-                {"role": "system", "content": summary_system},
-                {"role": "user", "content": summary_prompt}
-            ],
-            model="llama-3.3-70b-versatile"
-        )
-        summary = summary_response.choices[0].message.content
-    except Exception as e:
-        print(f"Error al generar resumen con Groq: {str(e)}")
-        summary = "No se pudo generar el análisis del discurso. Por favor, intenta de nuevo más tarde."
-
-    try:
-        sentiment_response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
-            messages=[
-                {"role": "system", "content": sentiment_system},
-                {"role": "user", "content": sentiment_prompt}
-            ],
-        )
-        sentiment = sentiment_response.choices[0].message.content
-    except Exception as e:
-        print(f"Error al analizar sentimiento con Groq: {str(e)}")
-        sentiment = "No se pudo generar el análisis de sentimiento. Por favor, intenta de nuevo más tarde."
-
-    try:
-        keywords_response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
-            messages=[
-                {"role": "system", "content": keywords_system},
-                {"role": "user", "content": keywords_prompt}
-            ],
-        )
-        keywords = keywords_response.choices[0].message.content
-    except Exception as e:
-        print(f"Error al analizar palabras clave con Groq: {str(e)}")
-        keywords = "No se pudo generar el análisis de palabras clave. Por favor, intenta de nuevo más tarde."
+    keywords = client.chat.completions.create(
+        model="llama-3.3-70b-versatile",
+        messages=[
+            {
+                "role": "system",
+                "content": (
+                    "Eres un experto en análisis lingüístico y en la identificación de palabras clave y entidades en discursos. "
+                    "Tu tarea es extraer las palabras clave y entidades de la transcripción del discurso, compararlas con las frases clave que el orador debía usar y con el guion original, "
+                    "y proporcionar una evaluación crítica sobre su relevancia y efectividad en el discurso."
+                )
+            },
+            {"role": "user", "content": f"{keywords_prompt}"}
+        ],
+        temperature=0,
+    ).choices[0].message.content
 
     calificacion = 0
+    
     match = re.search(r'\*\*Calificación:\*\*\s*(\d+)/10', summary)
     if match:
         try:
