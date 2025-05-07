@@ -80,9 +80,9 @@ export const MATERIALS = [
   },
 ]
 
-export const TIME_OUT_QUESTION = 45000;
+export const TIME_OUT_QUESTION = 40000;
 export const TIME_OUT_DISCURSE = [
   90000,
-  140000,
-  180000,
+  110000,
+  120000,
 ];
