@@ -1,9 +1,6 @@
-import os
-from fastapi import Depends, UploadFile, File, Form, HTTPException
+from fastapi import Depends, HTTPException
 from sqlmodel import Session, select
 from typing import List, Optional
-import json
-import uuid
 
 from database import get_session
 from model.oratory_audio import OratoryAudio, OratoryAudioCreate, OratoryAudioRead, OratoryAudioListItem
@@ -68,7 +65,6 @@ def get_audio_list(
     query = query.offset(skip).limit(limit)
     results = session.exec(query).all()
     
-    # Convertir los resultados a OratoryAudioListItem para excluir audio_data
     return [
         OratoryAudioListItem(
             id=audio.id,

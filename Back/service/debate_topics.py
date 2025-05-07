@@ -53,8 +53,8 @@ def read_topic(id: int, db: Session = Depends(get_session)) -> DebateTopic:
 
 def generate_argument(contexto, respuesta_usuario, ronda):
     load_dotenv()
-    API_KEY = os.getenv("GROG_API_LLAMA")
-    client = Groq(api_key=API_KEY)
+    OPEN_API_CHAT_GPT = os.getenv("OPEN_API_CHAT_GPT")
+
     prompt = (
         f"Contexto: {contexto}\n"
         f"El usuario dice: {respuesta_usuario}\n\n"
@@ -63,23 +63,49 @@ def generate_argument(contexto, respuesta_usuario, ronda):
         f"Recuerda: tu objetivo NO es llegar a un acuerdo con el usuario sino fomentar su pensamiento crítico mediante contraargumentos constantes. "
         f"Genera un contra-argumento persuasivo y respetuoso (menos de 100 palabras) para la ronda {ronda}."
     )
-
-    chat_completion = client.chat.completions.create(
-        messages=[
-            {"role": "system", "content": "Eres un argumentador crítico que mantiene una posición consistentemente opuesta a la del usuario, sin importar si este cambia su postura."},
-            {"role": "user", "content": prompt},
-        ],
-        model="llama-3.3-70b-versatile",
-    )
-    return chat_completion.choices[0].message.content
+    
+    system_message = "Eres un argumentador crítico que mantiene una posición consistentemente opuesta a la del usuario, sin importar si este cambia su postura."
+    
+    try:
+        import openai
+        openai.api_key = OPEN_API_CHAT_GPT
+        
+        response = openai.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": prompt},
+            ],
+        )
+        return response.choices[0].message.content
+        
+    except Exception as e:
+        print(f"Error al usar ChatGPT: {str(e)}")
+        try:
+            API_KEY = os.getenv("GROG_API_LLAMA")
+            client = Groq(api_key=API_KEY)
+            
+            chat_completion = client.chat.completions.create(
+                messages=[
+                    {"role": "system", "content": system_message},
+                    {"role": "user", "content": prompt},
+                ],
+                model="llama-3.3-70b-versatile",
+            )
+            return chat_completion.choices[0].message.content
+            
+        except Exception as e:
+            print(f"Error también al usar Groq: {str(e)}")
+            return "No se pudo generar un contraargumento en este momento. Por favor, intenta de nuevo."
 
 
 def summary_generator(debate_texto):
     load_dotenv()
-    API_KEY = os.getenv("GROG_API_LLAMA")
-    client = Groq(api_key=API_KEY)
+    OPEN_API_CHAT_GPT = os.getenv("OPEN_API_CHAT_GPT")
+    
     summary_prompt = f"""
-    Provee un feedback crítico y constructivo para el usuario que participó en el siguiente debate. 
+    Provee un feedback crítico y constructivo para el usuario que participó en el siguiente debate.
+    evalua solo las respuestas del usuario, y como reacciona el usuario antes los argumentos de la IA.
     Identifica y destaca:
     - **Aspectos Positivos:** Reconoce lo que hizo bien.
     - **Áreas de Mejora:** Señala de forma clara los puntos que requieren fortalecerse.
@@ -95,18 +121,51 @@ def summary_generator(debate_texto):
     Debate:
     {debate_texto}
     """
+    
+    system_message = "Eres un asistente que provee feedback al usuario en debates de forma concisa y precisa."
+    
+    try:
+        import openai
+        openai.api_key = OPEN_API_CHAT_GPT
+        
+        response = openai.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[
+                {"role": "system", "content": system_message},
+                {"role": "user", "content": summary_prompt},
+            ],
+        )
+        return response.choices[0].message.content
+        
+    except Exception as e:
+        print(f"Error al usar ChatGPT para el resumen: {str(e)}")
+        try:
+            API_KEY = os.getenv("GROG_API_LLAMA")
+            client = Groq(api_key=API_KEY)
+            
+            chat_completion = client.chat.completions.create(
+                model="llama-3.3-70b-versatile",
+                messages=[
+                    {"role": "system", "content": system_message},
+                    {"role": "user", "content": summary_prompt},
+                ],
+            )
+            return chat_completion.choices[0].message.content
+            
+        except Exception as e:
+            print(f"Error también al usar Groq para el resumen: {str(e)}")
+            return """
+            **Aspectos Positivos:**
+            - No se pudo generar un análisis detallado en este momento.
 
-    chat_completion = client.chat.completions.create(
-        model="llama-3.3-70b-versatile",
-        messages=[
-            {
-                "role": "system",
-                "content": "Eres un asistente que provee feedback al usuario en debates de forma concisa y precisa.",
-            },
-            {"role": "user", "content": summary_prompt},
-        ],
-    )
-    return chat_completion.choices[0].message.content
+            **Áreas de Mejora:**
+            - Intenta de nuevo más tarde.
+
+            **Sugerencias:**
+            - Verifica tu conexión a internet.
+
+            **Calificación Final:** 0
+            """
 
 def save_report(report: DebateReportRequest, db: Session = Depends(get_session)) -> DebateReportRequest:
     db.add(report)
