@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { useAuth0 } from "@auth0/auth0-react";
 import { useNavigate } from "react-router-dom";
 
 import BoxSelect from "../../../pensamientoCritico/components/BoxSelect/BoxSelect";
@@ -16,14 +15,12 @@ import {
 import "./Main.css";
 
 const MainOratory = () => {
-  const { isAuthenticated } = useAuth0();
-
   const navigate = useNavigate();
+
   useEffect(() => {
     removeOratoryTopic();
     removeOratoryTopic(ORATORY_FEEDBACK_STORAGE_KEY);
 
-    if (!isAuthenticated) navigate("/dashboard");
   }, []);
 
   return (

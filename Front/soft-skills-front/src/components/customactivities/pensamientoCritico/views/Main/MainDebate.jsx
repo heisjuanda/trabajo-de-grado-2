@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-import { useAuth0 } from "@auth0/auth0-react";
 import { useNavigate } from "react-router-dom";
 
 import BoxSelect from "../../components/BoxSelect/BoxSelect";
@@ -11,12 +9,7 @@ import { ALL_SECTIONS } from "../../constantes/debateIdeas";
 import "./Main.css";
 
 const MainDebate = () => {
-  const { isAuthenticated } = useAuth0();
   const navigate = useNavigate();
-
-  useEffect(() => {
-    if (!isAuthenticated) navigate("/dashboard");
-  }, [isAuthenticated, navigate]);
 
   return (
     <section className="main-section">
