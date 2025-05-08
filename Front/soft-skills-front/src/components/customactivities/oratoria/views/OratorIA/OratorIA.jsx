@@ -120,7 +120,7 @@ const OratorIA = () => {
         <Button
           loadingState={isLoading}
           onclick={getRandomTopic}
-          disabled={difficulty || isMobile}
+          disabled={difficulty}
           content={isMobile ? "No disponible en móviles" : "Empezar discurso"}
           typeStyle="main"
         />
