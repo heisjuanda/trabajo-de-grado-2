@@ -61,7 +61,7 @@ cd tu-repositorio
    ```bash
    python main.py
    ```
-   o
+    o
    ```bash
    uvicorn main:app --reload
    ```
