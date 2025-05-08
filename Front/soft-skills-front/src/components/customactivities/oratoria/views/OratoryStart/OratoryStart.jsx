@@ -40,6 +40,7 @@ const OratoryStart = () => {
   const [isFinished, setIsFinished] = useState(false);
   const [isQuestion, setIsQuestion] = useState(false);
   const timeoutRef = useRef(null);
+  const recognitionRestartRef = useRef(null);
 
   const [isAudioSupported, setIsAudioSupported] = useState(true);
   const [permissionGranted, setPermissionGranted] = useState(false);
@@ -51,6 +52,28 @@ const OratoryStart = () => {
   const startTimeRef = useRef(null);
   const endTimeRef = useRef(null);
   const [totalTime, setTotalTime] = useState(0);
+  
+  // Detector de dispositivos móviles
+  const [isMobile, setIsMobile] = useState(false);
+  const [isContinuousSupported, setIsContinuousSupported] = useState(true);
+
+  // Detectar si estamos en un dispositivo móvil al cargar
+  useEffect(() => {
+    const checkMobile = () => {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      const mobileRegex = /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i;
+      const isMobileDevice = mobileRegex.test(userAgent.toLowerCase());
+      setIsMobile(isMobileDevice);
+      
+      // En dispositivos móviles, asumimos que el modo continuo no está soportado correctamente
+      if (isMobileDevice) {
+        setIsContinuousSupported(false);
+        notifyInfo("Dispositivo móvil detectado: ajustando configuración de reconocimiento de voz");
+      }
+    };
+    
+    checkMobile();
+  }, []);
 
   const notifyInfo = (message) =>
     toast.info(message, {
@@ -352,6 +375,18 @@ const OratoryStart = () => {
     }
   };
 
+  // Función para reiniciar el reconocimiento en dispositivos móviles
+  const restartRecognition = () => {
+    if (!isMobile || !isRecording || !recognition) return;
+    
+    try {
+      recognition.start();
+      notifyInfo("Reconocimiento de voz reiniciado");
+    } catch (error) {
+      console.error("Error al reiniciar el reconocimiento:", error);
+    }
+  };
+
   const stopRecording = (isError = false) => {
     if (recognition && isRecording) {
       recognition.stop();
@@ -371,6 +406,13 @@ const OratoryStart = () => {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
     }
+    
+    // Limpiar el intervalo de reinicio para dispositivos móviles
+    if (recognitionRestartRef.current) {
+      clearInterval(recognitionRestartRef.current);
+      recognitionRestartRef.current = null;
+    }
+    
     if (!isRecording || isError) {
       setIsRecording(false);
     }
@@ -414,24 +456,55 @@ const OratoryStart = () => {
     }
 
     try {
-      recorder.start(1000); 
+      // Configuramos el intervalo para capturar chunks más pequeños
+      recorder.start(1000); // Captura chunks cada segundo en lugar de al final
       
-      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent
-      );
-      
+      // En móviles, usamos un enfoque diferente para el reconocimiento de voz
       if (isMobile) {
-        notifyInfo("Detectado dispositivo móvil - Habilitando modo de reconocimiento especial");
+        recognition.continuous = false; // Desactivar modo continuo en móviles
+        
+        // Configurar listener para reiniciar automáticamente cuando se detenga
+        recognition.onend = () => {
+          if (isRecording) {
+            // Solo reiniciar si todavía estamos grabando
+            setTimeout(() => {
+              try {
+                recognition.start();
+                notifyInfo("Reconocimiento de voz reiniciado automáticamente");
+              } catch (error) {
+                console.error("Error al reiniciar reconocimiento:", error);
+              }
+            }, 300); // Pequeño retraso antes de reiniciar
+          }
+        };
+      } else {
+        // En desktop, usar el comportamiento normal continuo
+        recognition.continuous = true;
       }
       
       recognition.start();
       setIsRecording(true);
       notifyInfo("Grabación de audio y reconocimiento iniciados.");
 
+      // Configurar temporizador para detener la grabación
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
       timeoutRef.current = setTimeout(() => {
         stopRecording();
       }, TIME_OUT_DISCURSE[oratoryTopic.difficulty]);
+      
+      // Para móviles, configurar un intervalo para verificar si el reconocimiento está activo
+      if (isMobile) {
+        if (recognitionRestartRef.current) {
+          clearInterval(recognitionRestartRef.current);
+        }
+        
+        recognitionRestartRef.current = setInterval(() => {
+          // Si el state del reconocimiento no es "running", intentar reiniciarlo
+          if (recognition.state !== "running" && isRecording) {
+            restartRecognition();
+          }
+        }, 1000); // Verificar cada segundo
+      }
     } catch (error) {
       notifyFailure("Error al iniciar grabación/reconocimiento:", error);
       stopRecording(true);
@@ -494,7 +567,8 @@ const OratoryStart = () => {
 
     const initRecognition = () => {
       const recognitionInstance = new SpeechRecognition();
-      recognitionInstance.continuous = true;
+      // La propiedad continuous se establecerá dinámicamente al iniciar la grabación
+      // según si es un dispositivo móvil o no
       recognitionInstance.interimResults = true;
       recognitionInstance.lang = "es-CO";
 
@@ -512,29 +586,19 @@ const OratoryStart = () => {
         setInterimTranscript(interim);
       };
 
-      recognitionInstance.onend = () => {
-        notifyInfo("Reconocimiento de voz terminado.");
-        
-        if (isRecording && mediaRecorderRef.current?.state === "recording") {
-          try {
-            setTimeout(() => {
-              if (isRecording && mediaRecorderRef.current?.state === "recording") {
-                notifyInfo("Reiniciando reconocimiento de voz...");
-                recognitionInstance.start();
-              }
-            }, 300);
-          } catch (error) {
-            notifyFailure("Error al reiniciar el reconocimiento de voz: " + error.message);
-            stopRecording(true);
-          }
-        } else {
-          stopRecording();
-        }
-      };
-
+      // El onend se establecerá dinámicamente al iniciar la grabación
+      // según si es un dispositivo móvil o no
+      
       recognitionInstance.onerror = (event) => {
-        notifyFailure("Error en SpeechRecognition:", event.error);
-        stopRecording(true);
+        notifyFailure(`Error en SpeechRecognition: ${event.error}`);
+        // En dispositivos móviles, algunos errores son esperados, intentamos reiniciar
+        if (isMobile && isRecording && event.error !== "not-allowed") {
+          setTimeout(() => {
+            restartRecognition();
+          }, 500);
+        } else {
+          stopRecording(true);
+        }
       };
 
       setRecognition(recognitionInstance);
@@ -551,6 +615,9 @@ const OratoryStart = () => {
       }
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
+      }
+      if (recognitionRestartRef.current) {
+        clearInterval(recognitionRestartRef.current);
       }
       audioClips.forEach((clip) => {
         if (clip.audioUrl) {
