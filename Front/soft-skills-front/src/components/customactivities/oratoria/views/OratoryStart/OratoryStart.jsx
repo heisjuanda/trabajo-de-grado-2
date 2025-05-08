@@ -41,7 +41,6 @@ const OratoryStart = () => {
   const [isQuestion, setIsQuestion] = useState(false);
   const timeoutRef = useRef(null);
   const recognitionRestartRef = useRef(null);
-  const finishTimeoutRef = useRef(null);
 
   const [isAudioSupported, setIsAudioSupported] = useState(true);
   const [permissionGranted, setPermissionGranted] = useState(false);
@@ -56,7 +55,6 @@ const OratoryStart = () => {
   
   const [isMobile, setIsMobile] = useState(false);
   const [isContinuousSupported, setIsContinuousSupported] = useState(true);
-  const [processingComplete, setProcessingComplete] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -267,59 +265,30 @@ const OratoryStart = () => {
 
       recorder.onstop = async () => {
         notifyInfo("MediaRecorder detenido. Procesando audio...");
-        setProcessingComplete(false);
-        
-        if (audioChunksRef.current.length === 0) {
-          notifyWarning("No se capturó audio. Intentando nuevamente...");
-          setIsFinished(false);
-          return;
-        }
         
         const audioBlob = new Blob(audioChunksRef.current, {
           type: recorder.mimeType || "audio/webm",
         });
         
-        if (audioBlob.size === 0) {
-          notifyWarning("Audio vacío. Asegúrate de hablar durante la grabación.");
-          setIsFinished(false);
-          return;
-        }
+        const compressedBlob = await compressAudio(audioBlob);
         
-        try {
-          const compressedBlob = await compressAudio(audioBlob);
-          
-          const audioUrl = URL.createObjectURL(compressedBlob);
-          const filename = `grabacion-${new Date().toISOString()}.webm`;
+        const audioUrl = URL.createObjectURL(compressedBlob);
+        const filename = `grabacion-${new Date().toISOString()}.webm`;
 
-          const currentFinalTranscript = finalTranscript + interimTranscript;
+        const currentFinalTranscript = finalTranscript + interimTranscript;
 
-          setAudioClips((prevClips) => [
-            ...prevClips,
-            {
-              transcript: currentFinalTranscript.trim(),
-              audioUrl: audioUrl,
-              filename: filename,
-            },
-          ]);
+        setAudioClips((prevClips) => [
+          ...prevClips,
+          {
+            transcript: currentFinalTranscript.trim(),
+            audioUrl: audioUrl,
+            filename: filename,
+          },
+        ]);
 
-          stopMediaStream();
-          setBlob(compressedBlob);
-          setProcessingComplete(true);
-          
-          // Asegurarse de que el audio se envía incluso en dispositivos móviles
-          if (isMobile && currentFinalTranscript.trim()) {
-            notifyInfo("Preparando envío del audio al servidor...");
-            // Pequeño retraso para asegurar que todo está listo
-            setTimeout(() => {
-              if (!isSending) {
-                setTranscript(currentFinalTranscript.trim());
-              }
-            }, 500);
-          }
-        } catch (error) {
-          console.error("Error procesando el audio:", error);
-          notifyFailure("Error al procesar el audio grabado.");
-        }
+        audioChunksRef.current = [];
+        stopMediaStream();
+        setBlob(compressedBlob);
       };
 
       recorder.onerror = (event) => {
@@ -347,21 +316,10 @@ const OratoryStart = () => {
   };
 
   const sendAudioToServer = async (transcript, retryCount = 0) => {
-    if (!user?.email) {
+    if (!user.email) {
       notifyFailure("No se pudo obtener el email del usuario");
       return;
     }
-    
-    if (!blob) {
-      notifyFailure("No hay audio para enviar");
-      return;
-    }
-    
-    if (!transcript || transcript.trim() === "") {
-      notifyWarning("La transcripción está vacía. Asegúrate de hablar durante la grabación.");
-      return;
-    }
-    
     try {
       setIsLoading(true);
       if (retryCount === 0) notifyInfo("Enviando audio al servidor...");
@@ -427,30 +385,19 @@ const OratoryStart = () => {
 
   const stopRecording = (isError = false) => {
     if (recognition && isRecording) {
-      try {
-        recognition.stop();
-      } catch (error) {
-        console.error("Error al detener el reconocimiento:", error);
-      }
+      recognition.stop();
     }
-    
     if (
       mediaRecorderRef.current &&
       mediaRecorderRef.current.state === "recording"
     ) {
-      try {
-        mediaRecorderRef.current.stop();
-      } catch (error) {
-        console.error("Error al detener el MediaRecorder:", error);
-      }
+      mediaRecorderRef.current.stop();
     }
-    
     if (isError) {
       setIsRecording(false);
       setInterimTranscript("");
       stopMediaStream();
     }
-    
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
@@ -459,10 +406,6 @@ const OratoryStart = () => {
     if (recognitionRestartRef.current) {
       clearInterval(recognitionRestartRef.current);
       recognitionRestartRef.current = null;
-    }
-    
-    if (finishTimeoutRef.current) {
-      clearTimeout(finishTimeoutRef.current);
     }
     
     if (!isRecording || isError) {
@@ -476,10 +419,9 @@ const OratoryStart = () => {
       setTotalTime(durationMs);
     }
 
-    // Asegurarse de que la interfaz se actualice para mostrar el finalizar
-    finishTimeoutRef.current = setTimeout(() => {
-      setIsFinished(true);
-    }, 1000); // Pequeño retraso para asegurar que los datos se procesen
+    recognition?.stop();
+
+    setIsFinished(true);
   };
 
   const handleRecord = async () => {
@@ -498,11 +440,6 @@ const OratoryStart = () => {
 
     setFinalTranscript("");
     setInterimTranscript("");
-    setTranscript("");
-    setBlob(null);
-    setIsSending(false);
-    setIsFinished(false);
-    setProcessingComplete(false);
     audioChunksRef.current = [];
 
     startTimeRef.current = Date.now();
@@ -592,19 +529,12 @@ const OratoryStart = () => {
     setTranscript(currentDisplayTranscript);
   }, [finalTranscript, interimTranscript]);
 
-  // Modificado: Usar processingComplete para garantizar que se envía cuando todo esté listo
   useEffect(() => {
-    if (isFinished && blob && transcript && !isSending && processingComplete) {
-      const trimmedTranscript = transcript.trim();
-      if (trimmedTranscript.length > 0) {
-        notifyInfo("Todo listo, enviando datos al servidor...");
-        setIsSending(true);
-        sendAudioToServer(trimmedTranscript);
-      } else {
-        notifyWarning("No se detectó voz en la grabación. No se enviará al servidor.");
-      }
+    if (!isRecording && blob && transcript && !isSending) {
+      setIsSending(true);
+      sendAudioToServer(transcript);
     }
-  }, [isFinished, blob, transcript, isSending, processingComplete]);
+  }, [transcript, blob, isSending]);
 
   useEffect(() => {
     if (!SpeechRecognition) {
@@ -624,6 +554,8 @@ const OratoryStart = () => {
 
     const initRecognition = () => {
       const recognitionInstance = new SpeechRecognition();
+      // La propiedad continuous se establecerá dinámicamente al iniciar la grabación
+      // según si es un dispositivo móvil o no
       recognitionInstance.interimResults = true;
       recognitionInstance.lang = "es-CO";
 
@@ -640,9 +572,13 @@ const OratoryStart = () => {
         setFinalTranscript((prevFinal) => prevFinal + final);
         setInterimTranscript(interim);
       };
+
+      // El onend se establecerá dinámicamente al iniciar la grabación
+      // según si es un dispositivo móvil o no
       
       recognitionInstance.onerror = (event) => {
         notifyFailure(`Error en SpeechRecognition: ${event.error}`);
+        // En dispositivos móviles, algunos errores son esperados, intentamos reiniciar
         if (isMobile && isRecording && event.error !== "not-allowed") {
           setTimeout(() => {
             restartRecognition();
@@ -670,9 +606,6 @@ const OratoryStart = () => {
       if (recognitionRestartRef.current) {
         clearInterval(recognitionRestartRef.current);
       }
-      if (finishTimeoutRef.current) {
-        clearTimeout(finishTimeoutRef.current);
-      }
       audioClips.forEach((clip) => {
         if (clip.audioUrl) {
           URL.revokeObjectURL(clip.audioUrl);
@@ -699,10 +632,6 @@ const OratoryStart = () => {
           duration={TIME_OUT_DISCURSE[oratoryTopic.difficulty]}
           onComplete={() => {
             notifyInfo("El tiempo se ha acabado automáticamente.");
-            // Añadir una finalización explícita cuando se acaba el tiempo
-            if (isRecording) {
-              stopRecording();
-            }
           }}
         />
       )}
@@ -719,8 +648,8 @@ const OratoryStart = () => {
         <div className="transcript-container">
           <AudioTranscript transcript={transcript} audioClips={audioClips} />
           <Button
-            content={!isLoading || transcript.length === 0 || !processingComplete ? "Continuar" : "Cargando..."}
-            disabled={!isLoading || transcript.length === 0 || !processingComplete}
+            content={!isLoading || transcript.length === 0 ? "Continuar" : "Cargando..."}
+            disabled={!isLoading || transcript.length === 0}
             typeStyle="main"
             onclick={() => {
               history("/activity/oratoria-feedback");
