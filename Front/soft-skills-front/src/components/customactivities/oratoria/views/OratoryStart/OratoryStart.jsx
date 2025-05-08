@@ -719,7 +719,7 @@ const OratoryStart = () => {
         <div className="transcript-container">
           <AudioTranscript transcript={transcript} audioClips={audioClips} />
           <Button
-            content="Continuar"
+            content={!isLoading || transcript.length === 0 || !processingComplete ? "Continuar" : "Cargando..."}
             disabled={!isLoading || transcript.length === 0 || !processingComplete}
             typeStyle="main"
             onclick={() => {
