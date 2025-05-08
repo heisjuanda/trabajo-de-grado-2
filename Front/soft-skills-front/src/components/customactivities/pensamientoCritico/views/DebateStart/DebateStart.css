@@ -1,18 +1,28 @@
+:root {
+  --primary-color: #f0efef;
+  --secondary-color: #634aff;
+}
 .debate-ia-container {
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+
+  & .debate-start-feedback-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 
-    height: 95vh;
-
-    & .debate-start-feedback-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-
-        & button {
-            margin: 20px auto 20px auto;
-        }
+    & button {
+      margin: 20px auto 20px auto;
     }
+  }
+}
+
+/* Estilos adicionales para asegurar que el RoundCounter se muestre correctamente */
+.debate-ia-container > nav {
+  z-index: 9; /* Menor que el RoundCounter para que no lo cubra */
 }

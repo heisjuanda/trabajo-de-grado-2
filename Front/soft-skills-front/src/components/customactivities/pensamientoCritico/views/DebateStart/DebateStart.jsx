@@ -9,6 +9,7 @@ import Button from "../../components/Button/Button";
 import BoxInfo from "../../components/BoxInfo/BoxInfo";
 import Chat from "../../components/Chat/Chat";
 import Feedback from "../../components/Feedback/Feedback";
+import RoundCounter from "../../components/RoundCounter/RoundCounter";
 
 import {
   getFormattedDate,
@@ -26,9 +27,11 @@ import {
 import "./DebateStart.css";
 
 const DebateStart = () => {
+  const TOTAL_ROUNDS = 10;
   const [question, setQuestion] = useState("");
   const [topic, setTopic] = useState(0);
   const [userFeedback, setUserFeedback] = useState(null);
+  const [currentRound, setCurrentRound] = useState(0);
 
   const { user } = useAuth0();
 
@@ -70,6 +73,27 @@ const DebateStart = () => {
   }, []);
 
   useEffect(() => {
+    const updateRoundFromContext = () => {
+      const rawContext = getSessionStorageValues(IA_CHAT_RESPONSE_CONTEXT);
+      if (rawContext) {
+        try {
+          const context = JSON.parse(rawContext);
+          if (context && context.ronda !== undefined) {
+            setCurrentRound(context.ronda + 1);
+          }
+        } catch (error) {
+          console.error("Error al parsear el contexto del chat:", error);
+        }
+      }
+    };
+
+    updateRoundFromContext();
+    const intervalId = setInterval(updateRoundFromContext, 1000);
+    
+    return () => clearInterval(intervalId);
+  }, []);
+
+  useEffect(() => {
     if (!userFeedback) return;
 
     const rawFeedback = JSON.stringify(userFeedback);
@@ -107,6 +131,9 @@ const DebateStart = () => {
   return (
     <section className="debate-ia-container">
       <Nav />
+      {!userFeedback && (
+        <RoundCounter currentRound={currentRound} totalRounds={TOTAL_ROUNDS} />
+      )}
       <BoxInfo
         dropdown={true}
         topic={topic}
@@ -126,7 +153,7 @@ const DebateStart = () => {
           />
         </div>
       ) : (
-        <Chat setFeedback={setUserFeedback} />
+        <Chat setFeedback={setUserFeedback} totalRounds={TOTAL_ROUNDS} />
       )}
       <ToastContainer />
     </section>

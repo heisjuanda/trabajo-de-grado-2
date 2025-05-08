@@ -20,8 +20,7 @@ import { IA_CHAT_RESPONSE_CONTEXT } from "../../constantes/debateIdeas";
 
 import "./Chat.css";
 
-const Chat = ({ setFeedback }) => {
-  const totalRounds = 10;
+const Chat = ({ setFeedback, totalRounds }) => {
   const [imageButton, setImageButton] = useState(sendBlue);
   const [isLoading, setIsLoading] = useState(false);
   const [isLoadingFeedback, setIsLoadingFeedback] = useState(false);
