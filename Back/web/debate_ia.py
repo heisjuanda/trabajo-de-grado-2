@@ -22,7 +22,7 @@ def get_topic_by_id(id: int, db: Session = Depends(get_session)):
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail=exc.msg)
 
 
-@router.post("/procesar-ronda", summary="Procesa una ronda del debate")
+@router.post("/process-round", summary="Procesa una ronda del debate")
 def procesar_ronda(data: DebateRoundRequest):
     contexto = data.contexto
     debate_completo = data.debate_completo or f"Idea moral: {contexto}\n\n"
@@ -41,7 +41,7 @@ def procesar_ronda(data: DebateRoundRequest):
     }
 
 
-@router.post("/dar-feedback", summary="Provee feedback de un debate entero")
+@router.post("/give-feedback", summary="Provee feedback de un debate entero")
 def procesar_debate(data: DebateDebateFeedbackRequest):
     debate_completo = data.contexto
 

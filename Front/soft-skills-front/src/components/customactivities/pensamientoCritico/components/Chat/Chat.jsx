@@ -65,7 +65,7 @@ const Chat = ({ setFeedback, totalRounds }) => {
 
     axios
       .post(
-        `${process.env.REACT_APP_API_HOST}/debate-topics/procesar-ronda`,
+        `${process.env.REACT_APP_API_HOST}/debate-topics/process-round`,
         dataToSend
       )
       .then((response) => {
@@ -127,7 +127,7 @@ const Chat = ({ setFeedback, totalRounds }) => {
     notifyLoading()
     axios
       .post(
-        `${process.env.REACT_APP_API_HOST}/debate-topics/dar-feedback`,
+        `${process.env.REACT_APP_API_HOST}/debate-topics/give-feedback`,
         dataToSend
       )
       .then((response) => {

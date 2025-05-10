@@ -101,10 +101,10 @@ El backend utiliza pytest para ejecutar las pruebas unitarias.
 1. Asegúrate de tener activado el entorno virtual:
    ```bash
    cd Back
-   # Si no está activado:
-   source venv/bin/activate  # Linux/Mac
-   # o
-   venv\Scripts\activate  # Windows
+   # Si no está activado Linux/Mac:
+   source venv/bin/activate 
+   # o Windows:
+   venv\Scripts\activate
    ```
 
 2. Instalar dependencias de pruebas si aún no lo has hecho:
