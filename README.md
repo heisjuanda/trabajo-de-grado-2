@@ -187,3 +187,6 @@ Para desplegar la aplicación en un entorno de producción:
 ![Oratoria](https://github.com/user-attachments/assets/144c8772-0851-413b-8f63-1da2017aade4)
 ### Juan Dabot
 ![JuanDaBot (2)](https://github.com/user-attachments/assets/4133c711-89c5-4728-9380-db0d61dde77d)
+### Base de Datos
+![DbFlow](https://github.com/user-attachments/assets/385ff8e1-8258-4987-b53b-6d80ee732820)
+
