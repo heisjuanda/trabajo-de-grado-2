@@ -176,6 +176,14 @@ Para desplegar la aplicación en un entorno de producción:
    - Servidor WSGI/ASGI (Gunicorn/Hypercorn)
    - Configuraciones de seguridad adecuadas
 
-## Documentación Adicional
+# Documentación Adicional
 
-Para más información sobre el uso de la plataforma, consulta el archivo `Manual de uso.pdf` incluido en este repositorio.
+## Diagramas 
+### Dashboard
+![dashboard](https://github.com/user-attachments/assets/f37d2c05-17dd-4249-9a5b-3c6f2b0cd00f)
+### Debate IA
+![Debate-ia](https://github.com/user-attachments/assets/e310fc1a-fa82-43ca-b50a-fd623fbfe0e9)
+### Oratoria IA
+![Oratoria](https://github.com/user-attachments/assets/144c8772-0851-413b-8f63-1da2017aade4)
+### Juan Dabot
+![JuanDaBot (2)](https://github.com/user-attachments/assets/4133c711-89c5-4728-9380-db0d61dde77d)
