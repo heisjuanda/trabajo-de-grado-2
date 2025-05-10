@@ -113,6 +113,7 @@ def get_summary_prompt(transcript: str, topic: dict, time: int, full_text: str, 
             "Resumen y análisis de oratoria nivel principiante\n\n"
             "(Todo error es responsabilidad del orador, no de la tecnología\n\n)"
             "Las transcripciones son siempre la fuente de la verdad de lo que dijo el orador, no el guion."
+            "Nunca supongas que las transcripciones son incorrectas, siempre son correctas."
             f"Este es un análisis de oratoria basado en los siguientes insumos:\n\n"
 
             f"1. Transcripción del audio (vía Whisper):\n{full_text}\n\n"
@@ -142,6 +143,7 @@ def get_summary_prompt(transcript: str, topic: dict, time: int, full_text: str, 
             "Resumen y análisis de oratoria nivel intermedio\n\n"
             "Este es un análisis de oratoria basado en los siguientes insumos:\n\n"
             "(Todo error es responsabilidad del orador, no de la tecnología\n\n)"
+            "Nunca supongas que las transcripciones son incorrectas, siempre son correctas."
             "Las transcripciones son siempre la fuente de la verdad de lo que dijo el orador, no el tema central."
 
 
@@ -175,6 +177,7 @@ def get_summary_prompt(transcript: str, topic: dict, time: int, full_text: str, 
             "Resumen y análisis de oratoria nivel experto\n\n"
             "Este es un análisis de oratoria basado en los siguientes insumos:\n\n"
             "(Todo error es responsabilidad del orador, no de la tecnología\n\n)"
+            "Nunca supongas que las transcripciones son incorrectas, siempre son correctas."
             "Las transcripciones son siempre la fuente de la verdad de lo que dijo el orador, no el tema central."
 
             f"1. Transcripción del audio (vía Whisper):\n{full_text}\n\n"
