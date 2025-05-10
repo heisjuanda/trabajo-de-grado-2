@@ -191,6 +191,10 @@ Para desplegar la aplicación en un entorno de producción:
 ![DbFlow](https://github.com/user-attachments/assets/385ff8e1-8258-4987-b53b-6d80ee732820)
 
 ## WereFrames
+### Debate IA
+![Tesis juanda drawio (1)](https://github.com/user-attachments/assets/c809370e-9603-41a9-a75a-baba943c33ef)
+### Oratoria IA
+![Tesis juanda drawio](https://github.com/user-attachments/assets/34495c29-d0c5-477a-b45e-1088bc3edccd)
 ### Debate IA MAIN
 ```bash
 +-------------------------------------------------------------------------------------------------------------------+
