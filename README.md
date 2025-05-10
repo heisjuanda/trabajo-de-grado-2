@@ -182,7 +182,7 @@ Para desplegar la aplicación en un entorno de producción:
 ### Dashboard
 ![dashboard](https://github.com/user-attachments/assets/f37d2c05-17dd-4249-9a5b-3c6f2b0cd00f)
 ### Debate IA
-![Debate-ia](https://github.com/user-attachments/assets/e310fc1a-fa82-43ca-b50a-fd623fbfe0e9)
+![DebateIA](https://github.com/user-attachments/assets/3af23fd1-837c-4770-9b2d-3c8986b7f2af)
 ### Oratoria IA
 ![Oratoria](https://github.com/user-attachments/assets/144c8772-0851-413b-8f63-1da2017aade4)
 ### Juan Dabot
