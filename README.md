@@ -92,6 +92,76 @@ cd tu-repositorio
    http://localhost:3000
    ```
 
+## Pruebas Unitarias y de Integración
+
+### Pruebas del Backend
+
+El backend utiliza pytest para ejecutar las pruebas unitarias.
+
+1. Asegúrate de tener activado el entorno virtual:
+   ```bash
+   cd Back
+   # Si no está activado:
+   source venv/bin/activate  # Linux/Mac
+   # o
+   venv\Scripts\activate  # Windows
+   ```
+
+2. Instalar dependencias de pruebas si aún no lo has hecho:
+   ```bash
+   pip install pytest pytest-cov
+   ```
+
+3. Ejecutar todas las pruebas:
+   ```bash
+   python -m pytest
+   ```
+
+4. Para ejecutar pruebas con detalles:
+   ```bash
+   python -m pytest -v
+   ```
+
+5. Para ejecutar pruebas específicas:
+   ```bash
+   python -m pytest tests/test_debate_topics.py -v
+   python -m pytest tests/test_oratory_topics.py -v
+   ```
+
+6. Para ejecutar pruebas con cobertura:
+   ```bash
+   python -m pytest --cov=service tests/
+   ```
+
+### Pruebas del Frontend
+
+El frontend utiliza Jest y React Testing Library para las pruebas.
+
+1. Navegar al directorio del frontend:
+   ```bash
+   cd Front/soft-skills-front
+   ```
+
+2. Ejecutar todas las pruebas:
+   ```bash
+   npm test
+   ```
+
+3. Ejecutar pruebas en modo watch (desarrollo):
+   ```bash
+   npm test -- --watch
+   ```
+
+4. Ejecutar pruebas con cobertura:
+   ```bash
+   npm test -- --coverage
+   ```
+
+5. Para ejecutar un archivo de prueba específico:
+   ```bash
+   npm test -- src/components/__tests__/MiComponente.test.js
+   ```
+
 ## Configuración para Producción
 
 Para desplegar la aplicación en un entorno de producción:
