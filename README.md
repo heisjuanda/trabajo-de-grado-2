@@ -184,7 +184,7 @@ Para desplegar la aplicación en un entorno de producción:
 ### Debate IA
 ![DebateIA](https://github.com/user-attachments/assets/3af23fd1-837c-4770-9b2d-3c8986b7f2af)
 ### Oratoria IA
-![Oratoria](https://github.com/user-attachments/assets/144c8772-0851-413b-8f63-1da2017aade4)
+![asd drawio](https://github.com/user-attachments/assets/52d44f3e-ead6-4ec9-bf32-403d12329bca)
 ### Juan Dabot
 ![JuanDaBot (2)](https://github.com/user-attachments/assets/4133c711-89c5-4728-9380-db0d61dde77d)
 ### Base de Datos
