@@ -19,16 +19,23 @@ const OratorIA = () => {
   const [difficulty, setDifficulty] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isSupportedBrowser, setIsSupportedBrowser] = useState(true);
   const history = useNavigate();
 
   useEffect(() => {
-    const checkIfMobile = () => {
+    const checkDevice = () => {
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
       const mobileRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
       setIsMobile(mobileRegex.test(userAgent));
+
+      const isChrome = /Chrome/.test(navigator.userAgent) && !/Edg/.test(navigator.userAgent);
+      const isEdge = /Edg/.test(navigator.userAgent);
+      const isFirefox = /Firefox/.test(navigator.userAgent);
+      
+      setIsSupportedBrowser(isChrome || isEdge || isFirefox);
     };
 
-    checkIfMobile();
+    checkDevice();
   }, []);
 
   const handleSelection = (value) => {
@@ -38,9 +45,13 @@ const OratorIA = () => {
   const getRandomTopic = () => {
     if (!difficulty) return;
     
-    // Si es un dispositivo móvil, mostrar advertencia y no continuar
     if (isMobile) {
       notifyWarning("Esta actividad no es compatible con dispositivos móviles. Por favor, utiliza un ordenador.");
+      return;
+    }
+    
+    if (!isSupportedBrowser) {
+      notifyWarning("Esta actividad requiere Chrome, Firefox o Edge para funcionar correctamente. Por favor, cambia de navegador.");
       return;
     }
     
@@ -100,17 +111,30 @@ const OratorIA = () => {
     removeOratoryTopic(ORATORY_FEEDBACK_STORAGE_KEY);
   }, []);
 
+  const isCompatible = !isMobile && isSupportedBrowser;
+
   return (
     <section className="orator-ia-section">
       <Nav />
       <header>
         <h1>Empezar Nuevo Discurso</h1>
-        {isMobile ? (
-          <div className="mobile-warning">
-            <p>Esta actividad no es compatible con dispositivos móviles.</p>
-            <p>Por favor, utiliza un ordenador con Chrome, Firefox o Edge para realizar esta actividad.</p>
+        {!isCompatible && (
+          <div className="compatibility-warning">
+            {isMobile && (
+              <div className="mobile-warning">
+                <p>Esta actividad no es compatible con dispositivos móviles.</p>
+                <p>Por favor, utiliza un ordenador con Chrome, Firefox o Edge para realizar esta actividad.</p>
+              </div>
+            )}
+            {!isSupportedBrowser && !isMobile && (
+              <div className="browser-warning">
+                <p>Esta actividad requiere un navegador compatible con reconocimiento de voz.</p>
+                <p>Por favor, utiliza Chrome, Firefox o Edge para realizar esta actividad.</p>
+              </div>
+            )}
           </div>
-        ) : (
+        )}
+        {isCompatible && (
           <div>
             <InputSelection options={ALL_DIFFICULTIES} onSelect={handleSelection} textLabel="Dificultad:" />
           </div>
@@ -120,8 +144,14 @@ const OratorIA = () => {
         <Button
           loadingState={isLoading}
           onclick={getRandomTopic}
-          disabled={difficulty}
-          content={isMobile ? "No disponible en móviles" : "Empezar discurso"}
+          disabled={!isCompatible ? false : difficulty}
+          content={
+            isMobile 
+              ? "No disponible en móviles" 
+              : !isSupportedBrowser 
+                ? "Navegador no compatible" 
+                : "Empezar discurso"
+          }
           typeStyle="main"
         />
       </div>
