@@ -57,7 +57,7 @@ export const ALL_SECTIONS = [
     type: "INTERACTIVO",
     title: "Ejercicios de Oratoria",
     link: "/activity/oratoria-ejercicios",
-    buttonText: "Practicar",
+    buttonText: "Prácticar",
   },
 ]
 

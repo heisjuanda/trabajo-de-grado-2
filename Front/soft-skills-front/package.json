@@ -40,7 +40,10 @@
     "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test:e2e": "start-server-and-test start http://localhost:3000 cypress:run"
   },
   "eslintConfig": {
     "extends": [
@@ -67,8 +70,10 @@
     "@babel/plugin-transform-runtime": "^7.25.4",
     "@babel/preset-env": "^7.25.4",
     "@babel/preset-react": "^7.24.7",
+    "cypress": "^14.3.3",
     "eslint-plugin-storybook": "^0.8.0",
-    "identity-obj-proxy": "^3.0.0"
+    "identity-obj-proxy": "^3.0.0",
+    "start-server-and-test": "^2.0.3"
   },
   "jest": {
     "transform": {

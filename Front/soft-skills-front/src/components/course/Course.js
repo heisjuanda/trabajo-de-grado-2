@@ -353,7 +353,7 @@ export default function Course() {
                 
                 <CardContent>
                   <Typography variant="h6" gutterBottom>
-                    {courseId === "253" ? "Oratoria Efectiva" : "Pensamiento Crítico"}
+                    {courseId === "270" ? "Oratoria Efectiva" : "Pensamiento Crítico"}
                   </Typography>
                   <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                     <Avatar sx={{ mr: 2, bgcolor: 'primary.main' }}>

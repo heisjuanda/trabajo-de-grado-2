@@ -1,0 +1,122 @@
+{
+  "usuarios": {
+    "default": {
+      "email": "usuario.prueba@example.com",
+      "name": "Usuario Prueba",
+      "picture": "https://example.com/avatar.jpg"
+    },
+    "instructor": {
+      "email": "instructor@example.com",
+      "name": "Instructor Demo",
+      "picture": "https://example.com/instructor.jpg",
+      "role": "instructor"
+    }
+  },
+  "modulos": {
+    "oratoria": {
+      "id": 253,
+      "titulo": "Oratoria",
+      "descripcion": "Desarrolla tus habilidades para hablar en público",
+      "temas": [
+        {
+          "id": 1,
+          "nombre": "Tecnología",
+          "descripcion": "Discute sobre los avances tecnológicos recientes"
+        },
+        {
+          "id": 2,
+          "nombre": "Medio Ambiente",
+          "descripcion": "Habla sobre los desafíos ambientales actuales"
+        },
+        {
+          "id": 3,
+          "nombre": "Educación",
+          "descripcion": "Analiza el estado actual de la educación"
+        }
+      ]
+    },
+    "pensamiento_critico": {
+      "id": 270,
+      "titulo": "Pensamiento Crítico",
+      "descripcion": "Mejora tu capacidad de análisis y argumentación",
+      "temas": [
+        {
+          "id": 1,
+          "nombre": "politica",
+          "descripcion": "Debate sobre temas políticos"
+        },
+        {
+          "id": 2,
+          "nombre": "educacion",
+          "descripcion": "Analiza críticamente el sistema educativo"
+        },
+        {
+          "id": 3,
+          "nombre": "economia",
+          "descripcion": "Debate sobre modelos económicos"
+        }
+      ]
+    }
+  },
+  "reportes": {
+    "oratoria": [
+      {
+        "id": "rep-or-001",
+        "fecha": "2023-05-10T14:30:00Z",
+        "tema": "Tecnología",
+        "duracion": 125,
+        "palabras_por_minuto": 120,
+        "muletillas": 8,
+        "calificacion": 85
+      },
+      {
+        "id": "rep-or-002",
+        "fecha": "2023-05-15T16:45:00Z",
+        "tema": "Medio Ambiente",
+        "duracion": 180,
+        "palabras_por_minuto": 115,
+        "muletillas": 5,
+        "calificacion": 90
+      }
+    ],
+    "pensamiento_critico": [
+      {
+        "id": "rep-pc-001",
+        "fecha": "2023-05-12T10:15:00Z",
+        "tema": "politica",
+        "duracion": 15,
+        "mensajes": 8,
+        "falacias_identificadas": 2,
+        "calificacion": 88
+      },
+      {
+        "id": "rep-pc-002",
+        "fecha": "2023-05-18T11:30:00Z",
+        "tema": "economia",
+        "duracion": 20,
+        "mensajes": 12,
+        "falacias_identificadas": 3,
+        "calificacion": 92
+      }
+    ]
+  },
+  "respuestas_api": {
+    "login_success": {
+      "access_token": "example_token",
+      "expires_in": 86400,
+      "token_type": "Bearer"
+    },
+    "login_error": {
+      "error": "invalid_credentials",
+      "error_description": "Credenciales incorrectas"
+    },
+    "usuario_info": {
+      "email": "usuario.prueba@example.com",
+      "name": "Usuario Prueba",
+      "progress": {
+        "oratoria": 30,
+        "pensamientoCritico": 45
+      }
+    }
+  }
+} 
