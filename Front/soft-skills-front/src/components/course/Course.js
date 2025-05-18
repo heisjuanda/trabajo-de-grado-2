@@ -205,7 +205,7 @@ export default function Course() {
               width: '100%'
             }}>
               <Chip 
-                label={courseId === "253" ? "Oratoria" : "Pensamiento Crítico"}
+                label={courseId === "270" ? "Oratoria" : "Pensamiento Crítico"}
                 color="primary" 
                 sx={{ mb: 2, fontWeight: 'bold' }} 
               />
