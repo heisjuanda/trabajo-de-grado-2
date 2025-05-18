@@ -71,7 +71,6 @@ jest.mock('../../helpers/helpers', () => ({
   saveOratoryTopic: jest.fn()
 }));
 
-// Mock de componentes
 jest.mock('../../components/Nav/Nav', () => () => <div>Nav</div>);
 jest.mock('../../components/MicNotSupported/MicNotSupported', () => ({ setupMediaRecorder }) => (
   <div data-testid="mic-not-supported">

@@ -46,6 +46,7 @@ jest.mock('react-toastify', () => ({
   toast: {
     success: jest.fn(),
     error: jest.fn(),
+    warning: jest.fn(),
     info: jest.fn()
   },
   ToastContainer: () => <div data-testid="toast-container" />
@@ -70,11 +71,12 @@ jest.mock('../../../pensamientoCritico/components/InputSelection/InputSelection'
   </div>
 ));
 jest.mock('../../../pensamientoCritico/components/Button/Button', () => {
-  return ({ onclick, disabled, content, loadingState }) => (
+  return ({ onclick, disabled, content, loadingState, typeStyle }) => (
     <button 
       data-testid="oratory-button" 
       onClick={onclick} 
-      disabled={!disabled} 
+      disabled={!disabled}
+      className={typeStyle || ""}
     >
       {loadingState ? 'Cargando...' : content}
     </button>
@@ -89,9 +91,34 @@ jest.mock('../../components/JuanDabot/JuanDabot', () => () => <div>Bot</div>);
 // Configuración de API
 process.env.REACT_APP_API_HOST = 'http://localhost:3000';
 
+// Mock del entorno del navegador para simular compatibilidad
 describe('OratorIA Component', () => {
+  // Guardar la implementación original de navigator.userAgent
+  const originalUserAgent = Object.getOwnPropertyDescriptor(navigator, 'userAgent');
+  
   beforeEach(() => {
     jest.clearAllMocks();
+    
+    // Simular Chrome como navegador para pasar el check de compatibilidad
+    Object.defineProperty(navigator, 'userAgent', {
+      value: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+      configurable: true
+    });
+    
+    // Mock SpeechRecognition para indicar que el navegador lo soporta
+    global.SpeechRecognition = jest.fn();
+    global.webkitSpeechRecognition = jest.fn();
+  });
+  
+  afterEach(() => {
+    // Restaurar la implementación original de navigator.userAgent
+    if (originalUserAgent) {
+      Object.defineProperty(navigator, 'userAgent', originalUserAgent);
+    }
+    
+    // Limpiar el mock de SpeechRecognition
+    delete global.SpeechRecognition;
+    delete global.webkitSpeechRecognition;
   });
 
   test('renderiza el componente correctamente', () => {
@@ -270,5 +297,25 @@ describe('OratorIA Component', () => {
     await waitFor(() => {
       expect(mockNavigate).toHaveBeenCalledWith('/activity/oratoria/topic-start');
     });
+  });
+
+  test('muestra advertencia cuando se detecta dispositivo móvil', () => {
+    // Simular dispositivo móvil
+    Object.defineProperty(navigator, 'userAgent', {
+      value: 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1',
+      configurable: true
+    });
+    
+    render(
+      <MemoryRouter>
+        <OratorIA />
+      </MemoryRouter>
+    );
+    
+    // Verificar que se muestra el mensaje de advertencia para móviles
+    expect(screen.getByText('Esta actividad no es compatible con dispositivos móviles.')).toBeInTheDocument();
+    
+    // Verificar que el botón muestra el mensaje correcto
+    expect(screen.getByTestId('oratory-button')).toHaveTextContent('No disponible en móviles');
   });
 }); 
