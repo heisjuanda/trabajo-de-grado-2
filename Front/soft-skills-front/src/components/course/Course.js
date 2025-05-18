@@ -106,10 +106,10 @@ export default function Course() {
 
   const getCourseVideo = (courseId) => {
     const courseVideos = {
-      "253": "https://www.youtube.com/embed/cJUXxjOeoCk",
-      "270": "https://www.youtube.com/embed/pACWFYE1AUA",
+      "253": "https://www.youtube.com/watch?v=i-htv81L04g",
+      "270": "https://www.youtube.com/watch?v=Xp45ayoX_4s&t=126s",
     };
-    return courseVideos[courseId] || "https://www.youtube.com/embed/cJUXxjOeoCk";
+    return courseVideos[courseId] || "https://www.youtube.com/watch?v=i-htv81L04g";
   };
 
   useEffect(() => {
