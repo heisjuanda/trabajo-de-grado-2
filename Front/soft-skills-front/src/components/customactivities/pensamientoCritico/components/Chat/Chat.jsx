@@ -115,6 +115,18 @@ const Chat = ({ setFeedback, totalRounds }) => {
 
   const onChange = (event) => {
     setUserResponse(event.target.value);
+    
+    const textarea = event.target;
+    textarea.style.height = 'auto';
+    
+    const newHeight = Math.min(textarea.scrollHeight, 200);
+    textarea.style.height = newHeight + 'px';
+    
+    if (textarea.scrollHeight > 200) {
+      textarea.style.overflow = 'auto';
+    } else {
+      textarea.style.overflow = 'hidden';
+    }
   };
 
   const getFeedback = () => {
@@ -171,6 +183,13 @@ const Chat = ({ setFeedback, totalRounds }) => {
     }
   }, [isLoading]);
 
+  useEffect(() => {
+    if (textareaRef.current && userResponse === '') {
+      textareaRef.current.style.height = '40px';
+      textareaRef.current.style.overflow = 'hidden';
+    }
+  }, [userResponse]);
+
   return (
     <>
       <div className="chat-ia-user__response" ref={containerRef}>
@@ -199,6 +218,12 @@ const Chat = ({ setFeedback, totalRounds }) => {
               value={userResponse}
               disabled={isLoading}
               ref={textareaRef}
+              style={{
+                resize: 'none',
+                overflow: 'hidden',
+                minHeight: '40px',
+                maxHeight: '200px'
+              }}
             />
           )}
           <button
