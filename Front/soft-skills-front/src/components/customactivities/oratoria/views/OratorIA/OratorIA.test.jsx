@@ -75,7 +75,7 @@ jest.mock('../../../pensamientoCritico/components/Button/Button', () => {
     <button 
       data-testid="oratory-button" 
       onClick={onclick} 
-      disabled={!disabled}
+      disabled={!disabled} 
       className={typeStyle || ""}
     >
       {loadingState ? 'Cargando...' : content}
