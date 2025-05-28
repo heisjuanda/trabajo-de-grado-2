@@ -6,7 +6,6 @@ import OratorIA from './OratorIA';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-// Mock de constantes
 jest.mock('../../constantes/constants', () => ({
   ALL_DIFFICULTIES: {
     facil: {
@@ -31,17 +30,14 @@ jest.mock('../../constantes/constants', () => ({
   ORATORY_FEEDBACK_STORAGE_KEY: 'oratory-feedback'
 }));
 
-// Mock de react-router-dom useNavigate
 const mockNavigate = jest.fn();
 jest.mock('react-router-dom', () => ({
   ...jest.requireActual('react-router-dom'),
   useNavigate: () => mockNavigate
 }));
 
-// Mock de axios
 jest.mock('axios');
 
-// Mock de react-toastify
 jest.mock('react-toastify', () => ({
   toast: {
     success: jest.fn(),
@@ -52,14 +48,12 @@ jest.mock('react-toastify', () => ({
   ToastContainer: () => <div data-testid="toast-container" />
 }));
 
-// Mock de helpers
 jest.mock('../../helpers/helpers', () => ({
   parseOratoryTopic: jest.fn(data => data),
   saveOratoryTopic: jest.fn(),
   removeOratoryTopic: jest.fn()
 }));
 
-// Mock de componentes
 jest.mock('../../../pensamientoCritico/components/InputSelection/InputSelection', () => ({ options, onSelect }) => (
   <div data-testid="input-selection">
     <select data-testid="select-difficulty" onChange={(e) => onSelect(e.target.value)}>
@@ -88,40 +82,81 @@ jest.mock('../../../pensamientoCritico/components/BoxInfo/BoxInfo', () => ({ top
 jest.mock('../../components/Nav/Nav', () => () => <div>Nav</div>);
 jest.mock('../../components/JuanDabot/JuanDabot', () => () => <div>Bot</div>);
 
-// Configuración de API
 process.env.REACT_APP_API_HOST = 'http://localhost:3000';
 
-// Mock del entorno del navegador para simular compatibilidad
+const mockCompatibleBrowser = () => {
+  Object.defineProperty(navigator, 'userAgent', {
+    value: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+    configurable: true
+  });
+  
+  Object.defineProperty(window, 'chrome', {
+    value: { runtime: {} },
+    configurable: true
+  });
+  
+  Object.defineProperty(navigator, 'brave', {
+    value: undefined,
+    configurable: true
+  });
+  
+  delete window.InstallTrigger;
+};
+
+const mockIncompatibleBrowser = () => {
+  Object.defineProperty(navigator, 'userAgent', {
+    value: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 Brave/1.26.74',
+    configurable: true
+  });
+  
+  Object.defineProperty(navigator, 'brave', {
+    value: { 
+      isBrave: jest.fn().mockResolvedValue(true)
+    },
+    configurable: true
+  });
+  
+  delete window.chrome;
+  
+  delete window.InstallTrigger;
+  
+  delete window.StyleMedia;
+};
+
+const mockMobileDevice = () => {
+  Object.defineProperty(navigator, 'userAgent', {
+    value: 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1',
+    configurable: true
+  });
+};
+
 describe('OratorIA Component', () => {
-  // Guardar la implementación original de navigator.userAgent
   const originalUserAgent = Object.getOwnPropertyDescriptor(navigator, 'userAgent');
+  const originalChrome = Object.getOwnPropertyDescriptor(window, 'chrome');
+  const originalBrave = Object.getOwnPropertyDescriptor(navigator, 'brave');
   
   beforeEach(() => {
     jest.clearAllMocks();
-    
-    // Simular Chrome como navegador para pasar el check de compatibilidad
-    Object.defineProperty(navigator, 'userAgent', {
-      value: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-      configurable: true
-    });
-    
-    // Mock SpeechRecognition para indicar que el navegador lo soporta
-    global.SpeechRecognition = jest.fn();
-    global.webkitSpeechRecognition = jest.fn();
+    mockCompatibleBrowser();
   });
   
   afterEach(() => {
-    // Restaurar la implementación original de navigator.userAgent
     if (originalUserAgent) {
       Object.defineProperty(navigator, 'userAgent', originalUserAgent);
     }
-    
-    // Limpiar el mock de SpeechRecognition
-    delete global.SpeechRecognition;
-    delete global.webkitSpeechRecognition;
+    if (originalChrome) {
+      Object.defineProperty(window, 'chrome', originalChrome);
+    } else {
+      delete window.chrome;
+    }
+    if (originalBrave) {
+      Object.defineProperty(navigator, 'brave', originalBrave);
+    } else {
+      delete navigator.brave;
+    }
   });
 
-  test('renderiza el componente correctamente', () => {
+  test('renderiza el componente correctamente con navegador compatible', () => {
     render(
       <MemoryRouter>
         <OratorIA />
@@ -131,6 +166,7 @@ describe('OratorIA Component', () => {
     expect(screen.getByText('Empezar Nuevo Discurso')).toBeInTheDocument();
     expect(screen.getByTestId('input-selection')).toBeInTheDocument();
     expect(screen.getByTestId('oratory-button')).toBeInTheDocument();
+    expect(screen.getByTestId('box-info')).toBeInTheDocument();
   });
 
   test('llama a removeOratoryTopic al montar el componente', () => {
@@ -140,7 +176,6 @@ describe('OratorIA Component', () => {
       </MemoryRouter>
     );
 
-    // Verificar que removeOratoryTopic se llamó dos veces (una para cada clave)
     const { removeOratoryTopic } = require('../../helpers/helpers');
     expect(removeOratoryTopic).toHaveBeenCalledTimes(2);
     expect(removeOratoryTopic).toHaveBeenCalledWith();
@@ -155,16 +190,13 @@ describe('OratorIA Component', () => {
     );
 
     const selectDifficulty = screen.getByTestId('select-difficulty');
-    // Inicialmente el botón está deshabilitado porque difficulty es null
     expect(screen.getByTestId('oratory-button')).toBeDisabled();
     
-    // Al seleccionar una dificultad, el botón debe habilitarse
     fireEvent.change(selectDifficulty, { target: { value: 'facil' } });
     expect(screen.getByTestId('oratory-button')).not.toBeDisabled();
   });
 
   test('redirige a la página de inicio del discurso cuando se obtiene un tema exitosamente', async () => {
-    // Configura el mock de parseOratoryTopic para devolver datos válidos
     const { parseOratoryTopic } = require('../../helpers/helpers');
     parseOratoryTopic.mockImplementation(() => ({
       id: 1,
@@ -172,7 +204,6 @@ describe('OratorIA Component', () => {
       frasesClave: ['frase1', 'frase2']
     }));
 
-    // Configurar el mock de axios para devolver datos de tema
     axios.get.mockResolvedValue({
       data: {
         id: 1,
@@ -187,36 +218,29 @@ describe('OratorIA Component', () => {
       </MemoryRouter>
     );
 
-    // Seleccionar una dificultad
     const selectDifficulty = screen.getByTestId('select-difficulty');
     fireEvent.change(selectDifficulty, { target: { value: 'facil' } });
     
-    // Ahora el botón debe estar habilitado
     const button = screen.getByTestId('oratory-button');
     expect(button).not.toBeDisabled();
     
-    // Hacer clic en el botón para generar discurso
     fireEvent.click(button);
     
-    // Verificar que se llama a axios.get con la URL correcta
     await waitFor(() => {
       expect(axios.get).toHaveBeenCalledWith('http://localhost:3000/oratory-topics/facil');
     });
     
-    // Verificar que se guardó el tema
     const { saveOratoryTopic } = require('../../helpers/helpers');
     await waitFor(() => {
       expect(saveOratoryTopic).toHaveBeenCalled();
     });
     
-    // Verificar que se redirige a la página correcta
     await waitFor(() => {
       expect(mockNavigate).toHaveBeenCalledWith('/activity/oratoria/topic-start');
     });
   });
 
   test('muestra un mensaje de error cuando falla la obtención del tema', async () => {
-    // Configurar el mock de axios para simular un error
     axios.get.mockRejectedValue(new Error('Error de red'));
 
     render(
@@ -225,28 +249,22 @@ describe('OratorIA Component', () => {
       </MemoryRouter>
     );
 
-    // Seleccionar una dificultad
     const selectDifficulty = screen.getByTestId('select-difficulty');
     fireEvent.change(selectDifficulty, { target: { value: 'facil' } });
     
-    // Hacer clic en el botón para generar discurso
     fireEvent.click(screen.getByTestId('oratory-button'));
     
-    // Verificar que se muestra un mensaje de error
     await waitFor(() => {
       expect(toast.error).toHaveBeenCalled();
     });
     
-    // Verificar que se limpia el tema guardado
     const { removeOratoryTopic } = require('../../helpers/helpers');
     await waitFor(() => {
-      // removeOratoryTopic ya se llamó 2 veces en el useEffect inicial
       expect(removeOratoryTopic).toHaveBeenCalledTimes(3);
     });
   });
 
   test('intenta nuevamente cuando parseOratoryTopic devuelve null', async () => {
-    // Configura el mock de parseOratoryTopic para devolver null la primera vez y datos válidos la segunda
     const { parseOratoryTopic } = require('../../helpers/helpers');
     parseOratoryTopic
       .mockImplementationOnce(() => null)
@@ -256,7 +274,6 @@ describe('OratorIA Component', () => {
         frasesClave: ['frase1', 'frase2']
       }));
 
-    // Configurar el mock de axios para devolver datos dos veces
     axios.get
       .mockResolvedValueOnce({
         data: { id: 1 }
@@ -275,36 +292,27 @@ describe('OratorIA Component', () => {
       </MemoryRouter>
     );
 
-    // Seleccionar una dificultad
     const selectDifficulty = screen.getByTestId('select-difficulty');
     fireEvent.change(selectDifficulty, { target: { value: 'facil' } });
     
-    // Hacer clic en el botón para generar discurso
     fireEvent.click(screen.getByTestId('oratory-button'));
     
-    // Verificar que se llama a axios.get dos veces
     await waitFor(() => {
       expect(axios.get).toHaveBeenCalledTimes(2);
     });
     
-    // Verificar que se muestra un mensaje de error para el primer intento
     await waitFor(() => {
       expect(toast.error).toHaveBeenCalled();
       expect(toast.error.mock.calls[0][0]).toContain("Intentando");
     });
     
-    // Verificar que finalmente se guardó el tema y se navega a la página correcta
     await waitFor(() => {
       expect(mockNavigate).toHaveBeenCalledWith('/activity/oratoria/topic-start');
     });
   });
 
   test('muestra advertencia cuando se detecta dispositivo móvil', () => {
-    // Simular dispositivo móvil
-    Object.defineProperty(navigator, 'userAgent', {
-      value: 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1',
-      configurable: true
-    });
+    mockMobileDevice();
     
     render(
       <MemoryRouter>
@@ -312,10 +320,58 @@ describe('OratorIA Component', () => {
       </MemoryRouter>
     );
     
-    // Verificar que se muestra el mensaje de advertencia para móviles
-    expect(screen.getByText('Esta actividad no es compatible con dispositivos móviles.')).toBeInTheDocument();
+    expect(screen.getByText('Dispositivo móvil detectado')).toBeInTheDocument();
+    expect(screen.getByText(/Esta actividad requiere un ordenador con micrófono/)).toBeInTheDocument();
     
-    // Verificar que el botón muestra el mensaje correcto
     expect(screen.getByTestId('oratory-button')).toHaveTextContent('No disponible en móviles');
+    
+    expect(screen.queryByTestId('input-selection')).not.toBeInTheDocument();
+    
+    expect(screen.queryByTestId('box-info')).not.toBeInTheDocument();
+  });
+
+  test('muestra advertencia cuando el navegador no es compatible', async () => {
+    mockIncompatibleBrowser();
+    
+    render(
+      <MemoryRouter>
+        <OratorIA />
+      </MemoryRouter>
+    );
+    
+    await waitFor(() => {
+      expect(screen.getAllByText('Navegador no compatible')).toHaveLength(2);
+    });
+    
+    expect(screen.getByText(/Tu navegador no soporta las funciones de reconocimiento de voz/)).toBeInTheDocument();
+    
+    expect(screen.getByText('Google Chrome')).toBeInTheDocument();
+    expect(screen.getByText('Mozilla Firefox')).toBeInTheDocument();
+    expect(screen.getByText('Microsoft Edge')).toBeInTheDocument();
+    
+    expect(screen.getByTestId('oratory-button')).toHaveTextContent('Navegador no compatible');
+    
+    expect(screen.queryByTestId('input-selection')).not.toBeInTheDocument();
+    
+    expect(screen.queryByTestId('box-info')).not.toBeInTheDocument();
+  });
+
+  test('no permite hacer clic en el botón cuando el navegador no es compatible', async () => {
+    mockIncompatibleBrowser();
+    
+    render(
+      <MemoryRouter>
+        <OratorIA />
+      </MemoryRouter>
+    );
+    
+    await waitFor(() => {
+      expect(screen.getByTestId('oratory-button')).toBeDisabled();
+    });
+    
+    const button = screen.getByTestId('oratory-button');
+    fireEvent.click(button);
+    
+    expect(axios.get).not.toHaveBeenCalled();
   });
 }); 

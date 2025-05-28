@@ -23,15 +23,19 @@ const OratorIA = () => {
   const history = useNavigate();
 
   useEffect(() => {
-    const checkDevice = () => {
+    const checkDevice = async () => {
       const userAgent = navigator.userAgent || navigator.vendor || window.opera;
       const mobileRegex = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
       setIsMobile(mobileRegex.test(userAgent));
 
-      const isChrome = /Chrome/.test(navigator.userAgent) && !/Edg/.test(navigator.userAgent);
-      const isEdge = /Edg/.test(navigator.userAgent);
-      const isFirefox = /Firefox/.test(navigator.userAgent);
+      const isBrave = navigator.brave && await navigator.brave.isBrave() || false
+      const isChrome = !!window.chrome && !isBrave;
       
+      const isIE = /*@cc_on!@*/false || !!document.documentMode;
+      const isEdge = !isIE && !!window.StyleMedia;
+      
+      const isFirefox = typeof InstallTrigger !== 'undefined';
+
       setIsSupportedBrowser(isChrome || isEdge || isFirefox);
     };
 
@@ -122,14 +126,33 @@ const OratorIA = () => {
           <div className="compatibility-warning">
             {isMobile && (
               <div className="mobile-warning">
-                <p>Esta actividad no es compatible con dispositivos móviles.</p>
-                <p>Por favor, utiliza un ordenador con Chrome, Firefox o Edge para realizar esta actividad.</p>
+                <p>Dispositivo móvil detectado</p>
+                <p>Esta actividad requiere un ordenador con micrófono para el reconocimiento de voz.</p>
+                <p>Por favor, accede desde un ordenador con Chrome, Firefox o Edge.</p>
+                <div className="compatibility-note">
+                  <small>💡 Nota: Aunque uses "Ver como escritorio", tu dispositivo sigue siendo móvil y no soporta las funciones de micrófono necesarias.</small>
+                </div>
               </div>
             )}
             {!isSupportedBrowser && !isMobile && (
               <div className="browser-warning">
-                <p>Esta actividad requiere un navegador compatible con reconocimiento de voz.</p>
-                <p>Por favor, utiliza Chrome, Firefox o Edge para realizar esta actividad.</p>
+                <p>Navegador no compatible</p>
+                <p>Tu navegador no soporta las funciones de reconocimiento de voz necesarias.</p>
+                <p>Por favor, utiliza uno de estos navegadores recomendados:</p>
+                <div className="browser-recommendations">
+                  <div className="browser-option">
+                    <span className="browser-icon">🟢</span>
+                    <span>Google Chrome</span>
+                  </div>
+                  <div className="browser-option">
+                    <span className="browser-icon">🦊</span>
+                    <span>Mozilla Firefox</span>
+                  </div>
+                  <div className="browser-option">
+                    <span className="browser-icon">🔷</span>
+                    <span>Microsoft Edge</span>
+                  </div>
+                </div>
               </div>
             )}
           </div>
@@ -156,7 +179,7 @@ const OratorIA = () => {
         />
       </div>
 
-      <BoxInfo topic={difficulty} allIdeas={ALL_DIFFICULTIES} />
+      {isCompatible && <BoxInfo topic={difficulty} allIdeas={ALL_DIFFICULTIES} />}
       <ToastContainer />
       <JuanDabot />
     </section>

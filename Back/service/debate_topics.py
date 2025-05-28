@@ -78,6 +78,7 @@ def generate_argument(contexto, respuesta_usuario, ronda, debate_completo):
         f"- Mantén tu respuesta entre 30-45 palabras máximo\n"
         f"- Adapta tu tono: más exploratorio al inicio, más colaborativo al final\n"
         f"- Si el usuario muestra crecimiento en su razonamiento, reconócelo\n\n"
+        f"- Puedes usar emojis para hacer la conversación más amena\n"
         f"Genera una respuesta que fomente la reflexión profunda y el crecimiento intelectual."
     )
     
