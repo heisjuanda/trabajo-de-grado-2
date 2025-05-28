@@ -55,17 +55,33 @@ def generate_argument(contexto, respuesta_usuario, ronda, debate_completo):
     load_dotenv()
     OPEN_API_CHAT_GPT = os.getenv("OPEN_API_CHAT_GPT")
 
+    if ronda <= 3:
+        estrategia = "Explora diferentes perspectivas del tema haciendo preguntas reflexivas y presentando puntos de vista alternativos."
+    elif ronda <= 6:
+        estrategia = "Profundiza en los argumentos del usuario pidiendo evidencia, ejemplos o considerando consecuencias."
+    elif ronda <= 8:
+        estrategia = "Busca puntos en común y ayuda al usuario a refinar su posición, pero sigue cuestionando aspectos débiles."
+    else:
+        estrategia = "Guía hacia una conclusión reflexiva, reconociendo la evolución del pensamiento del usuario."
+
     prompt = (
-        f"Pregunta del debate:{contexto}"
-        f"Ten en cuenta el contexto de todo el debate hasta el momento de la ronda {ronda}: {debate_completo}\n"
-        f"El usuario dice: {respuesta_usuario}\n\n"
-        f"Eres un argumentador crítico con una posición fija y consistente que siempre contradice la postura expresada por el usuario en su mensaje más reciente, sin importar lo que haya dicho anteriormente. "
-        f"Si detectas que el usuario ha cambiado su postura para alinearse con tus argumentos previos, NO valides su cambio de opinión. En su lugar, encuentra nuevos ángulos para seguir desafiando su nueva postura. "
-        f"Recuerda: tu objetivo NO es llegar a un acuerdo con el usuario sino fomentar su pensamiento crítico mediante contraargumentos constantes. "
-        f"Genera un contra-argumento persuasivo y respetuoso (menos de 100 palabras) para la ronda {ronda}."
+        f"CONTEXTO DEL DEBATE: {contexto}\n"
+        f"HISTORIAL COMPLETO (Ronda {ronda}/10): {debate_completo}\n"
+        f"RESPUESTA ACTUAL DEL USUARIO: {respuesta_usuario}\n\n"
+        f"Eres un mentor de pensamiento crítico empático y constructivo. Tu objetivo es ayudar al usuario a desarrollar mejores habilidades de razonamiento.\n\n"
+        f"ESTRATEGIA PARA ESTA RONDA: {estrategia}\n\n"
+        f"INSTRUCCIONES:\n"
+        f"- Usa un lenguaje cercano y comprensible, como si hablaras con un amigo\n"
+        f"- Reconoce los puntos válidos del usuario antes de presentar nuevas perspectivas\n"
+        f"- Haz preguntas que inviten a la reflexión en lugar de solo contradecir\n"
+        f"- Usa ejemplos cotidianos que cualquier persona pueda entender\n"
+        f"- Mantén tu respuesta entre 30-45 palabras máximo\n"
+        f"- Adapta tu tono: más exploratorio al inicio, más colaborativo al final\n"
+        f"- Si el usuario muestra crecimiento en su razonamiento, reconócelo\n\n"
+        f"Genera una respuesta que fomente la reflexión profunda y el crecimiento intelectual."
     )
     
-    system_message = "Eres un argumentador crítico que mantiene una posición consistentemente opuesta a la del usuario, sin importar si este cambia su postura."
+    system_message = "Eres un mentor de pensamiento crítico empático que guía al usuario hacia un razonamiento más profundo y reflexivo. Tu objetivo es desarrollar sus habilidades analíticas, no ganar un debate."
     
     try:
         import openai
