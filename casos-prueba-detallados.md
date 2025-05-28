@@ -422,10 +422,4 @@ python -m pytest --cov=service tests/
 - **Tests de Integración**: Verifican comunicación entre componentes
 - **Fallback Testing**: Validación de redundancia en servicios de IA
 
-### Limitaciones Identificadas
-- **Cobertura Frontend**: Solo test básico implementado (oportunidad de mejora)
-- **Tests de Accesibilidad**: No implementados (recomendación futura)
-- **Tests de Performance**: Solo timeouts básicos (área de expansión)
-- **Tests de Seguridad**: No incluidos en suite actual
-
 Este Anexo G documenta la implementación real de pruebas en la aplicación, proporcionando una base sólida para la validación de funcionalidades críticas y el mantenimiento de la calidad del software. 

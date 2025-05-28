@@ -265,7 +265,7 @@ Frontend → /oratory-audio/save → save_audio_blob() → PostgreSQL BLOB → R
 
 ### Deployment
 - **Vercel** - Plataforma de deployment
-- **Docker** - Containerización (opcional)
+- **Render** - Plataforma de deployment
 
 ## Patrones de Diseño Implementados
 
