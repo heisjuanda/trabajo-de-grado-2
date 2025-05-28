@@ -1,4 +1,4 @@
-# Casos de Prueba Detallados - Aplicación de Habilidades Blandas (Anexo G)
+[debate-main-report.pdf](https://github.com/user-attachments/files/20473611/debate-main-report.pdf)# Casos de Prueba Detallados - Aplicación de Habilidades Blandas (Anexo G)
 
 ## Descripción General
 Este documento contiene la especificación completa de casos de prueba implementados en la aplicación de habilidades blandas, basados en los archivos de pruebas reales del repositorio. Incluye pruebas End-to-End (E2E), unitarias de frontend y backend, con criterios de aceptación específicos y justificación técnica de cada test.
@@ -10,7 +10,7 @@ Este documento contiene la especificación completa de casos de prueba implement
 2. **Pruebas Unitarias Backend** - pytest + FastAPI TestClient  
 3. **Pruebas End-to-End** - Cypress
 4. **Pruebas de Integración** - API + Base de Datos
-5. **Pruebas de Accesibilidad** - axe-core + Lighthouse
+5. **Pruebas de Accesibilidad** - Lighthouse
 
 ---
 
@@ -333,6 +333,16 @@ def test_analyze_oratory_input(mock_load_dotenv, mock_re_search, mock_save_audio
 ---
 
 ## 5. Métricas de Calidad Implementadas
+
+### SpeedPage
+#### Debate
+- Debate vista principal: [debate-main-report.pdf](https://github.com/user-attachments/files/20473612/debate-main-report.pdf)
+- Debate vista empezar: [debate-init-report.pdf](https://github.com/user-attachments/files/20473613/debate-init-report.pdf)
+- Debate vista reporte: [debate-report-report.pdf](https://github.com/user-attachments/files/20473615/debate-report-report.pdf)
+#### Oratoria
+- Oratoria vista principal: [oratoria-main-report.pdf](https://github.com/user-attachments/files/20473619/oratoria-main-report.pdf)
+- Oratoria vista empezar: [oratoria-init-report.pdf](https://github.com/user-attachments/files/20473621/oratoria-init-report.pdf)
+- Oratoria vista reporte: [oratoria-report-report.pdf](https://github.com/user-attachments/files/20473622/oratoria-report-report.pdf)
 
 ### Cobertura de Código Actual
 ```bash
