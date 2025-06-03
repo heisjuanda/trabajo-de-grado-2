@@ -53,12 +53,21 @@ export default function ProfileInDashboard() {
                     </div>
                   </Box>
                 </Grid>
-                <Grid item xs={1}>
+                <Grid item xs={12} sm={1} display="flex" justifyContent="center" alignItems="center">
                   <Button
                     variant="contained"
-                    style={{
-                      width: "100%",
-                      height: "100%",
+                    sx={{
+                      width: { xs: '90vw', sm: 'auto' },
+                      maxWidth: { xs: 180, sm: 200, md: 240 },
+                      minWidth: 90,
+                      height: { xs: '40px', sm: '100%' },
+                      fontSize: { xs: '0.95rem', sm: '1.05rem', md: '1.1rem' },
+                      whiteSpace: { xs: 'nowrap', sm: 'normal' },
+                      overflow: { xs: 'hidden', sm: 'visible' },
+                      textOverflow: { xs: 'ellipsis', sm: 'clip' },
+                      px: { xs: 1, sm: 2, md: 3 },
+                      m: { xs: '8px 0 0 0', sm: 0 },
+                      display: 'block',
                     }}
                   >
                     Mi perfil
