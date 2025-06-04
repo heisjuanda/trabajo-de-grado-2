@@ -48,7 +48,8 @@ const DebateIA = () => {
         history("/activity/debate-ia/topic-start");
       })
       .catch((error) => {
-        notifyFailure(`Error al obtener el tema: ${error}`);
+        notifyFailure(`Error al obtener el tema: Intenta nuevamente`);
+        console.error(error);
         removeSessionStorageValue();
       })
       .finally(() => {
